@@ -16,9 +16,7 @@ const Footer = () => (
         <h4 className="text-sm font-semibold text-foreground mb-4">Solutions</h4>
         <ul className="space-y-2 text-sm text-muted-foreground">
           <li><a href="#neev" className="hover:text-foreground transition-colors">Neev</a></li>
-          <li><span>Setu <span className="text-xs text-muted-foreground/60">(Coming Soon)</span></span></li>
-          <li><span>Drishti <span className="text-xs text-muted-foreground/60">(Coming Soon)</span></span></li>
-          <li><span>PramaaN <span className="text-xs text-muted-foreground/60">(Coming Soon)</span></span></li>
+          <li><a href="/hissa" className="hover:text-foreground transition-colors">Hissa</a></li>
         </ul>
       </div>
 

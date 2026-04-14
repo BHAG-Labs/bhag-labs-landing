@@ -1,4 +1,4 @@
-import { Boxes, GitBranch, Telescope, Award } from "lucide-react";
+import { Boxes, Calculator } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import SectionLabel from "./SectionLabel";
 import { motion } from "framer-motion";
@@ -12,30 +12,17 @@ const products = [
       "A structured week-by-week platform where founders build Business Model Canvases, state hypotheses, log customer interviews, submit weekly check-ins, and receive mentor feedback. Admins get a dashboard to monitor every team's progress across the cohort.",
     badge: "Live",
     link: "Explore Neev →",
+    href: "#neev",
   },
   {
-    icon: GitBranch,
-    name: "Setu",
-    tagline: "Mentor-Founder Matching Engine",
+    icon: Calculator,
+    name: "Hissa",
+    tagline: "Startup Equity Calculator",
     description:
-      "Algorithmically match mentors with founders based on domain expertise, industry, and stage. Track mentorship hours, session quality, and founder satisfaction — turning mentorship from ad-hoc to accountable.",
-    badge: "Coming Soon",
-  },
-  {
-    icon: Telescope,
-    name: "Drishti",
-    tagline: "AI-Powered Customer Discovery",
-    description:
-      "Generate hypothesis maps from a plain-English idea description. Run simulated customer interviews to stress-test your thinking before real conversations. Get interview question guides designed to reveal truth, not confirm bias.",
-    badge: "Coming Soon",
-  },
-  {
-    icon: Award,
-    name: "PramaaN",
-    tagline: "Venture Readiness Scorecard",
-    description:
-      "A structured scoring framework that evaluates startups across key dimensions — market validation evidence, team strength, business model clarity, traction metrics, and pitch quality. Helps programs identify which ventures are ready for the next stage.",
-    badge: "Coming Soon",
+      "A suite of equity tools built for the Indian startup ecosystem — ESOP valuation, co-founder equity splits, dilution simulation, India-specific ESOP tax calculations, and ESOP pool planning. All calculations client-side, all currency in ₹.",
+    badge: "Live",
+    link: "Try Hissa →",
+    href: "/hissa",
   },
 ];
 
@@ -52,7 +39,7 @@ const SolutionsSection = () => (
         from first hypothesis to investor-ready pitch.
       </p>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
         {products.map((p, i) => (
           <motion.div
             key={p.name}
@@ -66,18 +53,14 @@ const SolutionsSection = () => (
               <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center">
                 <p.icon className="w-5 h-5 text-primary-foreground" />
               </div>
-              <span className={p.badge === "Live" ? "badge-live" : "badge-coming-soon"}>
-                {p.badge}
-              </span>
+              <span className="badge-live">{p.badge}</span>
             </div>
             <h3 className="text-lg font-bold text-foreground mb-1">{p.name}</h3>
             <p className="text-sm text-primary font-medium mb-3">{p.tagline}</p>
             <p className="text-sm text-muted-foreground leading-relaxed flex-1">{p.description}</p>
-            {p.link && (
-              <a href="#neev" className="mt-4 text-sm font-semibold text-primary hover:underline">
-                {p.link}
-              </a>
-            )}
+            <a href={p.href} className="mt-4 text-sm font-semibold text-primary hover:underline">
+              {p.link}
+            </a>
           </motion.div>
         ))}
       </div>

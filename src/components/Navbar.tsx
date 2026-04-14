@@ -3,10 +3,8 @@ import { Menu, X, ChevronDown, Rocket } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const solutions = [
-  { name: "Neev", desc: "Lean LaunchPad Platform", badge: "Live" },
-  { name: "Setu", desc: "Mentor-Founder Matching", badge: "Coming Soon" },
-  { name: "Drishti", desc: "AI Customer Discovery", badge: "Coming Soon" },
-  { name: "PramaaN", desc: "Venture Readiness Scorecard", badge: "Coming Soon" },
+  { name: "Neev", desc: "Lean LaunchPad Platform", badge: "Live", href: "#neev" },
+  { name: "Hissa", desc: "Startup Equity Calculator", badge: "Live", href: "/hissa" },
 ];
 
 const Navbar = () => {
@@ -43,7 +41,7 @@ const Navbar = () => {
                   {solutions.map((s) => (
                     <a
                       key={s.name}
-                      href="#solutions"
+                      href={s.href}
                       className="flex items-center justify-between p-3 rounded-md hover:bg-secondary transition-colors"
                       onClick={() => setSolOpen(false)}
                     >
@@ -51,9 +49,7 @@ const Navbar = () => {
                         <div className="text-sm font-medium text-foreground">{s.name}</div>
                         <div className="text-xs text-muted-foreground">{s.desc}</div>
                       </div>
-                      <span className={s.badge === "Live" ? "badge-live" : "badge-coming-soon"}>
-                        {s.badge}
-                      </span>
+                      <span className="badge-live">{s.badge}</span>
                     </a>
                   ))}
                 </motion.div>
@@ -62,7 +58,6 @@ const Navbar = () => {
           </div>
           <a href="#who-we-serve" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Who We Serve</a>
           <a href="#why-us" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Why BHAG Labs</a>
-          <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Resources</a>
           <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</a>
         </div>
 
@@ -87,9 +82,9 @@ const Navbar = () => {
           >
             <div className="px-4 py-4 flex flex-col gap-4">
               <a href="#solutions" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>Solutions</a>
+              <a href="/hissa" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>Hissa Calculator</a>
               <a href="#who-we-serve" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>Who We Serve</a>
               <a href="#why-us" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>Why BHAG Labs</a>
-              <a href="#" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>Resources</a>
               <a href="#contact" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>Contact</a>
               <a href="#contact" className="gradient-bg px-5 py-2 rounded-full text-sm font-semibold text-primary-foreground text-center" onClick={() => setMobileOpen(false)}>
                 Book a Demo
