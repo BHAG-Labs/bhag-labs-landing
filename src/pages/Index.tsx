@@ -7,7 +7,6 @@ import MethodologySection from "@/components/MethodologySection";
 import WhyUsSection from "@/components/WhyUsSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import NeevSpotlight from "@/components/NeevSpotlight";
-import TrustSection from "@/components/TrustSection";
 import CtaSection from "@/components/CtaSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -23,7 +22,6 @@ const Index = () => (
     <WhyUsSection />
     <ComparisonSection />
     <NeevSpotlight />
-    <TrustSection />
     <CtaSection />
     <ContactSection />
     <Footer />

@@ -1,36 +1,4 @@
 import { motion } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
-
-const CountUp = ({ end, suffix = "" }: { end: number; suffix?: string }) => {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
-  const [started, setStarted] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting && !started) setStarted(true); },
-      { threshold: 0.5 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [started]);
-
-  useEffect(() => {
-    if (!started) return;
-    const duration = 2000;
-    const steps = 60;
-    const increment = end / steps;
-    let current = 0;
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= end) { setCount(end); clearInterval(timer); }
-      else setCount(Math.floor(current));
-    }, duration / steps);
-    return () => clearInterval(timer);
-  }, [started, end]);
-
-  return <div ref={ref} className="text-3xl md:text-4xl font-bold gradient-text">{count}{suffix}</div>;
-};
 
 const HeroSection = () => (
   <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
@@ -82,7 +50,7 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+        className="flex flex-col sm:flex-row gap-4 justify-center"
       >
         <a href="#contact" className="gradient-bg px-8 py-3.5 rounded-full font-semibold text-primary-foreground hover:opacity-90 transition-opacity text-base">
           Book a Demo
@@ -90,26 +58,6 @@ const HeroSection = () => (
         <a href="#solutions" className="px-8 py-3.5 rounded-full font-semibold border border-primary/40 text-foreground hover:bg-primary/10 transition-colors text-base">
           Explore Our Solutions
         </a>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-        className="grid grid-cols-3 gap-8 max-w-lg mx-auto"
-      >
-        <div className="text-center">
-          <CountUp end={500} suffix="+" />
-          <p className="text-xs md:text-sm text-muted-foreground mt-1">Founders Served</p>
-        </div>
-        <div className="text-center">
-          <CountUp end={25} suffix="+" />
-          <p className="text-xs md:text-sm text-muted-foreground mt-1">Programs Powered</p>
-        </div>
-        <div className="text-center">
-          <CountUp end={10} suffix="K+" />
-          <p className="text-xs md:text-sm text-muted-foreground mt-1">Hypotheses Tracked</p>
-        </div>
       </motion.div>
     </div>
   </section>
