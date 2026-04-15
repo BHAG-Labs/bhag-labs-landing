@@ -1,4 +1,3 @@
-import { Check, X, Minus } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import SectionLabel from "./SectionLabel";
 
@@ -13,36 +12,36 @@ const rows = [
 ];
 
 const Icon = ({ status }: { status: string }) => {
-  if (status === "yes") return <Check className="w-5 h-5 text-teal" />;
-  if (status === "partial") return <Minus className="w-5 h-5 text-muted-foreground" />;
-  return <X className="w-5 h-5 text-destructive/60" />;
+  if (status === "yes") return <span className="text-terracotta font-heading font-bold">&#10003;</span>;
+  if (status === "partial") return <span className="text-muted-foreground">&#8211;</span>;
+  return <span className="text-muted-foreground/40">&#10005;</span>;
 };
 
 const ComparisonSection = () => (
-  <AnimatedSection className="section-padding">
-    <div className="max-w-5xl mx-auto text-center">
+  <AnimatedSection className="section-padding section-light">
+    <div className="max-w-5xl mx-auto">
       <SectionLabel>Comparison</SectionLabel>
-      <h2 className="text-3xl md:text-4xl font-bold mb-12 text-foreground">
-        How BHAG Labs <span className="gradient-text">Compares</span>
+      <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase leading-[1.05] mb-12 text-foreground">
+        How BHAG Labs <span className="text-terracotta">Compares</span>
       </h2>
 
       <div className="overflow-x-auto">
-        <table className="w-full text-left text-sm">
+        <table className="w-full text-left text-sm border-2 border-foreground">
           <thead>
-            <tr className="border-b border-border">
-              <th className="pb-4 pr-4 text-muted-foreground font-medium">Feature</th>
-              <th className="pb-4 px-4 text-center text-muted-foreground font-medium">Spreadsheets & Docs</th>
-              <th className="pb-4 px-4 text-center text-muted-foreground font-medium">Generic PM Tools</th>
-              <th className="pb-4 pl-4 text-center font-medium gradient-text">BHAG Labs</th>
+            <tr className="border-b-2 border-foreground">
+              <th className="p-4 text-muted-foreground font-medium tracking-wide uppercase text-xs">Feature</th>
+              <th className="p-4 text-center text-muted-foreground font-medium tracking-wide uppercase text-xs">Spreadsheets</th>
+              <th className="p-4 text-center text-muted-foreground font-medium tracking-wide uppercase text-xs">PM Tools</th>
+              <th className="p-4 text-center font-medium tracking-wide uppercase text-xs bg-primary text-primary-foreground">BHAG Labs</th>
             </tr>
           </thead>
           <tbody>
             {rows.map((row) => (
-              <tr key={row.feature} className="border-b border-border/50">
-                <td className="py-4 pr-4 text-foreground font-medium">{row.feature}</td>
-                <td className="py-4 px-4 text-center"><div className="flex justify-center"><Icon status={row.sheets} /></div></td>
-                <td className="py-4 px-4 text-center"><div className="flex justify-center"><Icon status={row.pm} /></div></td>
-                <td className="py-4 pl-4 text-center"><div className="flex justify-center"><Icon status={row.bhag} /></div></td>
+              <tr key={row.feature} className="border-b border-foreground/20">
+                <td className="p-4 text-foreground font-medium">{row.feature}</td>
+                <td className="p-4 text-center"><Icon status={row.sheets} /></td>
+                <td className="p-4 text-center"><Icon status={row.pm} /></td>
+                <td className="p-4 text-center bg-primary/5"><Icon status={row.bhag} /></td>
               </tr>
             ))}
           </tbody>
