@@ -1,5 +1,9 @@
-const SectionLabel = ({ children }: { children: string }) => (
-  <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-[0.2em] uppercase rounded-full border border-primary/30 text-primary mb-6">
+const SectionLabel = ({ children, variant = "dark" }: { children: string; variant?: "dark" | "light" }) => (
+  <span
+    className={`section-label inline-block mb-6 ${
+      variant === "light" ? "text-ochre" : "text-terracotta"
+    }`}
+  >
     {children}
   </span>
 );

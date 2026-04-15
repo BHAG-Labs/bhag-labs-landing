@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,48 +6,53 @@
 
 @layer base {
   :root {
-    --background: 222 47% 7%;
-    --foreground: 210 40% 96%;
+    --background: 34 24% 91%;
+    --foreground: 0 0% 10%;
 
-    --card: 222 41% 10%;
-    --card-foreground: 210 40% 96%;
+    --card: 34 24% 91%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 222 41% 10%;
-    --popover-foreground: 210 40% 96%;
+    --popover: 34 24% 91%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 199 89% 48%;
-    --primary-foreground: 222 47% 7%;
+    --primary: 11 55% 49%;
+    --primary-foreground: 34 24% 91%;
 
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 96%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 34 24% 91%;
 
-    --muted: 217 33% 14%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 34 16% 85%;
+    --muted-foreground: 25 6% 39%;
 
-    --accent: 265 60% 55%;
-    --accent-foreground: 210 40% 96%;
+    --accent: 43 66% 47%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217 30% 18%;
-    --input: 217 30% 18%;
-    --ring: 199 89% 48%;
+    --border: 0 0% 10%;
+    --input: 0 0% 10%;
+    --ring: 11 55% 49%;
 
-    --radius: 0.75rem;
+    --radius: 0px;
 
-    --gradient-start: 199 89% 48%;
-    --gradient-mid: 174 72% 46%;
-    --gradient-end: 265 60% 55%;
+    --terracotta: 11 55% 49%;
+    --ochre: 43 66% 47%;
+    --forest: 163 27% 23%;
+    --sage: 100 12% 55%;
+    --dusty-rose: 6 30% 65%;
+    --charcoal: 0 0% 10%;
+    --cream: 34 24% 91%;
+    --cream-dark: 30 16% 82%;
 
-    --sidebar-background: 222 41% 10%;
-    --sidebar-foreground: 210 40% 96%;
-    --sidebar-primary: 199 89% 48%;
-    --sidebar-primary-foreground: 222 47% 7%;
-    --sidebar-accent: 217 33% 17%;
-    --sidebar-accent-foreground: 210 40% 96%;
-    --sidebar-border: 217 30% 18%;
-    --sidebar-ring: 199 89% 48%;
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 34 24% 91%;
+    --sidebar-primary: 11 55% 49%;
+    --sidebar-primary-foreground: 34 24% 91%;
+    --sidebar-accent: 43 66% 47%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 43 66% 47%;
+    --sidebar-ring: 11 55% 49%;
   }
 }
 
@@ -57,7 +62,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 
   html {
@@ -66,82 +72,199 @@
 }
 
 @layer components {
-  .gradient-text {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(199 89% 48%), hsl(174 72% 46%), hsl(265 60% 55%));
+  .font-heading {
+    font-family: 'Playfair Display', Georgia, serif;
   }
 
-  .gradient-bg {
-    background: linear-gradient(135deg, hsl(199 89% 48%), hsl(174 72% 46%));
+  .font-subheading {
+    font-family: 'Cormorant Garamond', Georgia, serif;
   }
 
-  .gradient-bg-full {
-    background: linear-gradient(135deg, hsl(199 89% 48%), hsl(174 72% 46%), hsl(265 60% 55%));
+  .font-body {
+    font-family: 'Inter', system-ui, sans-serif;
   }
 
-  .gradient-border {
+  /* Section label — small caps, tracked out */
+  .section-label {
+    @apply text-xs font-semibold tracking-[0.2em] uppercase;
+    font-family: 'Inter', system-ui, sans-serif;
+    letter-spacing: 0.15em;
+  }
+
+  /* Sections */
+  .section-padding {
+    @apply py-20 md:py-28 px-6 md:px-8;
+  }
+
+  /* Dark section */
+  .section-dark {
+    background-color: hsl(var(--charcoal));
+    color: hsl(var(--cream));
+  }
+
+  /* Light section */
+  .section-light {
+    background-color: hsl(var(--cream));
+    color: hsl(var(--charcoal));
+  }
+
+  /* Terracotta section */
+  .section-terracotta {
+    background-color: hsl(var(--terracotta));
+    color: hsl(var(--cream));
+  }
+
+  /* Thick horizontal rule */
+  .rule-dark {
+    border: none;
+    height: 2px;
+    background: hsl(var(--charcoal));
+    width: 100%;
+  }
+
+  .rule-gold {
+    border: none;
+    height: 2px;
+    background: hsl(var(--ochre));
+    width: 100%;
+  }
+
+  /* Diamond ornament divider */
+  .diamond-divider {
+    @apply flex items-center justify-center gap-4 my-0;
+  }
+
+  .diamond-divider::before,
+  .diamond-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.3;
+  }
+
+  /* Nested double border frame */
+  .double-border-frame {
     position: relative;
-    background: hsl(var(--card));
-    border: 1px solid transparent;
-    background-clip: padding-box;
   }
 
-  .gradient-border::before {
+  .double-border-frame::before {
     content: '';
     position: absolute;
-    inset: -1px;
-    border-radius: inherit;
-    padding: 1px;
-    background: linear-gradient(135deg, hsl(199 89% 48% / 0.3), hsl(174 72% 46% / 0.3), hsl(265 60% 55% / 0.3));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
+    inset: 16px;
+    border: 1px solid hsl(var(--charcoal) / 0.2);
     pointer-events: none;
-    transition: all 0.3s ease;
   }
 
-  .gradient-border:hover::before {
-    background: linear-gradient(135deg, hsl(199 89% 48% / 0.6), hsl(174 72% 46% / 0.6), hsl(265 60% 55% / 0.6));
+  .double-border-frame::after {
+    content: '';
+    position: absolute;
+    inset: 24px;
+    border: 2px solid hsl(var(--charcoal) / 0.1);
+    pointer-events: none;
   }
 
+  /* Corner marks (crop marks) */
+  .corner-marks {
+    position: relative;
+  }
+
+  .corner-marks::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid hsl(var(--charcoal) / 0.2);
+    border-left: 2px solid hsl(var(--charcoal) / 0.2);
+    pointer-events: none;
+  }
+
+  .corner-marks::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid hsl(var(--charcoal) / 0.2);
+    border-right: 2px solid hsl(var(--charcoal) / 0.2);
+    pointer-events: none;
+  }
+
+  /* Paper texture overlay */
+  .paper-texture {
+    position: relative;
+  }
+
+  .paper-texture::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Stamp/zigzag edge */
+  .stamp-edge-top {
+    clip-path: polygon(
+      0% 8px, 2% 0%, 4% 8px, 6% 0%, 8% 8px, 10% 0%, 12% 8px, 14% 0%, 16% 8px, 18% 0%,
+      20% 8px, 22% 0%, 24% 8px, 26% 0%, 28% 8px, 30% 0%, 32% 8px, 34% 0%, 36% 8px, 38% 0%,
+      40% 8px, 42% 0%, 44% 8px, 46% 0%, 48% 8px, 50% 0%, 52% 8px, 54% 0%, 56% 8px, 58% 0%,
+      60% 8px, 62% 0%, 64% 8px, 66% 0%, 68% 8px, 70% 0%, 72% 8px, 74% 0%, 76% 8px, 78% 0%,
+      80% 8px, 82% 0%, 84% 8px, 86% 0%, 88% 8px, 90% 0%, 92% 8px, 94% 0%, 96% 8px, 98% 0%,
+      100% 8px, 100% 100%, 0% 100%
+    );
+  }
+
+  .stamp-edge-bottom {
+    clip-path: polygon(
+      0% 0%, 100% 0%, 100% calc(100% - 8px),
+      98% 100%, 96% calc(100% - 8px), 94% 100%, 92% calc(100% - 8px), 90% 100%,
+      88% calc(100% - 8px), 86% 100%, 84% calc(100% - 8px), 82% 100%, 80% calc(100% - 8px),
+      78% 100%, 76% calc(100% - 8px), 74% 100%, 72% calc(100% - 8px), 70% 100%,
+      68% calc(100% - 8px), 66% 100%, 64% calc(100% - 8px), 62% 100%, 60% calc(100% - 8px),
+      58% 100%, 56% calc(100% - 8px), 54% 100%, 52% calc(100% - 8px), 50% 100%,
+      48% calc(100% - 8px), 46% 100%, 44% calc(100% - 8px), 42% 100%, 40% calc(100% - 8px),
+      38% 100%, 36% calc(100% - 8px), 34% 100%, 32% calc(100% - 8px), 30% 100%,
+      28% calc(100% - 8px), 26% 100%, 24% calc(100% - 8px), 22% 100%, 20% calc(100% - 8px),
+      18% 100%, 16% calc(100% - 8px), 14% 100%, 12% calc(100% - 8px), 10% 100%,
+      8% calc(100% - 8px), 6% 100%, 4% calc(100% - 8px), 2% 100%, 0% calc(100% - 8px)
+    );
+  }
+
+  /* Glass nav for light mode */
   .glass-nav {
     @apply backdrop-blur-xl;
-    background: hsl(222 47% 7% / 0.8);
-    border-bottom: 1px solid hsl(217 30% 18% / 0.5);
+    background: hsl(var(--cream) / 0.9);
+    border-bottom: 2px solid hsl(var(--charcoal));
   }
 
-  .glow-card {
-    @apply transition-all duration-300;
-    box-shadow: 0 0 0 0 hsl(199 89% 48% / 0);
+  /* Editorial card */
+  .editorial-card {
+    border: 1px solid hsl(var(--charcoal));
+    transition: border-width 0.2s ease, background-color 0.2s ease;
   }
 
-  .glow-card:hover {
-    box-shadow: 0 0 30px -5px hsl(199 89% 48% / 0.15);
-    transform: translateY(-2px);
+  .editorial-card:hover {
+    border-width: 2px;
+    background-color: hsl(var(--cream-dark));
   }
 
-  .mesh-gradient {
-    background:
-      radial-gradient(ellipse at 20% 50%, hsl(199 89% 48% / 0.15) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 20%, hsl(265 60% 55% / 0.1) 0%, transparent 50%),
-      radial-gradient(ellipse at 60% 80%, hsl(174 72% 46% / 0.1) 0%, transparent 50%);
-  }
-
-  .section-padding {
-    @apply py-24 md:py-32 px-4 md:px-8;
-  }
-
+  /* Badge styles */
   .badge-live {
-    @apply px-3 py-1 text-xs font-semibold rounded-full;
-    background: hsl(174 72% 46% / 0.15);
-    color: hsl(174 72% 56%);
-    border: 1px solid hsl(174 72% 46% / 0.3);
+    @apply px-3 py-1 text-xs font-semibold uppercase tracking-wider;
+    background: hsl(var(--terracotta));
+    color: hsl(var(--cream));
   }
 
   .badge-coming-soon {
-    @apply px-3 py-1 text-xs font-semibold rounded-full;
-    background: hsl(var(--muted) / 0.5);
-    color: hsl(var(--muted-foreground));
-    border: 1px dashed hsl(var(--muted-foreground) / 0.4);
+    @apply px-3 py-1 text-xs font-semibold uppercase tracking-wider;
+    color: hsl(var(--ochre));
+    border: 1px dashed hsl(var(--ochre));
   }
 }

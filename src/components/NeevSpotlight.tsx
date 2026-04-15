@@ -10,83 +10,66 @@ const features = [
 ];
 
 const NeevSpotlight = () => (
-  <AnimatedSection id="neev" className="section-padding relative overflow-hidden">
-    {/* Subtle gradient shift */}
-    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/[0.03] to-transparent" />
+  <>
+    <AnimatedSection id="neev" className="section-padding section-dark stamp-edge-top stamp-edge-bottom relative overflow-hidden">
+      <div className="max-w-5xl mx-auto relative z-10">
+        <SectionLabel variant="light">Spotlight</SectionLabel>
+        <div className="grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-16 items-start">
+          <div>
+            <h2 className="font-heading font-bold text-4xl md:text-5xl lg:text-7xl uppercase leading-[1.0] mb-6 text-ochre">
+              Meet Neev.
+            </h2>
+            <p className="font-subheading text-xl md:text-2xl text-cream/80 mb-4 italic">
+              Our Lean LaunchPad Platform
+            </p>
+            <p className="text-cream/60 mb-10 leading-relaxed text-base">
+              Neev (meaning 'foundation' in Hindi) is the first product from BHAG Labs.
+              It is already powering startup programs at partner universities.
+            </p>
 
-    <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-16 items-center">
-      <div>
-        <SectionLabel>Spotlight</SectionLabel>
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-          Meet Neev — Our{" "}
-          <span className="gradient-text">Lean LaunchPad Platform.</span>
-        </h2>
-        <p className="text-muted-foreground mb-8 leading-relaxed">
-          Neev (meaning 'foundation' in Hindi) is the first product from BHAG Labs.
-          It is already powering startup programs at partner universities.
-        </p>
-
-        <div className="space-y-6">
-          {features.map((f) => (
-            <div key={f.title} className="flex gap-4">
-              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <f.icon className="w-4 h-4 text-primary" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-foreground text-sm mb-0.5">{f.title}</h4>
-                <p className="text-sm text-muted-foreground">{f.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <a href="#contact" className="inline-block mt-8 gradient-bg px-6 py-3 rounded-full font-semibold text-primary-foreground hover:opacity-90 transition-opacity text-sm">
-          See Neev in Action →
-        </a>
-      </div>
-
-      {/* Stylized browser mockup */}
-      <div className="gradient-border rounded-xl overflow-hidden">
-        <div className="bg-card">
-          <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
-            <div className="w-3 h-3 rounded-full bg-destructive/40" />
-            <div className="w-3 h-3 rounded-full bg-muted-foreground/20" />
-            <div className="w-3 h-3 rounded-full bg-muted-foreground/20" />
-            <div className="flex-1 mx-4 h-6 rounded bg-secondary flex items-center px-3">
-              <span className="text-[10px] text-muted-foreground">neev.bhaglabs.com</span>
-            </div>
-          </div>
-          <div className="p-6 space-y-4">
-            {/* Abstract UI */}
-            <div className="flex gap-3">
-              <div className="h-8 w-24 rounded bg-primary/20" />
-              <div className="h-8 w-20 rounded bg-secondary" />
-              <div className="h-8 w-28 rounded bg-secondary" />
-            </div>
-            <div className="grid grid-cols-3 gap-3">
-              {Array.from({ length: 9 }).map((_, i) => (
-                <div key={i} className="h-20 rounded-lg bg-secondary/80 p-2">
-                  <div className="h-2 w-3/4 rounded bg-muted-foreground/15 mb-2" />
-                  <div className="h-2 w-1/2 rounded bg-muted-foreground/10" />
-                  <div className="h-2 w-2/3 rounded bg-muted-foreground/10 mt-1" />
+            <div className="space-y-6">
+              {features.map((f) => (
+                <div key={f.title} className="flex gap-4">
+                  <span className="text-ochre text-sm mt-1 select-none">&#9670;</span>
+                  <div>
+                    <h4 className="font-heading font-bold text-cream text-sm mb-0.5">{f.title}</h4>
+                    <p className="text-sm text-cream/50">{f.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
-            <div className="flex gap-3">
-              <div className="h-16 flex-1 rounded-lg bg-primary/10 p-2">
-                <div className="h-2 w-1/2 rounded bg-primary/30 mb-2" />
-                <div className="h-6 w-3/4 rounded bg-primary/20" />
+
+            <a href="#contact" className="inline-block mt-10 bg-ochre px-8 py-3.5 font-semibold text-charcoal hover:opacity-90 transition-opacity text-sm uppercase tracking-wider">
+              See Neev in Action →
+            </a>
+          </div>
+
+          {/* Stylized mockup — editorial style */}
+          <div className="border-2 border-ochre/30">
+            <div className="border-b border-ochre/20 px-4 py-3 flex items-center gap-3">
+              <span className="text-[10px] text-ochre/60 tracking-wider uppercase">neev.bhaglabs.com</span>
+            </div>
+            <div className="p-6 space-y-4">
+              <div className="flex gap-3">
+                <div className="h-8 w-24 bg-ochre/20" />
+                <div className="h-8 w-20 bg-cream/5" />
+                <div className="h-8 w-28 bg-cream/5" />
               </div>
-              <div className="h-16 flex-1 rounded-lg bg-teal/10 p-2">
-                <div className="h-2 w-1/2 rounded bg-teal/30 mb-2" />
-                <div className="h-6 w-3/4 rounded bg-teal/20" />
+              <div className="grid grid-cols-3 gap-2">
+                {Array.from({ length: 9 }).map((_, i) => (
+                  <div key={i} className="h-20 bg-cream/5 p-2 border border-ochre/10">
+                    <div className="h-2 w-3/4 bg-ochre/15 mb-2" />
+                    <div className="h-2 w-1/2 bg-cream/10" />
+                    <div className="h-2 w-2/3 bg-cream/10 mt-1" />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </AnimatedSection>
+    </AnimatedSection>
+  </>
 );
 
 export default NeevSpotlight;
