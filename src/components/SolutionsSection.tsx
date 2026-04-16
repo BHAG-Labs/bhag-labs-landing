@@ -10,7 +10,6 @@ const products = [
     category: "Lean LaunchPad Platform",
     description:
       "A structured week-by-week platform where founders build Business Model Canvases, state hypotheses, log customer interviews, submit weekly check-ins, and receive mentor feedback. Admins get a dashboard to monitor every team's progress across the cohort.",
-    badge: "Live",
     link: "Explore Neev →",
     href: "#neev",
   },
@@ -20,7 +19,6 @@ const products = [
     category: "Startup Equity Calculator",
     description:
       "A suite of equity tools built for the Indian startup ecosystem — ESOP valuation, co-founder equity splits, dilution simulation, India-specific ESOP tax calculations, and ESOP pool planning. All calculations client-side, all currency in ₹.",
-    badge: "Live",
     link: "Try Hissa →",
     href: "/hissa",
   },
@@ -49,9 +47,8 @@ const SolutionsSection = () => (
             transition={{ delay: i * 0.1, duration: 0.5 }}
             className={`p-8 flex flex-col ${i === 0 ? "sm:border-r-2 border-b-2 sm:border-b-0 border-foreground" : ""}`}
           >
-            <div className="flex items-center justify-between mb-6">
+            <div className="mb-6">
               <span className="section-label text-muted-foreground">{p.category}</span>
-              <span className="badge-live">{p.badge}</span>
             </div>
             <h3 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-4">{p.name}</h3>
             <p className="text-sm text-muted-foreground leading-relaxed flex-1">{p.description}</p>

@@ -72,16 +72,16 @@ export default function Hissa() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border py-8 px-4">
+      <footer className="border-t-2 border-foreground/10 py-8 px-4 bg-[hsl(var(--cream-dark))]/50">
         <div className="max-w-[1200px] mx-auto text-center space-y-3">
-          <p className="text-sm text-muted-foreground">Hissa by BHAG Labs — Equity tools built for the Indian startup ecosystem.</p>
-          <div className="flex justify-center gap-6 text-xs text-muted-foreground/60">
+          <p className="text-sm text-foreground/60">Hissa by BHAG Labs — Equity tools built for the Indian startup ecosystem.</p>
+          <div className="flex justify-center gap-6 text-xs text-foreground/40">
             <a href="/" className="hover:text-foreground transition-colors">About BHAG Labs</a>
             <a href="/#neev" className="hover:text-foreground transition-colors">Neev — Lean LaunchPad</a>
             <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
           </div>
-          <p className="text-[10px] text-muted-foreground/40">© 2026 BHAG Labs Pvt. Ltd. All rights reserved.</p>
-          <p className="text-[10px] text-muted-foreground/40 max-w-xl mx-auto">Hissa provides estimates for educational purposes only. It is not financial, legal, or tax advice. Consult a qualified Chartered Accountant or Company Secretary for your specific situation.</p>
+          <p className="text-[10px] text-foreground/30">© 2026 BHAG Labs Pvt. Ltd. All rights reserved.</p>
+          <p className="text-[10px] text-foreground/30 max-w-xl mx-auto">Hissa provides estimates for educational purposes only. It is not financial, legal, or tax advice. Consult a qualified Chartered Accountant or Company Secretary for your specific situation.</p>
         </div>
       </footer>
     </div>
