@@ -44,7 +44,7 @@ const InputField = ({ label, value, onChange, prefix, suffix, helper, type = "nu
         type={type}
         value={value}
         onChange={e => onChange(e.target.value)}
-        className={`w-full px-3 py-2 rounded-lg bg-secondary border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 ${prefix ? 'pl-7' : ''} ${suffix ? 'pr-7' : ''}`}
+        className={`w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-foreground/15 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 ${prefix ? 'pl-7' : ''} ${suffix ? 'pr-7' : ''}`}
       />
       {suffix && <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-muted-foreground">{suffix}</span>}
     </div>
@@ -57,7 +57,7 @@ const VestingTimeline = ({ years, cliff }: { years: number; cliff: number }) => 
   return (
     <div className="mt-3">
       <p className="text-[10px] font-medium text-muted-foreground mb-1">Vesting Schedule</p>
-      <div className="h-2 rounded-full bg-secondary overflow-hidden flex">
+      <div className="h-2 rounded-full bg-[hsl(var(--cream-dark))] overflow-hidden flex">
         {Array.from({ length: years }).map((_, i) => {
           const vested = i + 1 > cliffYears;
           return <div key={i} className={`flex-1 ${vested ? 'bg-primary' : 'bg-destructive/30'} ${i > 0 ? 'ml-px' : ''}`} />;
@@ -80,24 +80,24 @@ const CompanyCard = ({ data, onChange }: { data: CompanyData; onChange: (d: Comp
       <InputField label="Last Valuation (Post-Money)" value={data.valuation} onChange={v => onChange({ ...data, valuation: Number(v) || 0 })} prefix="₹" helper="Valuation after last funding round" />
       <InputField label="Total Fully-Diluted Shares" value={data.totalShares} onChange={v => onChange({ ...data, totalShares: Number(v) || 0 })} helper="Total shares including ESOP pool. Ask HR." />
       <InputField label="Hypothetical Exit Valuation" value={data.exitValuation} onChange={v => onChange({ ...data, exitValuation: Number(v) || 0 })} prefix="₹" helper="Value at IPO or acquisition" />
-      <hr className="border-border my-4" />
+      <hr className="border-foreground/15 my-4" />
       <InputField label="ESOPs Granted" value={data.esopsGranted} onChange={v => onChange({ ...data, esopsGranted: Number(v) || 0 })} />
       <InputField label="Exercise Price (per share)" value={data.exercisePrice} onChange={v => onChange({ ...data, exercisePrice: Number(v) || 0 })} prefix="₹" />
       <div className="grid grid-cols-2 gap-3">
         <div>
           <label className="block text-xs font-medium text-muted-foreground mb-1">Vesting Period</label>
-          <select value={data.vestingYears} onChange={e => onChange({ ...data, vestingYears: Number(e.target.value) })} className="w-full px-3 py-2 rounded-lg bg-secondary border border-border text-foreground text-sm">
+          <select value={data.vestingYears} onChange={e => onChange({ ...data, vestingYears: Number(e.target.value) })} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-foreground/15 text-foreground text-sm">
             {vestingOptions.map(y => <option key={y} value={y}>{y} years</option>)}
           </select>
         </div>
         <div>
           <label className="block text-xs font-medium text-muted-foreground mb-1">Cliff Period</label>
-          <select value={data.cliffMonths} onChange={e => onChange({ ...data, cliffMonths: Number(e.target.value) })} className="w-full px-3 py-2 rounded-lg bg-secondary border border-border text-foreground text-sm">
+          <select value={data.cliffMonths} onChange={e => onChange({ ...data, cliffMonths: Number(e.target.value) })} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-foreground/15 text-foreground text-sm">
             {cliffOptions.map(m => <option key={m} value={m}>{m} months</option>)}
           </select>
         </div>
       </div>
-      <hr className="border-border my-4" />
+      <hr className="border-foreground/15 my-4" />
       <div className="space-y-2">
         <div className="flex justify-between text-sm"><span className="text-muted-foreground">Price/Share</span><span className="text-foreground font-semibold">{formatINR(r.pricePerShare)}</span></div>
         <div className="flex justify-between text-sm"><span className="text-muted-foreground">Ownership</span><span className="text-foreground font-semibold">{formatPercent(r.ownership, 3)}</span></div>
@@ -105,7 +105,7 @@ const CompanyCard = ({ data, onChange }: { data: CompanyData; onChange: (d: Comp
         <div className="flex justify-between text-sm"><span className="text-muted-foreground">Intrinsic Value</span><span className="text-foreground font-semibold">{formatINR(r.totalIntrinsic)}</span></div>
         <div className="flex justify-between text-sm"><span className="text-muted-foreground">Cost to Exercise</span><span className="text-amber-400 font-semibold">{formatINR(r.costToExercise)}</span></div>
         <div className="flex justify-between text-sm"><span className="text-muted-foreground">Value at Exit</span><span className="text-foreground font-semibold">{formatINR(r.valueAtExit)}</span></div>
-        <div className="flex justify-between text-base pt-2 border-t border-border"><span className="text-muted-foreground font-medium">Net Payout at Exit</span><span className={`font-bold ${r.netPayout >= 0 ? 'text-emerald-400' : 'text-destructive'}`}>{formatINR(r.netPayout)}</span></div>
+        <div className="flex justify-between text-base pt-2 border-t border-foreground/15"><span className="text-muted-foreground font-medium">Net Payout at Exit</span><span className={`font-bold ${r.netPayout >= 0 ? 'text-emerald-400' : 'text-destructive'}`}>{formatINR(r.netPayout)}</span></div>
       </div>
       <VestingTimeline years={data.vestingYears} cliff={data.cliffMonths} />
     </div>
@@ -141,7 +141,7 @@ export default function EsopValueCalculator() {
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-border">
+              <tr className="border-b border-foreground/15">
                 <th className="pb-2 text-left text-muted-foreground font-medium text-xs">Metric</th>
                 <th className="pb-2 text-center text-muted-foreground font-medium text-xs">{companies[0].name}</th>
                 <th className="pb-2 text-center text-muted-foreground font-medium text-xs">{companies[1].name}</th>
@@ -150,7 +150,7 @@ export default function EsopValueCalculator() {
             </thead>
             <tbody>
               {comparisons.map(c => (
-                <tr key={c.metric} className="border-b border-border/30">
+                <tr key={c.metric} className="border-b border-foreground/15/30">
                   <td className="py-2 text-foreground text-xs">{c.metric}</td>
                   <td className={`py-2 text-center text-xs ${c.w === 'A' ? 'text-emerald-400 font-semibold' : 'text-muted-foreground'}`}>{c.a}</td>
                   <td className={`py-2 text-center text-xs ${c.w === 'B' ? 'text-emerald-400 font-semibold' : 'text-muted-foreground'}`}>{c.b}</td>

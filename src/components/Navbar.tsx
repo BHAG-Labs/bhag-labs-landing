@@ -3,8 +3,8 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const solutions = [
-  { name: "Neev", desc: "Lean LaunchPad Platform", badge: "Live", href: "#neev" },
-  { name: "Hissa", desc: "Startup Equity Calculator", badge: "Live", href: "/hissa" },
+  { name: "Neev", desc: "Lean LaunchPad Platform", href: "#neev" },
+  { name: "Hissa", desc: "Startup Equity Calculator", href: "/hissa" },
 ];
 
 const Navbar = () => {
@@ -49,7 +49,6 @@ const Navbar = () => {
                         <div className="text-sm font-heading font-bold text-foreground">{s.name}</div>
                         <div className="text-xs text-muted-foreground">{s.desc}</div>
                       </div>
-                      <span className="badge-live">{s.badge}</span>
                     </a>
                   ))}
                 </motion.div>

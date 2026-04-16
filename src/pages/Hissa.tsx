@@ -18,34 +18,34 @@ export default function Hissa() {
   const [activeTab, setActiveTab] = useState('esop-value');
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[hsl(var(--cream))]">
       {/* Header */}
-      <header className="border-b border-border bg-card/50 backdrop-blur-xl sticky top-0 z-50">
+      <header className="border-b-2 border-foreground/10 bg-[hsl(var(--cream))]/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-[1200px] mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <a href="/" className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors text-sm">
-              <Rocket className="w-4 h-4 text-primary" />
+            <a href="/" className="flex items-center gap-1.5 text-foreground/60 hover:text-foreground transition-colors text-sm">
+              <Rocket className="w-4 h-4 text-terracotta" />
               BHAG Labs
             </a>
-            <span className="text-border">/</span>
-            <span className="text-foreground font-bold text-lg">Hissa</span>
+            <span className="text-foreground/20">◆</span>
+            <span className="text-foreground font-heading font-bold text-lg">Hissa</span>
           </div>
-          <a href="/" className="text-xs text-muted-foreground hover:text-foreground transition-colors">← Back to BHAG Labs</a>
+          <a href="/" className="text-xs text-foreground/50 hover:text-foreground transition-colors">← Back to BHAG Labs</a>
         </div>
       </header>
 
       {/* Tab bar */}
-      <div className="border-b border-border bg-card/30 sticky top-[53px] z-40">
+      <div className="border-b-2 border-foreground/10 bg-[hsl(var(--cream-dark))]/50 sticky top-[53px] z-40">
         <div className="max-w-[1200px] mx-auto px-4 overflow-x-auto scrollbar-hide">
           <div className="flex gap-1 min-w-max py-2">
             {tabs.map(t => (
               <button
                 key={t.id}
                 onClick={() => setActiveTab(t.id)}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${
+                className={`flex items-center gap-2 px-4 py-2.5 text-xs font-medium transition-all whitespace-nowrap ${
                   activeTab === t.id
-                    ? 'bg-primary text-primary-foreground'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
+                    ? 'bg-terracotta text-[hsl(var(--cream))] font-semibold'
+                    : 'text-foreground/50 hover:text-foreground hover:bg-[hsl(var(--cream-dark))]'
                 }`}
               >
                 <t.icon className="w-3.5 h-3.5" />
@@ -72,16 +72,16 @@ export default function Hissa() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border py-8 px-4">
+      <footer className="border-t-2 border-foreground/10 py-8 px-4 bg-[hsl(var(--cream-dark))]/50">
         <div className="max-w-[1200px] mx-auto text-center space-y-3">
-          <p className="text-sm text-muted-foreground">Hissa by BHAG Labs — Equity tools built for the Indian startup ecosystem.</p>
-          <div className="flex justify-center gap-6 text-xs text-muted-foreground/60">
+          <p className="text-sm text-foreground/60">Hissa by BHAG Labs — Equity tools built for the Indian startup ecosystem.</p>
+          <div className="flex justify-center gap-6 text-xs text-foreground/40">
             <a href="/" className="hover:text-foreground transition-colors">About BHAG Labs</a>
             <a href="/#neev" className="hover:text-foreground transition-colors">Neev — Lean LaunchPad</a>
             <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
           </div>
-          <p className="text-[10px] text-muted-foreground/40">© 2026 BHAG Labs Pvt. Ltd. All rights reserved.</p>
-          <p className="text-[10px] text-muted-foreground/40 max-w-xl mx-auto">Hissa provides estimates for educational purposes only. It is not financial, legal, or tax advice. Consult a qualified Chartered Accountant or Company Secretary for your specific situation.</p>
+          <p className="text-[10px] text-foreground/30">© 2026 BHAG Labs Pvt. Ltd. All rights reserved.</p>
+          <p className="text-[10px] text-foreground/30 max-w-xl mx-auto">Hissa provides estimates for educational purposes only. It is not financial, legal, or tax advice. Consult a qualified Chartered Accountant or Company Secretary for your specific situation.</p>
         </div>
       </footer>
     </div>

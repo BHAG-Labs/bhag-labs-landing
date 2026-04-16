@@ -89,7 +89,7 @@ export default function EsopPoolPlanner() {
         <h3 className="text-sm font-semibold text-foreground mb-3">Company Stage</h3>
         <div className="flex flex-wrap gap-2">
           {(['pre-seed', 'seed', 'series-a', 'series-b'] as Stage[]).map(s => (
-            <button key={s} onClick={() => setStage(s)} className={`px-4 py-2 rounded-lg text-xs font-medium transition-colors ${stage === s ? 'bg-primary text-primary-foreground' : 'bg-secondary text-muted-foreground hover:text-foreground'}`}>
+            <button key={s} onClick={() => setStage(s)} className={`px-4 py-2 rounded-lg text-xs font-medium transition-colors ${stage === s ? 'bg-primary text-primary-foreground' : 'bg-[hsl(var(--cream-dark))] text-muted-foreground hover:text-foreground'}`}>
               {s === 'pre-seed' ? 'Pre-Seed' : s === 'seed' ? 'Seed' : s === 'series-a' ? 'Series A' : 'Series B+'}
             </button>
           ))}
@@ -103,17 +103,17 @@ export default function EsopPoolPlanner() {
             <div key={i} className="grid grid-cols-12 gap-2 items-end">
               <div className="col-span-4">
                 {i === 0 && <label className="block text-[10px] text-muted-foreground mb-1">Role</label>}
-                <input value={h.role} onChange={e => updateHire(i, { role: e.target.value })} className="w-full px-2 py-2 rounded-lg bg-secondary border border-border text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="Role title" />
+                <input value={h.role} onChange={e => updateHire(i, { role: e.target.value })} className="w-full px-2 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-foreground/15 text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="Role title" />
               </div>
               <div className="col-span-4">
                 {i === 0 && <label className="block text-[10px] text-muted-foreground mb-1">Seniority</label>}
-                <select value={h.seniority} onChange={e => updateHire(i, { seniority: e.target.value as Seniority })} className="w-full px-2 py-2 rounded-lg bg-secondary border border-border text-foreground text-xs">
+                <select value={h.seniority} onChange={e => updateHire(i, { seniority: e.target.value as Seniority })} className="w-full px-2 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-foreground/15 text-foreground text-xs">
                   {Object.entries(seniorityLabels).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
                 </select>
               </div>
               <div className="col-span-2">
                 {i === 0 && <label className="block text-[10px] text-muted-foreground mb-1">#</label>}
-                <input type="number" min={1} value={h.count} onChange={e => updateHire(i, { count: Number(e.target.value) || 1 })} className="w-full px-2 py-2 rounded-lg bg-secondary border border-border text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-primary/50" />
+                <input type="number" min={1} value={h.count} onChange={e => updateHire(i, { count: Number(e.target.value) || 1 })} className="w-full px-2 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-foreground/15 text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-primary/50" />
               </div>
               <div className="col-span-2 flex justify-end">
                 <button onClick={() => removeHire(i)} className="px-2 py-2 text-xs text-destructive hover:text-destructive/80">✕</button>
@@ -131,7 +131,7 @@ export default function EsopPoolPlanner() {
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-xs text-muted-foreground mb-1">Number of Advisors</label>
-            <input type="number" min={0} value={numAdvisors} onChange={e => setNumAdvisors(Number(e.target.value) || 0)} className="w-full px-3 py-2 rounded-lg bg-secondary border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50" />
+            <input type="number" min={0} value={numAdvisors} onChange={e => setNumAdvisors(Number(e.target.value) || 0)} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-foreground/15 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50" />
           </div>
           <div>
             <label className="block text-xs text-muted-foreground mb-1">Equity/Advisor: {advisorEquity}%</label>
@@ -180,7 +180,7 @@ export default function EsopPoolPlanner() {
         <div className="overflow-x-auto">
           <table className="w-full text-xs">
             <thead>
-              <tr className="border-b border-border">
+              <tr className="border-b border-foreground/15">
                 <th className="pb-2 text-left text-muted-foreground">Role</th>
                 <th className="pb-2 text-center text-muted-foreground">Seniority</th>
                 <th className="pb-2 text-center text-muted-foreground">#</th>
@@ -190,7 +190,7 @@ export default function EsopPoolPlanner() {
             </thead>
             <tbody>
               {result.breakdown.map((b, i) => (
-                <tr key={i} className="border-b border-border/30">
+                <tr key={i} className="border-b border-foreground/15/30">
                   <td className="py-2 text-foreground">{b.role || '—'}</td>
                   <td className="py-2 text-center text-muted-foreground">{seniorityLabels[b.seniority]}</td>
                   <td className="py-2 text-center text-foreground">{b.count}</td>
@@ -198,11 +198,11 @@ export default function EsopPoolPlanner() {
                   <td className="py-2 text-center text-foreground font-medium">{formatPercent(b.totalEquity, 2)}</td>
                 </tr>
               ))}
-              <tr className="border-b border-border/30">
+              <tr className="border-b border-foreground/15/30">
                 <td className="py-2 text-muted-foreground" colSpan={4}>Advisors ({numAdvisors} × {advisorEquity}%)</td>
                 <td className="py-2 text-center text-foreground font-medium">{formatPercent(result.totalAdvisor, 2)}</td>
               </tr>
-              <tr className="border-b border-border/30">
+              <tr className="border-b border-foreground/15/30">
                 <td className="py-2 text-muted-foreground" colSpan={4}>Buffer (20%)</td>
                 <td className="py-2 text-center text-foreground font-medium">{formatPercent(result.buffer, 2)}</td>
               </tr>
