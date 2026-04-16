@@ -93,14 +93,14 @@ export default function DilutionSimulator() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
           <div>
             <label className="block text-xs text-muted-foreground mb-1">Founders</label>
-            <select value={numFounders} onChange={e => setNumFounders(Number(e.target.value))} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-border text-foreground text-sm">
+            <select value={numFounders} onChange={e => setNumFounders(Number(e.target.value))} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-foreground/15 text-foreground text-sm">
               {[1, 2, 3].map(n => <option key={n} value={n}>{n}</option>)}
             </select>
           </div>
           {Array.from({ length: numFounders }).map((_, i) => (
             <div key={i}>
               <label className="block text-xs text-muted-foreground mb-1">Founder {i + 1} Split (%)</label>
-              <input type="number" value={founderSplits[i]} onChange={e => { const s = [...founderSplits]; s[i] = Number(e.target.value) || 0; setFounderSplits(s); }} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50" />
+              <input type="number" value={founderSplits[i]} onChange={e => { const s = [...founderSplits]; s[i] = Number(e.target.value) || 0; setFounderSplits(s); }} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-foreground/15 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50" />
             </div>
           ))}
           <div>
@@ -124,11 +124,11 @@ export default function DilutionSimulator() {
             <div className="grid grid-cols-3 gap-3">
               <div>
                 <label className="block text-[10px] text-muted-foreground mb-1">Amount Raised (₹ Cr)</label>
-                <input type="number" value={round.amount} onChange={e => updateRound(i, { amount: Number(e.target.value) || 0 })} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50" />
+                <input type="number" value={round.amount} onChange={e => updateRound(i, { amount: Number(e.target.value) || 0 })} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-foreground/15 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50" />
               </div>
               <div>
                 <label className="block text-[10px] text-muted-foreground mb-1">Pre-Money Val (₹ Cr)</label>
-                <input type="number" value={round.preMoney} onChange={e => updateRound(i, { preMoney: Number(e.target.value) || 0 })} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50" />
+                <input type="number" value={round.preMoney} onChange={e => updateRound(i, { preMoney: Number(e.target.value) || 0 })} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-foreground/15 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50" />
               </div>
               <div>
                 <label className="block text-[10px] text-muted-foreground mb-1">ESOP Top-Up: {round.esopTopUp}%</label>
@@ -165,7 +165,7 @@ export default function DilutionSimulator() {
         <div className="overflow-x-auto">
           <table className="w-full text-xs">
             <thead>
-              <tr className="border-b border-border">
+              <tr className="border-b border-foreground/15">
                 <th className="pb-2 text-left text-muted-foreground">Stage</th>
                 {Array.from({ length: numFounders }).map((_, i) => <th key={i} className="pb-2 text-center text-muted-foreground">F{i + 1}</th>)}
                 <th className="pb-2 text-center text-muted-foreground">ESOP</th>
@@ -175,7 +175,7 @@ export default function DilutionSimulator() {
             </thead>
             <tbody>
               {result.map(s => (
-                <tr key={s.stage} className="border-b border-border/30">
+                <tr key={s.stage} className="border-b border-foreground/15/30">
                   <td className="py-2 text-foreground">{s.stage}</td>
                   {s.founders.map((f, i) => <td key={i} className="py-2 text-center text-foreground">{formatPercent(f, 1)}</td>)}
                   <td className="py-2 text-center text-amber-400">{formatPercent(s.esop, 1)}</td>

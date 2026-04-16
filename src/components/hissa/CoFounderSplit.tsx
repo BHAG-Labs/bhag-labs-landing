@@ -103,7 +103,7 @@ export default function CoFounderSplit() {
           {founders.map((f, i) => (
             <div key={i}>
               <label className="block text-xs text-muted-foreground mb-1">Founder {i + 1}</label>
-              <input value={f} onChange={e => { const n = [...names]; n[i] = e.target.value; setNames(n); }} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50" />
+              <input value={f} onChange={e => { const n = [...names]; n[i] = e.target.value; setNames(n); }} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-foreground/15 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50" />
             </div>
           ))}
         </div>
@@ -114,7 +114,7 @@ export default function CoFounderSplit() {
         <h3 className="text-sm font-semibold text-foreground mb-4">Questionnaire</h3>
         <div className="space-y-5">
           {questions.slice(0, 11).map((q, qi) => (
-            <div key={qi} className="pb-4 border-b border-border/30 last:border-0">
+            <div key={qi} className="pb-4 border-b border-foreground/15/30 last:border-0">
               <p className="text-xs font-medium text-foreground mb-2">{qi + 1}. {q.q} <span className="text-muted-foreground/50">({q.weight}pts)</span></p>
               <div className="flex flex-wrap gap-2">
                 {founders.map(f => {

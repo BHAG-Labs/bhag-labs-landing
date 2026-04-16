@@ -74,7 +74,7 @@ export default function EsopTaxCalculator() {
               <label className="block text-xs text-muted-foreground mb-1">{f.label}</label>
               <div className="relative">
                 {f.prefix && <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs text-muted-foreground">{f.prefix}</span>}
-                <input type="number" value={f.value} onChange={e => f.set(Number(e.target.value) || 0)} className={`w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 ${f.prefix ? 'pl-7' : ''}`} />
+                <input type="number" value={f.value} onChange={e => f.set(Number(e.target.value) || 0)} className={`w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-foreground/15 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 ${f.prefix ? 'pl-7' : ''}`} />
               </div>
               {f.helper && <p className="text-[10px] text-muted-foreground/60 mt-0.5">{f.helper}</p>}
             </div>
@@ -92,7 +92,7 @@ export default function EsopTaxCalculator() {
           </div>
           <div>
             <label className="block text-xs text-muted-foreground mb-1">Company Type</label>
-            <select value={companyType} onChange={e => setCompanyType(e.target.value as CompanyType)} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-border text-foreground text-sm">
+            <select value={companyType} onChange={e => setCompanyType(e.target.value as CompanyType)} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-foreground/15 text-foreground text-sm">
               <option value="listed">Listed Company</option>
               <option value="startup">Unlisted (DPIIT-recognised startup)</option>
               <option value="unlisted">Unlisted (non-startup)</option>
@@ -100,7 +100,7 @@ export default function EsopTaxCalculator() {
           </div>
           <div>
             <label className="block text-xs text-muted-foreground mb-1">Holding Period After Exercise</label>
-            <select value={holding} onChange={e => setHolding(e.target.value as HoldingPeriod)} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-border text-foreground text-sm">
+            <select value={holding} onChange={e => setHolding(e.target.value as HoldingPeriod)} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-foreground/15 text-foreground text-sm">
               <option value="<12">Less than 12 months</option>
               <option value="12-24">12-24 months</option>
               <option value=">24">More than 24 months</option>
@@ -133,7 +133,7 @@ export default function EsopTaxCalculator() {
             <div className="flex justify-between text-sm"><span className="text-muted-foreground">− Cost to Exercise</span><span className="text-amber-400">{formatINR(result.costToExercise)}</span></div>
             <div className="flex justify-between text-sm"><span className="text-muted-foreground">− Perquisite Tax</span><span className="text-destructive">{formatINR(result.perquisiteTax)}</span></div>
             <div className="flex justify-between text-sm"><span className="text-muted-foreground">− Capital Gains Tax</span><span className="text-destructive">{formatINR(result.cgTax)}</span></div>
-            <hr className="border-border" />
+            <hr className="border-foreground/15" />
             <div className="flex justify-between text-base"><span className="text-foreground font-medium">Net in Hand</span><span className="text-emerald-400 font-bold text-lg">{formatINR(result.netInHand)}</span></div>
           </div>
 
