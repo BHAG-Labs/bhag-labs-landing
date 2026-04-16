@@ -44,7 +44,7 @@ const InputField = ({ label, value, onChange, prefix, suffix, helper, type = "nu
         type={type}
         value={value}
         onChange={e => onChange(e.target.value)}
-        className={`w-full px-3 py-2 rounded-lg bg-secondary border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 ${prefix ? 'pl-7' : ''} ${suffix ? 'pr-7' : ''}`}
+        className={`w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 ${prefix ? 'pl-7' : ''} ${suffix ? 'pr-7' : ''}`}
       />
       {suffix && <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-muted-foreground">{suffix}</span>}
     </div>
@@ -57,7 +57,7 @@ const VestingTimeline = ({ years, cliff }: { years: number; cliff: number }) => 
   return (
     <div className="mt-3">
       <p className="text-[10px] font-medium text-muted-foreground mb-1">Vesting Schedule</p>
-      <div className="h-2 rounded-full bg-secondary overflow-hidden flex">
+      <div className="h-2 rounded-full bg-[hsl(var(--cream-dark))] overflow-hidden flex">
         {Array.from({ length: years }).map((_, i) => {
           const vested = i + 1 > cliffYears;
           return <div key={i} className={`flex-1 ${vested ? 'bg-primary' : 'bg-destructive/30'} ${i > 0 ? 'ml-px' : ''}`} />;
@@ -86,13 +86,13 @@ const CompanyCard = ({ data, onChange }: { data: CompanyData; onChange: (d: Comp
       <div className="grid grid-cols-2 gap-3">
         <div>
           <label className="block text-xs font-medium text-muted-foreground mb-1">Vesting Period</label>
-          <select value={data.vestingYears} onChange={e => onChange({ ...data, vestingYears: Number(e.target.value) })} className="w-full px-3 py-2 rounded-lg bg-secondary border border-border text-foreground text-sm">
+          <select value={data.vestingYears} onChange={e => onChange({ ...data, vestingYears: Number(e.target.value) })} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-border text-foreground text-sm">
             {vestingOptions.map(y => <option key={y} value={y}>{y} years</option>)}
           </select>
         </div>
         <div>
           <label className="block text-xs font-medium text-muted-foreground mb-1">Cliff Period</label>
-          <select value={data.cliffMonths} onChange={e => onChange({ ...data, cliffMonths: Number(e.target.value) })} className="w-full px-3 py-2 rounded-lg bg-secondary border border-border text-foreground text-sm">
+          <select value={data.cliffMonths} onChange={e => onChange({ ...data, cliffMonths: Number(e.target.value) })} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-border text-foreground text-sm">
             {cliffOptions.map(m => <option key={m} value={m}>{m} months</option>)}
           </select>
         </div>

@@ -95,7 +95,7 @@ export default function CoFounderSplit() {
           <label className="block text-xs font-medium text-muted-foreground mb-1">How many co-founders?</label>
           <div className="flex gap-2">
             {[2, 3, 4].map(n => (
-              <button key={n} onClick={() => setNumFounders(n)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${numFounders === n ? 'bg-primary text-primary-foreground' : 'bg-secondary text-muted-foreground hover:text-foreground'}`}>{n}</button>
+              <button key={n} onClick={() => setNumFounders(n)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${numFounders === n ? 'bg-primary text-primary-foreground' : 'bg-[hsl(var(--cream-dark))] text-muted-foreground hover:text-foreground'}`}>{n}</button>
             ))}
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function CoFounderSplit() {
           {founders.map((f, i) => (
             <div key={i}>
               <label className="block text-xs text-muted-foreground mb-1">Founder {i + 1}</label>
-              <input value={f} onChange={e => { const n = [...names]; n[i] = e.target.value; setNames(n); }} className="w-full px-3 py-2 rounded-lg bg-secondary border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50" />
+              <input value={f} onChange={e => { const n = [...names]; n[i] = e.target.value; setNames(n); }} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50" />
             </div>
           ))}
         </div>
@@ -121,16 +121,16 @@ export default function CoFounderSplit() {
                   const selected = (answers[qi] || []).includes(f);
                   if (q.type === 'single') {
                     return (
-                      <button key={f} onClick={() => setAnswer(qi, [f])} className={`px-3 py-1.5 rounded-lg text-xs transition-colors ${selected ? 'bg-primary text-primary-foreground' : 'bg-secondary text-muted-foreground hover:text-foreground'}`}>{f}</button>
+                      <button key={f} onClick={() => setAnswer(qi, [f])} className={`px-3 py-1.5 rounded-lg text-xs transition-colors ${selected ? 'bg-primary text-primary-foreground' : 'bg-[hsl(var(--cream-dark))] text-muted-foreground hover:text-foreground'}`}>{f}</button>
                     );
                   }
                   return (
-                    <button key={f} onClick={() => toggleMulti(qi, f)} className={`px-3 py-1.5 rounded-lg text-xs transition-colors ${selected ? 'bg-primary text-primary-foreground' : 'bg-secondary text-muted-foreground hover:text-foreground'}`}>{f}</button>
+                    <button key={f} onClick={() => toggleMulti(qi, f)} className={`px-3 py-1.5 rounded-lg text-xs transition-colors ${selected ? 'bg-primary text-primary-foreground' : 'bg-[hsl(var(--cream-dark))] text-muted-foreground hover:text-foreground'}`}>{f}</button>
                   );
                 })}
-                {q.joint && <button onClick={() => setAnswer(qi, ['joint'])} className={`px-3 py-1.5 rounded-lg text-xs transition-colors ${(answers[qi] || []).includes('joint') ? 'bg-primary text-primary-foreground' : 'bg-secondary text-muted-foreground'}`}>Joint idea</button>}
-                {q.none && <button onClick={() => setAnswer(qi, ['none'])} className={`px-3 py-1.5 rounded-lg text-xs transition-colors ${(answers[qi] || []).includes('none') ? 'bg-primary text-primary-foreground' : 'bg-secondary text-muted-foreground'}`}>No revenue yet</button>}
-                {q.equal && <button onClick={() => setAnswer(qi, ['equal'])} className={`px-3 py-1.5 rounded-lg text-xs transition-colors ${(answers[qi] || []).includes('equal') ? 'bg-primary text-primary-foreground' : 'bg-secondary text-muted-foreground'}`}>Roughly equal</button>}
+                {q.joint && <button onClick={() => setAnswer(qi, ['joint'])} className={`px-3 py-1.5 rounded-lg text-xs transition-colors ${(answers[qi] || []).includes('joint') ? 'bg-primary text-primary-foreground' : 'bg-[hsl(var(--cream-dark))] text-muted-foreground'}`}>Joint idea</button>}
+                {q.none && <button onClick={() => setAnswer(qi, ['none'])} className={`px-3 py-1.5 rounded-lg text-xs transition-colors ${(answers[qi] || []).includes('none') ? 'bg-primary text-primary-foreground' : 'bg-[hsl(var(--cream-dark))] text-muted-foreground'}`}>No revenue yet</button>}
+                {q.equal && <button onClick={() => setAnswer(qi, ['equal'])} className={`px-3 py-1.5 rounded-lg text-xs transition-colors ${(answers[qi] || []).includes('equal') ? 'bg-primary text-primary-foreground' : 'bg-[hsl(var(--cream-dark))] text-muted-foreground'}`}>Roughly equal</button>}
               </div>
             </div>
           ))}
@@ -151,7 +151,7 @@ export default function CoFounderSplit() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {result.map((r, i) => (
-            <div key={r.name} className="bg-secondary rounded-lg p-3">
+            <div key={r.name} className="bg-[hsl(var(--cream-dark))] rounded-lg p-3">
               <div className={`w-3 h-3 rounded-full ${colors[i]} mb-2`} />
               <p className="text-sm font-semibold text-foreground">{r.name}</p>
               <p className="text-lg font-bold text-foreground">{formatPercent(r.pct, 1)}</p>
@@ -166,7 +166,7 @@ export default function CoFounderSplit() {
           </div>
         )}
 
-        <div className="mt-4 text-xs text-muted-foreground bg-secondary rounded-lg p-3">
+        <div className="mt-4 text-xs text-muted-foreground bg-[hsl(var(--cream-dark))] rounded-lg p-3">
           💡 We strongly recommend 4-year vesting with a 1-year cliff for ALL co-founders, including the CEO. This protects everyone if someone leaves early.
         </div>
       </div>

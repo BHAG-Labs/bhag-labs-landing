@@ -74,7 +74,7 @@ export default function EsopTaxCalculator() {
               <label className="block text-xs text-muted-foreground mb-1">{f.label}</label>
               <div className="relative">
                 {f.prefix && <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs text-muted-foreground">{f.prefix}</span>}
-                <input type="number" value={f.value} onChange={e => f.set(Number(e.target.value) || 0)} className={`w-full px-3 py-2 rounded-lg bg-secondary border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 ${f.prefix ? 'pl-7' : ''}`} />
+                <input type="number" value={f.value} onChange={e => f.set(Number(e.target.value) || 0)} className={`w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 ${f.prefix ? 'pl-7' : ''}`} />
               </div>
               {f.helper && <p className="text-[10px] text-muted-foreground/60 mt-0.5">{f.helper}</p>}
             </div>
@@ -86,13 +86,13 @@ export default function EsopTaxCalculator() {
             <label className="block text-xs text-muted-foreground mb-1">Tax Regime</label>
             <div className="flex gap-2">
               {(['new', 'old'] as const).map(r => (
-                <button key={r} onClick={() => setRegime(r)} className={`flex-1 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${regime === r ? 'bg-primary text-primary-foreground' : 'bg-secondary text-muted-foreground'}`}>{r === 'new' ? 'New Regime' : 'Old Regime'}</button>
+                <button key={r} onClick={() => setRegime(r)} className={`flex-1 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${regime === r ? 'bg-primary text-primary-foreground' : 'bg-[hsl(var(--cream-dark))] text-muted-foreground'}`}>{r === 'new' ? 'New Regime' : 'Old Regime'}</button>
               ))}
             </div>
           </div>
           <div>
             <label className="block text-xs text-muted-foreground mb-1">Company Type</label>
-            <select value={companyType} onChange={e => setCompanyType(e.target.value as CompanyType)} className="w-full px-3 py-2 rounded-lg bg-secondary border border-border text-foreground text-sm">
+            <select value={companyType} onChange={e => setCompanyType(e.target.value as CompanyType)} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-border text-foreground text-sm">
               <option value="listed">Listed Company</option>
               <option value="startup">Unlisted (DPIIT-recognised startup)</option>
               <option value="unlisted">Unlisted (non-startup)</option>
@@ -100,7 +100,7 @@ export default function EsopTaxCalculator() {
           </div>
           <div>
             <label className="block text-xs text-muted-foreground mb-1">Holding Period After Exercise</label>
-            <select value={holding} onChange={e => setHolding(e.target.value as HoldingPeriod)} className="w-full px-3 py-2 rounded-lg bg-secondary border border-border text-foreground text-sm">
+            <select value={holding} onChange={e => setHolding(e.target.value as HoldingPeriod)} className="w-full px-3 py-2 rounded-lg bg-[hsl(var(--cream-dark))] border border-border text-foreground text-sm">
               <option value="<12">Less than 12 months</option>
               <option value="12-24">12-24 months</option>
               <option value=">24">More than 24 months</option>
@@ -138,11 +138,11 @@ export default function EsopTaxCalculator() {
           </div>
 
           <div className="grid grid-cols-2 gap-3">
-            <div className="bg-secondary rounded-lg p-3 text-center">
+            <div className="bg-[hsl(var(--cream-dark))] rounded-lg p-3 text-center">
               <p className="text-[10px] text-muted-foreground">Effective Total Tax Rate</p>
               <p className="text-lg font-bold text-foreground">{result.grossProceeds > 0 ? formatPercent((result.totalTax / result.grossProceeds) * 100, 1) : '—'}</p>
             </div>
-            <div className="bg-secondary rounded-lg p-3 text-center">
+            <div className="bg-[hsl(var(--cream-dark))] rounded-lg p-3 text-center">
               <p className="text-[10px] text-muted-foreground">Regime Comparison</p>
               <p className="text-xs text-muted-foreground mt-1">{regime === 'new' ? 'New' : 'Old'}: {formatINR(result.perquisiteTax)}</p>
               <p className="text-xs text-emerald-400">{result.altRegime === 'new' ? 'New' : 'Old'}: {formatINR(result.altPerquisiteTax)} {result.altPerquisiteTax < result.perquisiteTax ? '← saves more' : ''}</p>
