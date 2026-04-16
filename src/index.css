@@ -255,6 +255,12 @@
     background-color: hsl(var(--cream-dark));
   }
 
+  /* Gradient border for Hissa calculator cards */
+  .gradient-border {
+    border: 2px solid hsl(var(--charcoal) / 0.15);
+    background: hsl(var(--cream));
+  }
+
   /* Badge styles */
   .badge-live {
     @apply px-3 py-1 text-xs font-semibold uppercase tracking-wider;
