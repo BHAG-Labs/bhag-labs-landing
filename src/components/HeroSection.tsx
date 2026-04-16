@@ -11,14 +11,6 @@ const HeroSection = () => (
     <div className="absolute bottom-5 right-5 w-[30px] h-[30px] border-b-2 border-r-2 border-foreground/20 pointer-events-none" />
 
     <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="mb-8"
-      >
-        <span className="font-subheading text-lg md:text-xl text-muted-foreground italic">भाग लैब्स</span>
-      </motion.div>
 
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
