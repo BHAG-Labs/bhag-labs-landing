@@ -16,6 +16,9 @@ const Footer = () => (
           <ul className="space-y-2 text-sm text-cream/60">
             <li><a href="#neev" className="hover:text-cream transition-colors">Neev</a></li>
             <li><a href="/hissa" className="hover:text-cream transition-colors">Hissa</a></li>
+            <li><a href="/pitchwala" className="hover:text-cream transition-colors">Pitchwala</a></li>
+            <li><a href="/vyapaar" className="hover:text-cream transition-colors">Vyapaar</a></li>
+            <li><a href="/bazaar" className="hover:text-cream transition-colors">Bazaar</a></li>
           </ul>
         </div>
 
