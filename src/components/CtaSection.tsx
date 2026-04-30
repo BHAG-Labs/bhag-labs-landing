@@ -2,7 +2,6 @@ import AnimatedSection from "./AnimatedSection";
 
 const CtaSection = () => (
   <AnimatedSection className="section-padding section-terracotta relative">
-    {/* Double border frame */}
     <div className="absolute inset-4 border border-primary-foreground/20 pointer-events-none" />
     <div className="absolute inset-8 border-2 border-primary-foreground/10 pointer-events-none" />
 
@@ -16,11 +15,11 @@ const CtaSection = () => (
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="#contact" className="bg-charcoal px-8 py-3.5 font-semibold text-cream hover:opacity-90 transition-opacity text-sm uppercase tracking-wider">
-          Book a Demo
+        <a href="/bazaar" title="India's weekly startup newsletter — free, always." className="bg-ochre px-8 py-3.5 font-semibold text-forest hover:opacity-90 transition-opacity text-sm uppercase tracking-wider">
+          Join Bazaar →
         </a>
-        <a href="#" className="px-8 py-3.5 font-semibold border-2 border-cream text-cream hover:bg-cream hover:text-terracotta transition-colors text-sm uppercase tracking-wider">
-          Download Product Overview
+        <a href="#solutions" className="px-8 py-3.5 font-semibold border-2 border-cream text-cream hover:bg-cream hover:text-terracotta transition-colors text-sm uppercase tracking-wider">
+          Explore Our Solutions
         </a>
       </div>
       <a href="#contact" className="inline-block mt-6 text-sm text-cream/80 hover:text-cream transition-colors tracking-wide">

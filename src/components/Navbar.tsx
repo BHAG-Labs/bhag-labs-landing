@@ -5,6 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 const solutions = [
   { name: "Neev", desc: "Lean LaunchPad Platform", href: "#neev" },
   { name: "Hissa", desc: "Startup Equity Calculator", href: "/hissa" },
+  { name: "Pitchwala", desc: "AI pitch deck builder for Indian founders", href: "/pitchwala" },
+  { name: "Vyapaar", desc: "Feasibility reports & partner marketplace", href: "/vyapaar" },
+  { name: "Bazaar", desc: "Weekly newsletter on India's startup economy", href: "/bazaar" },
 ];
 
 const Navbar = () => {
@@ -60,8 +63,8 @@ const Navbar = () => {
           <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase">Contact</a>
         </div>
 
-        <a href="#contact" className="hidden md:inline-flex bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity tracking-wide uppercase">
-          Book a Demo
+        <a href="/bazaar" title="India's weekly startup newsletter — free, always." className="hidden md:inline-flex bg-ochre px-6 py-2.5 text-sm font-semibold text-forest hover:opacity-90 transition-opacity tracking-wide uppercase">
+          Join Bazaar →
         </a>
 
         {/* Mobile toggle */}
@@ -81,12 +84,14 @@ const Navbar = () => {
           >
             <div className="px-6 py-4 flex flex-col gap-4">
               <a href="#solutions" className="text-sm text-muted-foreground uppercase tracking-wide" onClick={() => setMobileOpen(false)}>Solutions</a>
-              <a href="/hissa" className="text-sm text-muted-foreground uppercase tracking-wide" onClick={() => setMobileOpen(false)}>Hissa Calculator</a>
+              <a href="/pitchwala" className="text-sm text-muted-foreground uppercase tracking-wide" onClick={() => setMobileOpen(false)}>Pitchwala</a>
+              <a href="/vyapaar" className="text-sm text-muted-foreground uppercase tracking-wide" onClick={() => setMobileOpen(false)}>Vyapaar</a>
+              <a href="/hissa" className="text-sm text-muted-foreground uppercase tracking-wide" onClick={() => setMobileOpen(false)}>Hissa</a>
               <a href="#who-we-serve" className="text-sm text-muted-foreground uppercase tracking-wide" onClick={() => setMobileOpen(false)}>Who We Serve</a>
               <a href="#why-us" className="text-sm text-muted-foreground uppercase tracking-wide" onClick={() => setMobileOpen(false)}>Why Us</a>
               <a href="#contact" className="text-sm text-muted-foreground uppercase tracking-wide" onClick={() => setMobileOpen(false)}>Contact</a>
-              <a href="#contact" className="bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground text-center uppercase tracking-wide" onClick={() => setMobileOpen(false)}>
-                Book a Demo
+              <a href="/bazaar" className="bg-ochre px-6 py-2.5 text-sm font-semibold text-forest text-center uppercase tracking-wide" onClick={() => setMobileOpen(false)}>
+                Join Bazaar →
               </a>
             </div>
           </motion.div>
