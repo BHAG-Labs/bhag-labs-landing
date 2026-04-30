@@ -40,8 +40,8 @@ const HeroSection = () => (
         transition={{ duration: 0.8, delay: 0.4 }}
         className="flex flex-col sm:flex-row gap-4 justify-center"
       >
-        <a href="#contact" className="bg-primary px-8 py-3.5 font-semibold text-primary-foreground hover:opacity-90 transition-opacity text-sm uppercase tracking-wider">
-          Book a Demo
+        <a href="/bazaar" title="India's weekly startup newsletter — free, always." className="bg-ochre px-8 py-3.5 font-semibold text-forest hover:opacity-90 transition-opacity text-sm uppercase tracking-wider">
+          Join Bazaar →
         </a>
         <a href="#solutions" className="px-8 py-3.5 font-semibold border-2 border-forest text-forest hover:bg-forest hover:text-cream transition-colors text-sm uppercase tracking-wider">
           Explore Our Solutions
