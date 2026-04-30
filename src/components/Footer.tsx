@@ -14,11 +14,11 @@ const Footer = () => (
         <div>
           <h4 className="section-label text-ochre mb-4">Solutions</h4>
           <ul className="space-y-2 text-sm text-cream/60">
-            <li><a href="#neev" className="hover:text-cream transition-colors">Neev</a></li>
-            <li><a href="/hissa" className="hover:text-cream transition-colors">Hissa</a></li>
-            <li><a href="/pitchwala" className="hover:text-cream transition-colors">Pitchwala</a></li>
-            <li><a href="/vyapaar" className="hover:text-cream transition-colors">Vyapaar</a></li>
-            <li><a href="/bazaar" className="hover:text-cream transition-colors">Bazaar</a></li>
+            <li><a href="https://neev.bhaglabs.com" className="hover:text-cream transition-colors">Neev</a></li>
+            <li><a href="https://hissa.bhaglabs.com" className="hover:text-cream transition-colors">Hissa</a></li>
+            <li><a href="https://pitchwala.bhaglabs.com" className="hover:text-cream transition-colors">Pitchwala</a></li>
+            <li><a href="https://vyapaar.bhaglabs.com" className="hover:text-cream transition-colors">Vyapaar</a></li>
+            <li><a href="https://bazaar.bhaglabs.com" className="hover:text-cream transition-colors">Bazaar</a></li>
           </ul>
         </div>
 

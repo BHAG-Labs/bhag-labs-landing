@@ -13,7 +13,7 @@ const products = [
     description:
       "A structured week-by-week platform where founders build Business Model Canvases, log customer interviews, and submit weekly check-ins. Admins monitor every team's progress across the cohort.",
     link: "Explore Neev →",
-    href: "#neev",
+    href: "https://neev.bhaglabs.com",
   },
   {
     icon: PieChart,
@@ -24,7 +24,7 @@ const products = [
     description:
       "Equity tools for the Indian startup ecosystem — ESOP valuation, co-founder splits, dilution simulation, India-specific ESOP tax, and ESOP pool planning. Client-side, all currency in ₹.",
     link: "Try Hissa →",
-    href: "/hissa",
+    href: "https://hissa.bhaglabs.com",
   },
   {
     icon: FileText,
@@ -35,7 +35,7 @@ const products = [
     description:
       "9 questions, 10 slides. A guided wizard that turns founder intent into an investor-ready deck — framed for how Indian VCs actually evaluate seed and pre-seed bets.",
     link: "Build a Deck →",
-    href: "/pitchwala",
+    href: "https://pitchwala.bhaglabs.com",
   },
   {
     icon: Map,
@@ -46,7 +46,7 @@ const products = [
     description:
       "Generate a bank-ready DPR or investor-grade feasibility report in minutes. Plus a co-sell marketplace matching founders with logistics, payments, and sourcing partners.",
     link: "Get a Plan →",
-    href: "/vyapaar",
+    href: "https://vyapaar.bhaglabs.com",
   },
   {
     icon: Newspaper,
@@ -57,7 +57,7 @@ const products = [
     description:
       "A weekly broadsheet on India's startup, VC, and policy economy. Funding signals, regulatory shifts, and one actionable deal — every Sunday morning. Free, always.",
     link: "Subscribe →",
-    href: "/bazaar",
+    href: "https://bazaar.bhaglabs.com",
   },
 ];
 
