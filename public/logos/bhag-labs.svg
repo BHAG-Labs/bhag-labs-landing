@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs</title>
+  <!-- Mark -->
+  <g transform="translate(0,0)">
+    <path d="M100 28 L172 162 L28 162 Z" fill="#1a1a1a"/>
+    <circle cx="100" cy="80" r="18" fill="#c89b27"/>
+    <rect x="14" y="172" width="172" height="5" fill="#1a1a1a"/>
+    <path d="M100 184 L107 191 L100 198 L93 191 Z" fill="#c1502e"/>
+  </g>
+  <!-- Wordmark -->
+  <g transform="translate(214,124)">
+    <text font-family="Playfair Display, Georgia, serif" font-weight="900" font-size="78" letter-spacing="-1.5" fill="#1a1a1a">BHAG</text>
+    <text x="0" y="40" font-family="Cormorant Garamond, Georgia, serif" font-style="italic" font-weight="500" font-size="32" fill="#c89b27">Labs</text>
+  </g>
+</svg>

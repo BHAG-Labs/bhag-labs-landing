@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs</title>
+  <rect width="256" height="256" fill="#f1ebe1"/>
+  <!-- Audacious peak: charcoal triangle rising from a foundation rule -->
+  <path d="M128 44 L208 196 L48 196 Z" fill="#1a1a1a"/>
+  <!-- Inner ochre flame / sun rising at the apex -->
+  <circle cx="128" cy="100" r="22" fill="#c89b27"/>
+  <!-- Foundation rule -->
+  <rect x="32" y="208" width="192" height="6" fill="#1a1a1a"/>
+  <!-- Diamond punctuation -->
+  <path d="M128 222 L136 230 L128 238 L120 230 Z" fill="#c1502e"/>
+</svg>

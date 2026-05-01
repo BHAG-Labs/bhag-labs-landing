@@ -6,7 +6,7 @@ const solutions = [
   { name: "Neev", desc: "Lean LaunchPad Platform", href: "https://neev.bhaglabs.com" },
   { name: "Hissa", desc: "Startup Equity Calculator", href: "https://hissa.bhaglabs.com" },
   { name: "Pitchwala", desc: "AI pitch deck builder for Indian founders", href: "https://pitchwala.bhaglabs.com" },
-  { name: "Vyapaar", desc: "Feasibility reports & partner marketplace", href: "https://vyapaar.bhaglabs.com" },
+  { name: "Yantra", desc: "AI agents & business solutions, co-sold for every startup need", href: "https://yantra.bhaglabs.com" },
   { name: "Bazaar", desc: "Weekly newsletter on India's startup economy", href: "https://bazaar.bhaglabs.com" },
 ];
 
@@ -17,9 +17,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
       <div className="max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between h-16">
-        <a href="#" className="flex flex-col leading-none">
-          <span className="font-heading font-bold text-xl text-foreground tracking-tight">BHAG Labs</span>
-          <span className="text-[10px] text-muted-foreground font-subheading">भाग लैब्स</span>
+        <a href="#" className="flex items-center gap-2.5 leading-none">
+          <img src="/logos/bhag-labs-mark.svg" alt="" className="h-8 w-8" aria-hidden="true" />
+          <span className="flex flex-col">
+            <span className="font-heading font-bold text-xl text-foreground tracking-tight">BHAG Labs</span>
+            <span className="text-[10px] text-muted-foreground font-subheading">भाग लैब्स</span>
+          </span>
         </a>
 
         {/* Desktop Nav */}
@@ -85,7 +88,7 @@ const Navbar = () => {
             <div className="px-6 py-4 flex flex-col gap-4">
               <a href="#solutions" className="text-sm text-muted-foreground uppercase tracking-wide" onClick={() => setMobileOpen(false)}>Solutions</a>
               <a href="https://pitchwala.bhaglabs.com" className="text-sm text-muted-foreground uppercase tracking-wide" onClick={() => setMobileOpen(false)}>Pitchwala</a>
-              <a href="https://vyapaar.bhaglabs.com" className="text-sm text-muted-foreground uppercase tracking-wide" onClick={() => setMobileOpen(false)}>Vyapaar</a>
+              <a href="https://yantra.bhaglabs.com" className="text-sm text-muted-foreground uppercase tracking-wide" onClick={() => setMobileOpen(false)}>Yantra</a>
               <a href="https://hissa.bhaglabs.com" className="text-sm text-muted-foreground uppercase tracking-wide" onClick={() => setMobileOpen(false)}>Hissa</a>
               <a href="#who-we-serve" className="text-sm text-muted-foreground uppercase tracking-wide" onClick={() => setMobileOpen(false)}>Who We Serve</a>
               <a href="#why-us" className="text-sm text-muted-foreground uppercase tracking-wide" onClick={() => setMobileOpen(false)}>Why Us</a>

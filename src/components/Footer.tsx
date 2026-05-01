@@ -17,7 +17,7 @@ const Footer = () => (
             <li><a href="https://neev.bhaglabs.com" className="hover:text-cream transition-colors">Neev</a></li>
             <li><a href="https://hissa.bhaglabs.com" className="hover:text-cream transition-colors">Hissa</a></li>
             <li><a href="https://pitchwala.bhaglabs.com" className="hover:text-cream transition-colors">Pitchwala</a></li>
-            <li><a href="https://vyapaar.bhaglabs.com" className="hover:text-cream transition-colors">Vyapaar</a></li>
+            <li><a href="https://yantra.bhaglabs.com" className="hover:text-cream transition-colors">Yantra</a></li>
             <li><a href="https://bazaar.bhaglabs.com" className="hover:text-cream transition-colors">Bazaar</a></li>
           </ul>
         </div>

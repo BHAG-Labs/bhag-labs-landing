@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" role="img" aria-label="Neev">
+  <title>Neev — Foundation</title>
+  <g>
+    <rect x="14"  y="142" width="176" height="28" fill="#1a1a1a"/>
+    <rect x="30"  y="110" width="144" height="24" fill="#1a1a1a"/>
+    <rect x="46"  y="82"  width="112" height="20" fill="#2a4942"/>
+    <rect x="92"  y="40"  width="20"  height="36" fill="#c1502e"/>
+    <circle cx="102" cy="32" r="7" fill="#c89b27"/>
+  </g>
+  <g transform="translate(220,124)">
+    <text font-family="Playfair Display, Georgia, serif" font-weight="900" font-size="78" letter-spacing="-1" fill="#1a1a1a">Neev</text>
+    <text x="0" y="40" font-family="Cormorant Garamond, Georgia, serif" font-style="italic" font-weight="500" font-size="28" fill="#2a4942">नींव — the foundation</text>
+  </g>
+</svg>

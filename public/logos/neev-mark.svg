@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Neev">
+  <title>Neev — Foundation</title>
+  <rect width="256" height="256" fill="#f1ebe1"/>
+  <!-- Three foundation stones, ascending, plus a small rising column -->
+  <rect x="40"  y="172" width="176" height="32" fill="#1a1a1a"/>
+  <rect x="56"  y="136" width="144" height="28" fill="#1a1a1a"/>
+  <rect x="72"  y="104" width="112" height="24" fill="#2a4942"/>
+  <!-- Rising column / new build -->
+  <rect x="116" y="56"  width="24"  height="40" fill="#c1502e"/>
+  <!-- Apex dot -->
+  <circle cx="128" cy="46" r="8" fill="#c89b27"/>
+</svg>

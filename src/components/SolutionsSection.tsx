@@ -39,14 +39,14 @@ const products = [
   },
   {
     icon: Map,
-    name: "Vyapaar",
-    category: "Feasibility Reports & Marketplace",
+    name: "Yantra",
+    category: "AI Agents & Business Solutions Marketplace",
     badge: { label: "New", cls: "bg-ochre text-forest" },
     borderStyle: "border-dashed",
     description:
-      "Generate a bank-ready DPR or investor-grade feasibility report in minutes. Plus a co-sell marketplace matching founders with logistics, payments, and sourcing partners.",
+      "A marketplace of proprietary AI agents (video, social, newsletter, outbound) and curated business solutions (logistics, payments, legal, marketing) — co-sold against the action plan from your feasibility report. Agents run on BHAG Labs' own GCP infra; partner solutions are commission-rev-shared.",
     link: "Get a Plan →",
-    href: "https://vyapaar.bhaglabs.com",
+    href: "https://yantra.bhaglabs.com",
   },
   {
     icon: Newspaper,
