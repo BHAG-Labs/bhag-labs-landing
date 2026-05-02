@@ -30,10 +30,10 @@ const ContactSection = () => {
               For partnerships, pilots, and program-level conversations. We read every email. No autoresponders.
             </p>
             <a
-              href="mailto:founders@bhaglabs.in"
+              href="mailto:founders@bhaglabs.com"
               className="inline-flex items-center gap-2 border-2 border-foreground px-6 py-2.5 text-sm font-semibold text-foreground hover:bg-foreground hover:text-cream transition-colors uppercase tracking-wider"
             >
-              founders@bhaglabs.in
+              founders@bhaglabs.com
             </a>
           </div>
 

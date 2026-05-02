@@ -8,6 +8,7 @@ import Hissa from "./pages/Hissa.tsx";
 import Pitchwala from "./pages/Pitchwala.tsx";
 import Yantra from "./pages/Yantra.tsx";
 import Bazaar from "./pages/Bazaar.tsx";
+import LegalPage from "./pages/LegalPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,9 @@ const App = () => (
           <Route path="/yantra" element={<Yantra />} />
           <Route path="/vyapaar" element={<Yantra />} />
           <Route path="/bazaar" element={<Bazaar />} />
+          <Route path="/privacy" element={<LegalPage kind="privacy" />} />
+          <Route path="/terms" element={<LegalPage kind="terms" />} />
+          <Route path="/grievance" element={<LegalPage kind="grievance" />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

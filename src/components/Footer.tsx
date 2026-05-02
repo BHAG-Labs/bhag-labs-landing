@@ -38,17 +38,21 @@ const Footer = () => (
           <ul className="space-y-2 text-sm text-cream/60">
             <li><a href="#" className="hover:text-cream transition-colors">About</a></li>
             <li><a href="#" className="hover:text-cream transition-colors">Blog</a></li>
-            <li><a href="#contact" className="hover:text-cream transition-colors">Contact</a></li>
-            <li><a href="#" className="hover:text-cream transition-colors">Privacy Policy</a></li>
+            <li><a href="mailto:careers@bhaglabs.com" className="hover:text-cream transition-colors">Careers</a></li>
+            <li><a href="mailto:press@bhaglabs.com" className="hover:text-cream transition-colors">Press</a></li>
+            <li><a href="mailto:partners@bhaglabs.com" className="hover:text-cream transition-colors">Partnerships</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="section-label text-ochre mb-4">Connect</h4>
+          <h4 className="section-label text-ochre mb-4">Contact & Legal</h4>
           <ul className="space-y-2 text-sm text-cream/60">
-            <li><a href="#" className="hover:text-cream transition-colors">LinkedIn</a></li>
-            <li><a href="#" className="hover:text-cream transition-colors">Twitter / X</a></li>
-            <li><a href="#" className="hover:text-cream transition-colors">Email</a></li>
+            <li><a href="mailto:hello@bhaglabs.com" className="hover:text-cream transition-colors">hello@bhaglabs.com</a></li>
+            <li><a href="mailto:founders@bhaglabs.com" className="hover:text-cream transition-colors">founders@bhaglabs.com</a></li>
+            <li><a href="/privacy" className="hover:text-cream transition-colors">Privacy Policy</a></li>
+            <li><a href="/terms" className="hover:text-cream transition-colors">Terms of Service</a></li>
+            <li><a href="mailto:privacy@bhaglabs.com" className="hover:text-cream transition-colors">Data Requests (DPDP)</a></li>
+            <li><a href="mailto:security@bhaglabs.com" className="hover:text-cream transition-colors">Security Disclosure</a></li>
           </ul>
         </div>
       </div>
