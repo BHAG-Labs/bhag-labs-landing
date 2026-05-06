@@ -1,3 +1,12 @@
+# --- Runway Project share short-links ---
+# Captions on social posts use bhaglabs.com/r/<slug> (clean, short).
+# These 301-redirect to /runway with full UTM params attached for attribution.
+# Order matters: must come BEFORE the /runway/* proxy and /* SPA fallback.
+/r/wa  /runway?utm_source=whatsapp&utm_medium=share&utm_campaign=runway_founder_share   301
+/r/x   /runway?utm_source=x&utm_medium=share&utm_campaign=runway_founder_share          301
+/r/li  /runway?utm_source=linkedin&utm_medium=share&utm_campaign=runway_founder_share   301
+/r/ig  /runway?utm_source=instagram&utm_medium=share&utm_campaign=runway_founder_share  301
+
 # --- Runway Project (proxied from runway-bhaglabs.netlify.app) ---
 # Status 200 = silent proxy; URL bar stays as bhaglabs.com/runway.
 /runway        https://runway-bhaglabs.netlify.app/runway        200
