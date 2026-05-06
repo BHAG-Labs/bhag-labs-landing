@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 200" role="img" aria-label="The Runway Project">
+  <title>The Runway Project</title>
+
+  <g transform="translate(8,12)">
+    <line x1="0" y1="106" x2="176" y2="106" stroke="#1a1a1a" stroke-width="0.8" opacity="0.35"/>
+    <circle cx="88" cy="96" r="16" fill="#c1502e"/>
+    <line x1="62"  y1="78" x2="114" y2="78" stroke="#c1502e" stroke-width="1.6" opacity="0.45"/>
+    <line x1="68"  y1="66" x2="108" y2="66" stroke="#c1502e" stroke-width="1.6" opacity="0.28"/>
+    <line x1="74"  y1="54" x2="102" y2="54" stroke="#c1502e" stroke-width="1.6" opacity="0.16"/>
+    <path d="M14 174 L162 174 L116 106 L60 106 Z" fill="#1a1a1a"/>
+    <g fill="#c89b27">
+      <rect x="86" y="156" width="4.5" height="11"/>
+      <rect x="86.5" y="142" width="4" height="9"/>
+      <rect x="87" y="130" width="3" height="6"/>
+      <rect x="87.5" y="120" width="2.5" height="5"/>
+    </g>
+  </g>
+
+  <g transform="translate(196,118)">
+    <text font-family="Playfair Display, Georgia, serif" font-weight="900" font-size="62" letter-spacing="-0.5" fill="#1a1a1a">The Runway <tspan fill="#c1502e">Project.</tspan></text>
+    <text x="0" y="34" font-family="Cormorant Garamond, Georgia, serif" font-style="italic" font-weight="500" font-size="24" fill="#2a4942">a founder research program by BHAG Labs</text>
+  </g>
+</svg>

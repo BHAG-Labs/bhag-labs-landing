@@ -1,1 +1,10 @@
-/*    /index.html   200
+# --- Runway Project (proxied from a separate Netlify deploy) ---
+# After you deploy runway/ to its own Netlify site, replace
+# RUNWAY_NETLIFY_HOSTNAME below with that site's *.netlify.app hostname
+# (Netlify dashboard → Site settings → Domain management → Default subdomain).
+# Status 200 = silent proxy; the URL bar stays as bhaglabs.com/runway.
+/runway        https://RUNWAY_NETLIFY_HOSTNAME.netlify.app/runway        200
+/runway/*      https://RUNWAY_NETLIFY_HOSTNAME.netlify.app/runway/:splat  200
+
+# SPA fallback for the landing page itself.
+/*             /index.html                                                200

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="The Runway Project">
+  <title>The Runway Project — perspective runway with rising sun</title>
+  <rect width="256" height="256" fill="#f1ebe1"/>
+
+  <!-- Horizon line (subtle) -->
+  <line x1="20" y1="138" x2="236" y2="138" stroke="#1a1a1a" stroke-width="0.8" opacity="0.35"/>
+
+  <!-- Terracotta sun rising on the horizon at the vanishing point -->
+  <circle cx="128" cy="124" r="22" fill="#c1502e"/>
+
+  <!-- Sun-ray hints above the horizon -->
+  <line x1="92"  y1="100" x2="164" y2="100" stroke="#c1502e" stroke-width="2" opacity="0.45"/>
+  <line x1="100" y1="84"  x2="156" y2="84"  stroke="#c1502e" stroke-width="2" opacity="0.3"/>
+  <line x1="108" y1="70"  x2="148" y2="70"  stroke="#c1502e" stroke-width="2" opacity="0.18"/>
+
+  <!-- Runway in perspective: trapezoid converging to vanishing point -->
+  <path d="M40 226 L216 226 L154 138 L102 138 Z" fill="#1a1a1a"/>
+
+  <!-- Center stripes (dashed runway markers, ochre — the "centerline") -->
+  <g fill="#c89b27">
+    <rect x="125" y="200" width="6"   height="14"/>
+    <rect x="125.5" y="180" width="5" height="11"/>
+    <rect x="126" y="164" width="4"   height="8"/>
+    <rect x="126.5" y="152" width="3" height="6"/>
+  </g>
+
+  <!-- Diamond punctuation, lower-right -->
+  <path d="M226 226 L232 232 L226 238 L220 232 Z" fill="#c1502e" opacity="0"/>
+</svg>

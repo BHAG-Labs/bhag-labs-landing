@@ -1,16 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Pitchwala">
-  <title>Pitchwala — The Pitcher</title>
+  <title>Pitchwala — pitch deck</title>
   <rect width="256" height="256" fill="#f1ebe1"/>
-  <!-- Slide stack (3 cards, fanned) -->
+
+  <!-- Slide stack: ochre back, forest middle, charcoal front -->
+  <rect x="56" y="84" width="124" height="124" rx="4" fill="#c89b27" transform="rotate(-8 118 146)"/>
+  <rect x="64" y="68" width="124" height="124" rx="4" fill="#2a4942" transform="rotate(-3 126 130)"/>
+  <rect x="72" y="56" width="124" height="124" rx="4" fill="#1a1a1a"/>
+
+  <!-- Slide masthead: title rule + section label -->
+  <rect x="86" y="68" width="60" height="2" fill="#c89b27"/>
+  <text x="86" y="80" font-family="Inter, sans-serif" font-weight="700" font-size="7" letter-spacing="2" fill="#f1ebe1">SLIDE 04 · TRACTION</text>
+  <rect x="86" y="86" width="96" height="4" fill="#f1ebe1"/>
+
+  <!-- Subtle baseline rule for the chart -->
+  <line x1="86" y1="160" x2="182" y2="160" stroke="#f1ebe1" stroke-width="0.6" opacity="0.35"/>
+
+  <!-- Ascending bar chart -->
   <g>
-    <rect x="60"  y="80"  width="120" height="120" rx="6" fill="#c89b27" transform="rotate(-9 120 140)"/>
-    <rect x="68"  y="64"  width="120" height="120" rx="6" fill="#2a4942" transform="rotate(-3 128 124)"/>
-    <rect x="76"  y="56"  width="120" height="120" rx="6" fill="#1a1a1a"/>
+    <rect x="90"  y="148" width="14" height="12" fill="#f1ebe1" opacity="0.45"/>
+    <rect x="110" y="138" width="14" height="22" fill="#f1ebe1" opacity="0.65"/>
+    <rect x="130" y="124" width="14" height="36" fill="#f1ebe1" opacity="0.85"/>
+    <rect x="150" y="106" width="14" height="54" fill="#c1502e"/>
   </g>
-  <!-- Lines on the top slide -->
-  <rect x="92"  y="76"  width="88"  height="6" fill="#f1ebe1"/>
-  <rect x="92"  y="92"  width="64"  height="4" fill="#f1ebe1" opacity="0.6"/>
-  <rect x="92"  y="104" width="72"  height="4" fill="#f1ebe1" opacity="0.6"/>
-  <!-- Play triangle = "pitch in motion" -->
-  <path d="M120 128 L160 152 L120 176 Z" fill="#c1502e"/>
+
+  <!-- Trend arrow -->
+  <path d="M170 100 L184 86" stroke="#c1502e" stroke-width="3" stroke-linecap="round"/>
+  <path d="M184 86 L184 96 M184 86 L174 86" stroke="#c1502e" stroke-width="3" stroke-linecap="round"/>
 </svg>

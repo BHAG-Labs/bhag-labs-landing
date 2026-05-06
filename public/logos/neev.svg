@@ -1,14 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" role="img" aria-label="Neev">
-  <title>Neev — Foundation</title>
-  <g>
-    <rect x="14"  y="142" width="176" height="28" fill="#1a1a1a"/>
-    <rect x="30"  y="110" width="144" height="24" fill="#1a1a1a"/>
-    <rect x="46"  y="82"  width="112" height="20" fill="#2a4942"/>
-    <rect x="92"  y="40"  width="20"  height="36" fill="#c1502e"/>
-    <circle cx="102" cy="32" r="7" fill="#c89b27"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" role="img" aria-label="Neev">
+  <title>Neev — foundation stone</title>
+
+  <!-- Compact framed mark -->
+  <g transform="translate(8,12)">
+    <rect x="0" y="0" width="176" height="176" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+    <rect x="6" y="6" width="164" height="164" fill="none" stroke="#1a1a1a" stroke-width="0.6"/>
+    <line x1="22" y1="32" x2="58" y2="32" stroke="#1a1a1a" stroke-width="0.7"/>
+    <line x1="118" y1="32" x2="154" y2="32" stroke="#1a1a1a" stroke-width="0.7"/>
+    <text x="88" y="35" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="9" letter-spacing="4" fill="#1a1a1a">NEEV</text>
+    <circle cx="88" cy="60" r="7" fill="#c89b27"/>
+    <rect x="82" y="70" width="12" height="22" fill="#c1502e"/>
+    <rect x="56" y="92" width="64"  height="14" fill="#2a4942"/>
+    <rect x="42" y="108" width="92" height="16" fill="#1a1a1a"/>
+    <rect x="30" y="126" width="116" height="20" fill="#1a1a1a"/>
   </g>
-  <g transform="translate(220,124)">
-    <text font-family="Playfair Display, Georgia, serif" font-weight="900" font-size="78" letter-spacing="-1" fill="#1a1a1a">Neev</text>
+
+  <g transform="translate(214,124)">
+    <text font-family="Playfair Display, Georgia, serif" font-weight="900" font-size="78" letter-spacing="-1" fill="#1a1a1a">Neev<tspan fill="#c1502e">.</tspan></text>
     <text x="0" y="40" font-family="Cormorant Garamond, Georgia, serif" font-style="italic" font-weight="500" font-size="28" fill="#2a4942">नींव — the foundation</text>
   </g>
 </svg>
