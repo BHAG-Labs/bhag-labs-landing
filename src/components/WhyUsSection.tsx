@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 
 const features = [
   { icon: BookOpen, title: "Methodology-First", desc: "We encode the Lean LaunchPad, Business Model Canvas, and Customer Development methodology directly into the workflow." },
-  { icon: UsersRound, title: "Built for Cohorts", desc: "Designed for cohort-based programs — multiple teams, mentors, check-in cycles, and demo days." },
+  { icon: UsersRound, title: "Built for Cohorts", desc: "Designed for cohort-based programs - multiple teams, mentors, check-in cycles, and demo days." },
   { icon: LayoutDashboard, title: "Admin Superpowers", desc: "Real-time dashboards showing hypotheses validated, interviews completed, pivots logged, and mood trends." },
   { icon: GitFork, title: "Structured Pivots", desc: "Every version of the Business Model Canvas is preserved, with pivot notes explaining the evolution." },
-  { icon: Shield, title: "Privacy & Roles", desc: "Row-level security ensures clean data boundaries — critical for academic integrity and multi-stakeholder programs." },
-  { icon: Cpu, title: "AI-Ready", desc: "Built to integrate AI tools — from hypothesis generation to insight analysis — without compromising the methodology." },
+  { icon: Shield, title: "Privacy & Roles", desc: "Row-level security ensures clean data boundaries - critical for academic integrity and multi-stakeholder programs." },
+  { icon: Cpu, title: "AI-Ready", desc: "Built to integrate AI tools - from hypothesis generation to insight analysis - without compromising the methodology." },
 ];
 
 const WhyUsSection = () => (

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 340" role="img" aria-label="BHAG Labs — vesica piscis construction">
+  <title>BHAG Labs — vesica piscis construction (Euclid 1.1)</title>
+  <rect width="520" height="340" fill="#f1ebe1"/>
+
+  <!-- Construction guides (hairline) -->
+  <g stroke="#1a1a1a" stroke-width="0.6" fill="none" opacity="0.35">
+    <!-- Both circles as hairline guides -->
+    <circle cx="260" cy="142" r="56"/>
+    <circle cx="260" cy="198" r="56"/>
+    <!-- The equilateral triangle hiding inside the vesica piscis -->
+    <path d="M260 142 L260 198 L308.5 170 Z"/>
+    <!-- Radius line from top center to right intersection -->
+    <line x1="260" y1="142" x2="308.5" y2="170"/>
+    <!-- Vertical axis through both centers -->
+    <line x1="260" y1="86" x2="260" y2="254" stroke-dasharray="2 3"/>
+  </g>
+
+  <!-- The filled mark sits on top of the guides -->
+  <g transform="translate(0,42)">
+    <circle cx="260" cy="100" r="56" fill="#1a1a1a"/>
+    <circle cx="260" cy="156" r="56" fill="#c1502e"/>
+    <path fill="#f1ebe1" d="M211.5 128 A56 56 0 0 1 308.5 128 A56 56 0 0 1 211.5 128 Z"/>
+  </g>
+
+  <!-- Center markers (each center lies on the OTHER circle's boundary: d = r) -->
+  <g fill="#f1ebe1" stroke="#1a1a1a" stroke-width="0.8">
+    <circle cx="260" cy="142" r="2.5"/>
+    <circle cx="260" cy="198" r="2.5"/>
+  </g>
+
+  <!-- Labels -->
+  <g font-family="Inter, ui-sans-serif, system-ui, sans-serif" fill="#1a1a1a">
+    <text x="244" y="138" font-size="11" font-weight="500" text-anchor="end">O₁</text>
+    <text x="244" y="204" font-size="11" font-weight="500" text-anchor="end">O₂</text>
+    <text x="282" y="158" font-size="10" font-weight="500" opacity="0.7">r</text>
+    <text x="320" y="174" font-size="10" font-weight="500" opacity="0.7">d = r</text>
+  </g>
+
+  <!-- Caption -->
+  <g font-family="Inter, ui-sans-serif, system-ui, sans-serif" fill="#1a1a1a">
+    <text x="260" y="300" font-size="11" font-weight="600" letter-spacing="3" text-anchor="middle">VESICA  PISCIS</text>
+    <text x="260" y="320" font-size="10" font-weight="500" letter-spacing="1" text-anchor="middle" opacity="0.6">Euclid, Elements — Proposition 1.1</text>
+  </g>
+</svg>

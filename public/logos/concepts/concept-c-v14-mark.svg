@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs v14</title>
+  <defs>
+    <!-- Soft ambient drop shadow (matte, not glossy) -->
+    <filter id="v14-shadow" x="0" y="0" width="256" height="256" filterUnits="userSpaceOnUse">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.2"/>
+      <feOffset dy="2.5"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.28"/></feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Charcoal puck: light from upper-left, base #1a1a1a -->
+    <radialGradient id="v14-charcoal" cx="36%" cy="30%" r="82%" fx="32%" fy="26%">
+      <stop offset="0%"  stop-color="#363636"/>
+      <stop offset="60%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0b0b0b"/>
+    </radialGradient>
+
+    <!-- Terracotta puck: light from upper-left, base #c1502e -->
+    <radialGradient id="v14-terracotta" cx="36%" cy="30%" r="82%" fx="32%" fy="26%">
+      <stop offset="0%"  stop-color="#d96b48"/>
+      <stop offset="60%" stop-color="#c1502e"/>
+      <stop offset="100%" stop-color="#963c1f"/>
+    </radialGradient>
+
+    <!-- Forest lens: subtle radial, base #2a4942 -->
+    <radialGradient id="v14-forest" cx="42%" cy="32%" r="80%">
+      <stop offset="0%"  stop-color="#3a5d52"/>
+      <stop offset="100%" stop-color="#1d3830"/>
+    </radialGradient>
+
+    <!-- Stem cylindrical shading: gradient axis is exactly perpendicular to the stem -->
+    <linearGradient id="v14-stem" gradientUnits="userSpaceOnUse"
+                    x1="87.17" y1="132.44" x2="101.83" y2="135.56">
+      <stop offset="0%"  stop-color="#2e2e2e"/>
+      <stop offset="50%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+
+    <!-- Lens = bottom disc clipped to top disc area -->
+    <clipPath id="v14-lens-clip">
+      <circle cx="148" cy="88" r="48"/>
+    </clipPath>
+  </defs>
+
+  <rect width="256" height="256" fill="#f1ebe1"/>
+
+  <!-- Soft floor shadow grounds the composition -->
+  <ellipse cx="148" cy="234" rx="72" ry="4" fill="#1a1a1a" opacity="0.13"/>
+
+  <!-- Stem: rounded cylinder, 12 deg lean.
+       Both discs are now on the same vertical axis (x=148).
+       Stem centerline is 5 px inside the top disc edge (merger),
+       and grazes the bottom disc (tangent within 0.4 px). -->
+  <line x1="76" y1="221" x2="113" y2="47"
+        stroke="url(#v14-stem)" stroke-width="15" stroke-linecap="round"
+        filter="url(#v14-shadow)"/>
+
+  <!-- Bottom disc: terracotta puck (the market) -->
+  <circle cx="148" cy="168" r="60" fill="url(#v14-terracotta)" filter="url(#v14-shadow)"/>
+
+  <!-- Top disc: charcoal puck (merges with stem -- founder + launchpad) -->
+  <circle cx="148" cy="88" r="48" fill="url(#v14-charcoal)" filter="url(#v14-shadow)"/>
+
+  <!-- Lens: where the two shapes meet (product-market fit) -->
+  <circle cx="148" cy="168" r="60" fill="url(#v14-forest)" clip-path="url(#v14-lens-clip)"/>
+</svg>

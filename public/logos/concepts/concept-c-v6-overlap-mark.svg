@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs — Overlapping Discs with Tilted Spine</title>
+  <rect width="256" height="256" fill="#f1ebe1"/>
+
+  <!-- Bottom disc: R = 44. Audacious. -->
+  <circle cx="130" cy="140" r="44" fill="#c1502e"/>
+
+  <!-- Top disc: r = 30. Disciplined, smaller, centre tilted left of bottom disc's centre. -->
+  <circle cx="118" cy="88" r="30" fill="#1a1a1a"/>
+
+  <!-- Lens of overlap: forest, a third hue distinct from both discs.
+       Where rigor (charcoal) meets ambition (terracotta), a new colour emerges. -->
+  <path fill="#3d5a4a" d="M97.77 110.10 A30 30 0 0 1 145.83 98.99 A44 44 0 0 1 97.77 110.10 Z"/>
+
+  <!-- Spine: tilted chord through both discs (NOT a strict tangent — a tangent line cannot stay flush
+       beyond its two tangent points). Direction matches the line through the two leftmost points
+       (118−30, 88) → (130−44, 140) = (88, 88) → (86, 140), offset right by ~14 so the right edge
+       of the stroke is flush with each disc's left arc throughout. Butt cap on the bottom: the stem
+       ends exactly where the bottom disc's left arc curves back to the right (y ≈ 170), so there is
+       no cream wedge below. The remaining triangle below-and-left of the stem-foot is the disc
+       curving away to its base — that is the “little triangle” negative space. -->
+  <line x1="102" y1="50" x2="91" y2="170"
+        stroke="#1a1a1a" stroke-width="14" stroke-linecap="butt"/>
+</svg>

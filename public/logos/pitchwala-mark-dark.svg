@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Pitchwala">
+  <title>Pitchwala dark</title>
+  <rect width="256" height="256" fill="#1a1a1a"/>
+
+  <rect x="68" y="52" width="120" height="152" rx="3" fill="#c89b27" transform="rotate(-8 128 128)"/>
+  <rect x="68" y="52" width="120" height="152" rx="3" fill="#2a4942" transform="rotate(-4 128 128)"/>
+  <rect x="68" y="52" width="120" height="152" rx="3" fill="#f1ebe1"/>
+
+  <g>
+    <rect x="84"  y="168" width="18" height="12" fill="#1a1a1a" opacity="0.4"/>
+    <rect x="108" y="156" width="18" height="24" fill="#1a1a1a" opacity="0.6"/>
+    <rect x="132" y="144" width="18" height="36" fill="#1a1a1a" opacity="0.8"/>
+    <rect x="156" y="120" width="18" height="60" fill="#c1502e"/>
+  </g>
+
+  <rect x="84" y="68" width="48" height="3" fill="#c89b27"/>
+  <rect x="84" y="80" width="80" height="5" fill="#1a1a1a"/>
+  <rect x="84" y="92" width="60" height="3" fill="#1a1a1a" opacity="0.5"/>
+
+  <line x1="174" y1="114" x2="182" y2="74" stroke="#c1502e" stroke-width="3" stroke-linecap="butt"/>
+  <polyline points="176,74 182,74 182,80" fill="none" stroke="#c1502e" stroke-width="3" stroke-linecap="butt"/>
+</svg>

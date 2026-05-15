@@ -1,0 +1,436 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>BHAG Labs — logo concepts</title>
+  <style>
+    :root { color-scheme: light; }
+    body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; margin: 0; padding: 48px; background: #f1ebe1; color: #1a1a1a; }
+    h1 { font-weight: 600; letter-spacing: -1px; margin: 0 0 8px; }
+    .sub { opacity: .6; margin: 0 0 40px; }
+    .row { display: grid; grid-template-columns: 220px 1fr; gap: 24px; align-items: center; border-top: 1px solid rgba(0,0,0,.1); padding: 32px 0; }
+    .row:last-child { border-bottom: 1px solid rgba(0,0,0,.1); }
+    .mark { background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+    .mark img { display: block; width: 100%; aspect-ratio: 1; }
+    .lockup { background: #fff; padding: 24px; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+    .lockup img { display: block; width: 100%; max-height: 160px; object-fit: contain; }
+    .name { font-weight: 600; font-size: 20px; margin-bottom: 4px; }
+    .desc { opacity: .7; font-size: 14px; }
+    .sizes { display:flex; gap: 16px; align-items:center; margin-top:16px; background: #1a1a1a; padding: 12px 16px; border-radius: 6px; }
+    .sizes img { background: #f1ebe1; }
+    .sizes .label { color: #f1ebe1; opacity: .6; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-left: 8px; }
+  </style>
+</head>
+<body>
+  <h1>BHAG Labs — logo concepts</h1>
+  <p class="sub">Three directions inspired by Logo Modernism (Taschen) + Cluely's minimalism. Click any SVG link to inspect the source. <a href="BRIEF.md" style="opacity:.7">Read the full identity brief →</a></p>
+
+  <div class="row">
+    <div class="mark"><img src="concept-a-aperture-mark.svg" alt="A"/></div>
+    <div>
+      <div class="name">Concept A — Aperture</div>
+      <div class="desc">Charcoal plate, cream geometric B with hollow counterforms. Publisher's colophon / Taschen book-cover energy. Most dressed-up.</div>
+      <div class="lockup" style="margin-top:16px"><img src="concept-a-aperture-lockup.svg" alt=""/></div>
+      <div class="sizes">
+        <img src="concept-a-aperture-mark.svg" width="16" height="16"/>
+        <img src="concept-a-aperture-mark.svg" width="32" height="32"/>
+        <img src="concept-a-aperture-mark.svg" width="64" height="64"/>
+        <span class="label">favicon · nav · app-tile</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mark"><img src="concept-b-bauhaus-mark.svg" alt="B"/></div>
+    <div>
+      <div class="name">Concept B — Bauhaus B <span style="background:#c1502e;color:#f1ebe1;font-size:11px;padding:2px 8px;border-radius:4px;letter-spacing:1px;margin-left:8px;">RECOMMENDED</span></div>
+      <div class="desc">Solid geometric B silhouette, terracotta dot signature. Fuses Cluely's minimalism with Bayer/Vignelli geometry. Reads at 16px and 5 metres.</div>
+      <div class="lockup" style="margin-top:16px"><img src="concept-b-bauhaus-lockup.svg" alt=""/></div>
+      <div class="sizes">
+        <img src="concept-b-bauhaus-mark.svg" width="16" height="16"/>
+        <img src="concept-b-bauhaus-mark.svg" width="32" height="32"/>
+        <img src="concept-b-bauhaus-mark.svg" width="64" height="64"/>
+        <span class="label">favicon · nav · app-tile</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mark"><img src="concept-c-disc-mark.svg" alt="C"/></div>
+    <div>
+      <div class="name">Concept C — Stacked Disc <span style="opacity:.5;font-size:13px;font-weight:400;margin-left:8px">(v1, superseded)</span></div>
+      <div class="desc">Two discs (charcoal + terracotta) on a thin stem. Original direction.</div>
+      <div class="lockup" style="margin-top:16px"><img src="concept-c-disc-lockup.svg" alt=""/></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mark"><img src="concept-c-v2-vesica-mark.svg" alt="C v2"/></div>
+    <div>
+      <div class="name">Concept C · v2 — Vesica Piscis <span style="opacity:.5;font-size:13px;font-weight:400;margin-left:8px">(explored, too symmetric)</span></div>
+      <div class="desc">Two equal circles, d(O₁,O₂) = r. Euclid 1.1. Dropped because the user wanted asymmetry and a leaning stem.</div>
+      <div class="lockup" style="margin-top:16px"><img src="concept-c-v2-vesica-lockup.svg" alt=""/></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mark"><img src="concept-c-v3-tangent-mark.svg" alt="C v3"/></div>
+    <div>
+      <div class="name">Concept C · v3 — Common External Tangent <span style="opacity:.5;font-size:13px;font-weight:400;margin-left:8px">(offset discs, superseded by v4)</span></div>
+      <div class="desc">
+        Two <em>unequal</em> circles (r = 30, R = 42), centres offset on x. The stem is the line tangent to both on the same side — and its lean is <em>forced</em> by the size difference:
+        <br><br>
+        <code style="background:#1a1a1a;color:#f1ebe1;padding:4px 10px;border-radius:4px;font-size:13px;">sin θ = (R − r) / d</code>
+        <br><br>
+        Equal discs → perpendicular stem. Unequal ambitions → the stem has no choice but to lean. That's the BHAG premise in one equation: a big hairy audacious goal is always an unequal pair (rigor vs. ambition), and the discipline that spans them is never perpendicular — it always leans.
+        <br><br>
+        Reads first as three geometric shapes with a diagonal bar. After a beat: an italic B whose bowls got their sizes from two different hypotheses. The stem "leans on" both discs in the literal tangency sense.
+      </div>
+      <div class="lockup" style="margin-top:16px"><img src="concept-c-v3-tangent-lockup.svg" alt=""/></div>
+      <div class="sizes">
+        <img src="concept-c-v3-tangent-mark.svg" width="16" height="16"/>
+        <img src="concept-c-v3-tangent-mark.svg" width="32" height="32"/>
+        <img src="concept-c-v3-tangent-mark.svg" width="64" height="64"/>
+        <img src="concept-c-v3-tangent-mark.svg" width="128" height="128"/>
+        <span class="label">favicon · nav · app-tile · hero</span>
+      </div>
+      <div class="lockup" style="margin-top:16px;background:#f1ebe1"><img src="concept-c-v3-tangent-construction.svg" alt="" style="max-height:300px"/></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mark"><img src="concept-c-v4-kissing-mark.svg" alt="C v4"/></div>
+    <div>
+      <div class="name">Concept C · v4 — Kissing Circles <span style="opacity:.5;font-size:13px;font-weight:400;margin-left:8px">(superseded by v6)</span></div>
+      <div class="desc">
+        Discs stacked on a single vertical axis, <em>externally tangent</em> — no gap, they kiss at a single point. In that configuration the centre distance <em>is</em> the sum of radii, so the tangent-line formula simplifies to its cleanest form:
+        <br><br>
+        <code style="background:#1a1a1a;color:#f1ebe1;padding:4px 10px;border-radius:4px;font-size:13px;">d = R + r   ⇒   sin θ = (R − r) / (R + r)</code>
+        <br><br>
+        For r = 30, R = 46: θ ≈ 12°. The stem is thicker (stroke 16), longer — it stretches from the crown of the small disc all the way to the base of the large one. Both its length and its angle are computed, not eyeballed.
+        <br><br>
+        Narrative: when two unequal ambitions kiss perfectly, the discipline that spans them still has to lean — and the lean is a pure function of their size ratio. Equal ambitions would give a perpendicular stem. BHAGs never do.
+      </div>
+      <div class="lockup" style="margin-top:16px"><img src="concept-c-v4-kissing-lockup.svg" alt=""/></div>
+      <div class="sizes">
+        <img src="concept-c-v4-kissing-mark.svg" width="16" height="16"/>
+        <img src="concept-c-v4-kissing-mark.svg" width="32" height="32"/>
+        <img src="concept-c-v4-kissing-mark.svg" width="64" height="64"/>
+        <img src="concept-c-v4-kissing-mark.svg" width="128" height="128"/>
+        <span class="label">favicon · nav · app-tile · hero</span>
+      </div>
+      <div class="lockup" style="margin-top:16px;background:#f1ebe1"><img src="concept-c-v4-kissing-construction.svg" alt="" style="max-height:340px"/></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mark"><img src="concept-c-v6-overlap-mark.svg" alt="C v6"/></div>
+    <div>
+      <div class="name">Concept C · v6 — Overlapping Discs, Embedded Chord <span style="opacity:.5;font-size:13px;font-weight:400;margin-left:8px">(superseded by v7)</span></div>
+      <div class="desc">
+        Two <em>unequal</em> discs (r = 30, R = 44) — top one smaller, slightly off-axis. They <em>overlap</em> rather than just kiss, so they intersect at two points and produce a lens region in between, coloured in a <em>third hue</em> (forest #3d5a4a) to mark where rigor meets ambition.
+        <br><br>
+        <code style="background:#1a1a1a;color:#f1ebe1;padding:4px 10px;border-radius:4px;font-size:13px;">d(O₁, O₂) &lt; R + r   ⇒   discs intersect at P₁, P₂</code>
+        <br><br>
+        The spine is a tilted chord (not a tangent — a strict tangent line cannot stay flush with both discs beyond its tangent points). It's positioned so its right edge is flush with each disc's left arc, runs from above the small disc down to where the bottom disc's lower-left arc curves back toward its base, and ends with a butt cap — no protrusion, no cream sliver below.
+        <br><br>
+        The lens (overlap) sits between the two discs and almost touches the spine, leaving a small curved cream wedge on the left — the <em>little triangle</em> negative space. That triangle is the only place where the two ambitions and the discipline that spans them all visibly separate; everywhere else they merge into a single figure.
+      </div>
+      <div class="lockup" style="margin-top:16px"><img src="concept-c-v6-overlap-lockup.svg" alt=""/></div>
+      <div class="sizes">
+        <img src="concept-c-v6-overlap-mark.svg" width="16" height="16"/>
+        <img src="concept-c-v6-overlap-mark.svg" width="32" height="32"/>
+        <img src="concept-c-v6-overlap-mark.svg" width="64" height="64"/>
+        <img src="concept-c-v6-overlap-mark.svg" width="128" height="128"/>
+        <span class="label">favicon · nav · app-tile · hero</span>
+      </div>
+      <div class="lockup" style="margin-top:16px;background:#f1ebe1"><img src="concept-c-v6-overlap-construction.svg" alt="" style="max-height:340px"/></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mark"><img src="concept-c-v7-overlap-mark.svg" alt="C v7"/></div>
+    <div>
+      <div class="name">Concept C · v7 — Overlapping Discs, Tangent Spine <span style="opacity:.5;font-size:13px;font-weight:400;margin-left:8px">(superseded by v8)</span></div>
+      <div class="desc">
+        Same disc geometry as v6 (r = 30, R = 44, overlapping, off-axis tilt). Two corrections from v6 feedback:
+        <br><br>
+        <strong>1. Lens fixed.</strong> The overlap is now drawn via SVG <code style="background:#1a1a1a;color:#f1ebe1;padding:2px 6px;border-radius:3px;font-size:12px;">clipPath</code> — the bottom disc redrawn in forest green, clipped to the interior of the top disc. This produces the exact intersection with no missing pixels. (v6's hand-traced lens path picked the wrong arcs on the bottom disc and only covered part of the overlap.)
+        <br><br>
+        <strong>2. Stem returned to a strict tangent.</strong> v6's embedded chord was overlapping the discs, which read as "stem cutting through" rather than "stem leaning on". v7 reverts to the common external tangent on the left — it kisses each disc at exactly one point (T₁ and T₂) and stays outside them everywhere else. Round caps, stroke 12 (thinner than v4/v6), extends past both tangent points so it visibly rests against the disc cluster.
+        <br><br>
+        <code style="background:#1a1a1a;color:#f1ebe1;padding:4px 10px;border-radius:4px;font-size:13px;">d &lt; R + r   (overlap)        sin θ = (R − r) / d   (tangent lean)</code>
+        <br><br>
+        The small curved-triangle cream wedge between the spine and the disc cluster is preserved — that's the negative space that makes the figure read as a B rather than a blob.
+      </div>
+      <div class="lockup" style="margin-top:16px"><img src="concept-c-v7-overlap-lockup.svg" alt=""/></div>
+      <div class="sizes">
+        <img src="concept-c-v7-overlap-mark.svg" width="16" height="16"/>
+        <img src="concept-c-v7-overlap-mark.svg" width="32" height="32"/>
+        <img src="concept-c-v7-overlap-mark.svg" width="64" height="64"/>
+        <img src="concept-c-v7-overlap-mark.svg" width="128" height="128"/>
+        <span class="label">favicon · nav · app-tile · hero</span>
+      </div>
+      <div class="lockup" style="margin-top:16px;background:#f1ebe1"><img src="concept-c-v7-overlap-construction.svg" alt="" style="max-height:340px"/></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mark"><img src="concept-c-v8-overlap-mark.svg" alt="C v8"/></div>
+    <div>
+      <div class="name">Concept C · v8 — Refined Proportions, Stronger Lean <span style="opacity:.5;font-size:13px;font-weight:400;margin-left:8px">(superseded by v9)</span></div>
+      <div class="desc">
+        Three structural refinements from v7:
+        <br><br>
+        <strong>1. Top disc r: 30 → 28.</strong> Upper/lower bowl ratio drops from 68% to 64%, closer to classical B typography where the upper bowl is 60–65% of the lower. The B reads more naturally as a letterform.
+        <br><br>
+        <strong>2. Spine stroke: 12 → 10.</strong> More refined weight. The cream wedge between spine and disc arcs opens slightly, improving B counter readability. Still legible at 16px.
+        <br><br>
+        <strong>3. Lean: ~2° → ~4.3° from vertical.</strong> Direct consequence of the smaller top disc — <code style="background:#1a1a1a;color:#f1ebe1;padding:2px 6px;border-radius:3px;font-size:12px;">sin θ = (R − r) / d = 16/55.3</code> yields a steeper tangent angle. The italic lean is now perceptible without being cartoonish.
+        <br><br>
+        <code style="background:#1a1a1a;color:#f1ebe1;padding:4px 10px;border-radius:4px;font-size:13px;">r=28  R=44  d≈55.3  →  lean ≈ 4.3°  ·  bowl ratio ≈ 0.64</code>
+        <br><br>
+        Same overlap + clipPath lens as v7. Same narrative — the lean is forced by the inequality of the discs, not designed.
+      </div>
+      <div class="lockup" style="margin-top:16px"><img src="concept-c-v8-overlap-lockup.svg" alt=""/></div>
+      <div class="sizes">
+        <img src="concept-c-v8-overlap-mark.svg" width="16" height="16"/>
+        <img src="concept-c-v8-overlap-mark.svg" width="32" height="32"/>
+        <img src="concept-c-v8-overlap-mark.svg" width="64" height="64"/>
+        <img src="concept-c-v8-overlap-mark.svg" width="128" height="128"/>
+        <span class="label">favicon · nav · app-tile · hero</span>
+      </div>
+      <div class="lockup" style="margin-top:16px;background:#f1ebe1"><img src="concept-c-v8-overlap-construction.svg" alt="" style="max-height:340px"/></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mark"><img src="concept-c-v9-overlap-mark.svg" alt="C v9"/></div>
+    <div>
+      <div class="name">Concept C · v9 — Tilted B, Separate Stem <span style="opacity:.5;font-size:13px;font-weight:400;margin-left:8px">(superseded by v10)</span></div>
+      <div class="desc">
+        Returns to v1's structural approach &mdash; the stem is a <em>separate bar</em> to the left, the two discs are <em>bowls</em> to the right &mdash; but tilted, overlapping, and using the canonical palette.
+        <br><br>
+        <strong>1. Equal gaps.</strong> The stem has ~5px clearance from both the top disc <em>and</em> the bottom disc. No touching. Reads as a proper B spine.
+        <br><br>
+        <strong>2. Rightward lean &amp; overlap.</strong> Top disc (r=32) is 2px right of bottom disc (R=40). ~20px overlap, lens in forest <code style="background:#2a4942;color:#f1ebe1;padding:2px 6px;border-radius:3px;font-size:12px;">#2a4942</code>. Stem leans ~11&deg; right.
+        <br><br>
+        <strong>3. Stroke 10.</strong> Thicker than v9a's stroke 8, clearly visible as the B's spine even at small sizes. Drawn <em>behind</em> the discs.
+        <br><br>
+        <code style="background:#1a1a1a;color:#f1ebe1;padding:4px 10px;border-radius:4px;font-size:13px;">r=32  R=40  overlap&asymp;20  lean&asymp;11&deg;  stroke 10  gap&asymp;5px</code>
+      </div>
+      <div class="lockup" style="margin-top:16px"><img src="concept-c-v9-overlap-lockup.svg" alt=""/></div>
+      <div class="sizes">
+        <img src="concept-c-v9-overlap-mark.svg" width="16" height="16"/>
+        <img src="concept-c-v9-overlap-mark.svg" width="32" height="32"/>
+        <img src="concept-c-v9-overlap-mark.svg" width="64" height="64"/>
+        <img src="concept-c-v9-overlap-mark.svg" width="128" height="128"/>
+        <span class="label">favicon &middot; nav &middot; app-tile &middot; hero</span>
+      </div>
+      <div style="margin-top:20px">
+        <div style="font-weight:600;font-size:14px;margin-bottom:12px;">Colour variants</div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+          <div style="text-align:center;">
+            <img src="concept-c-v9-overlap-mark.svg" width="96" height="96" style="border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.1)"/>
+            <div style="font-size:11px;opacity:.6;margin-top:6px;">Forest #2a4942</div>
+          </div>
+          <div style="text-align:center;">
+            <img src="concept-c-v9-overlap-mark-ochre.svg" width="96" height="96" style="border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.1)"/>
+            <div style="font-size:11px;opacity:.6;margin-top:6px;">Ochre #c89b27</div>
+          </div>
+          <div style="text-align:center;">
+            <img src="concept-c-v9-overlap-mark-sage.svg" width="96" height="96" style="border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.1)"/>
+            <div style="font-size:11px;opacity:.6;margin-top:6px;">Sage #8aa07c</div>
+          </div>
+          <div style="text-align:center;">
+            <img src="concept-c-v9-overlap-mark-dark.svg" width="96" height="96" style="border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.1)"/>
+            <div style="font-size:11px;opacity:.6;margin-top:6px;">Dark mode</div>
+          </div>
+        </div>
+      </div>
+      <div class="lockup" style="margin-top:16px;background:#f1ebe1"><img src="concept-c-v9-overlap-construction.svg" alt="" style="max-height:340px"/></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mark"><img src="concept-c-v10-mark.svg" alt="C v10"/></div>
+    <div>
+      <div class="name">Concept C &middot; v10 &mdash; Equal-gap, Butt-cap Spine <span style="opacity:.5;font-size:13px;font-weight:400;margin-left:8px">(superseded by v11)</span></div>
+      <div class="desc">
+        <strong>Scale.</strong> r=48, R=60 &mdash; fills ~60&times;80% of the tile. No longer feels small.
+        <br><br>
+        <strong>5:4 bowl ratio.</strong> R/r = 60/48 = 5/4. Upper bowl is exactly four-fifths of the lower. Close to classical B typography and a clean mathematical ratio.
+        <br><br>
+        <strong>Butt caps.</strong> Flat stem ends, perpendicular to the line direction. The angled cut at top and bottom makes the 10.6&deg; lean visible even at small sizes. Architectural, not soft.
+        <br><br>
+        <strong>Equal gaps.</strong> ~6px clearance from both discs. Stroke 14.
+        <br><br>
+        <strong>Two modes.</strong> Light: forest <code style="background:#2a4942;color:#f1ebe1;padding:2px 6px;border-radius:3px;font-size:12px;">#2a4942</code> lens. Dark: ochre <code style="background:#c89b27;color:#1a1a1a;padding:2px 6px;border-radius:3px;font-size:12px;">#c89b27</code> lens (per brand guide: ochre for highlights on dark).
+        <br><br>
+        <strong>Lockup.</strong> Playfair Display 700 wordmark + Cormorant Garamond italic tagline.
+      </div>
+      <div class="lockup" style="margin-top:16px"><img src="concept-c-v10-lockup.svg" alt=""/></div>
+      <div class="lockup" style="margin-top:8px;background:#1a1a1a"><img src="concept-c-v10-lockup-dark.svg" alt=""/></div>
+      <div class="sizes">
+        <img src="concept-c-v10-mark.svg" width="16" height="16"/>
+        <img src="concept-c-v10-mark.svg" width="32" height="32"/>
+        <img src="concept-c-v10-mark.svg" width="64" height="64"/>
+        <img src="concept-c-v10-mark.svg" width="128" height="128"/>
+        <span class="label">favicon &middot; nav &middot; app-tile &middot; hero</span>
+      </div>
+      <div style="margin-top:16px;display:flex;gap:16px;">
+        <div style="text-align:center;">
+          <img src="concept-c-v10-mark.svg" width="128" height="128" style="border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.1)"/>
+          <div style="font-size:12px;opacity:.6;margin-top:6px;">Light mode</div>
+        </div>
+        <div style="text-align:center;">
+          <img src="concept-c-v10-mark-dark.svg" width="128" height="128" style="border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.1)"/>
+          <div style="font-size:12px;opacity:.6;margin-top:6px;">Dark mode</div>
+        </div>
+      </div>
+      <div class="lockup" style="margin-top:16px;background:#f1ebe1"><img src="concept-c-v10-construction.svg" alt="" style="max-height:380px"/></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mark"><img src="concept-c-v11-mark.svg" alt="C v11"/></div>
+    <div>
+      <div class="name">Concept C &middot; v11 &mdash; Tangent to Both Discs <span style="opacity:.5;font-size:13px;font-weight:400;margin-left:8px">(superseded by v12)</span></div>
+      <div class="desc">
+        v10 had two equal gaps. v11 closes both: a single straight stem is tangent to <em>both</em> discs simultaneously, exactly the way the larger disc's leftmost extent reaches further out than the smaller disc's so the stem has two contact points instead of zero.
+        <br><br>
+        <strong>1. Stem bottom fixed in x.</strong> The bottom of the stem stays at <code style="background:#1a1a1a;color:#f1ebe1;padding:2px 6px;border-radius:3px;font-size:12px;">(59, 230)</code>. Only the angle is free.
+        <br><br>
+        <strong>2. Disc-pair rotated ~2.91&deg; CW around the bottom disc's centre.</strong> Top disc shifts from <code>(147, 84)</code> to <code>(151, 84)</code>. Bottom disc unchanged. This is the unique rotation that makes a stem anchored at <code>(59, 230)</code> tangent to both circles at once.
+        <br><br>
+        <strong>3. Stem angle &theta; &asymp; 13.67&deg; from vertical</strong> (up from v10's 10.6&deg;). Computed from the bottom-disc tangency equation:
+        <br><br>
+        <code style="background:#1a1a1a;color:#f1ebe1;padding:4px 10px;border-radius:4px;font-size:13px;">85 cos &theta; &minus; 66 sin &theta; = R + 7 = 67   &rArr;   &theta; &asymp; 13.67&deg;</code>
+        <br><br>
+        The top-disc tangency then determines the disc-pair rotation. Both contact points T<sub>1</sub> (top, ~(103, 72)) and T<sub>2</sub> (bottom, ~(86, 150)) lie on the common external tangent of the rotated pair.
+        <br><br>
+        <strong>4. Round caps, noticeably.</strong> Stroke 14 with <code>stroke-linecap="round"</code> &mdash; semi-circular ends of radius 7 at both stem termini. Softer than v10's butt caps; the stem reads as drawn, not cut.
+        <br><br>
+        Narrative: the spine doesn't float free or cut through &mdash; it actually leans on both bowls, with the bigger one catching it further down and the smaller one stopping it higher up. The lean is forced by the geometry: any other stem angle would either gap one disc or pierce it.
+      </div>
+      <div class="lockup" style="margin-top:16px"><img src="concept-c-v11-lockup.svg" alt=""/></div>
+      <div class="lockup" style="margin-top:8px;background:#1a1a1a"><img src="concept-c-v11-lockup-dark.svg" alt=""/></div>
+      <div class="sizes">
+        <img src="concept-c-v11-mark.svg" width="16" height="16"/>
+        <img src="concept-c-v11-mark.svg" width="32" height="32"/>
+        <img src="concept-c-v11-mark.svg" width="64" height="64"/>
+        <img src="concept-c-v11-mark.svg" width="128" height="128"/>
+        <span class="label">favicon &middot; nav &middot; app-tile &middot; hero</span>
+      </div>
+      <div style="margin-top:16px;display:flex;gap:16px;">
+        <div style="text-align:center;">
+          <img src="concept-c-v11-mark.svg" width="128" height="128" style="border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.1)"/>
+          <div style="font-size:12px;opacity:.6;margin-top:6px;">Light mode</div>
+        </div>
+        <div style="text-align:center;">
+          <img src="concept-c-v11-mark-dark.svg" width="128" height="128" style="border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.1)"/>
+          <div style="font-size:12px;opacity:.6;margin-top:6px;">Dark mode</div>
+        </div>
+      </div>
+      <div class="lockup" style="margin-top:16px;background:#f1ebe1"><img src="concept-c-v11-construction.svg" alt="" style="max-height:420px"/></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mark"><img src="concept-c-v12-mark.svg" alt="C v12"/></div>
+    <div>
+      <div class="name">Concept C &middot; v12 &mdash; Top Tangent, Bottom Sliver <span style="opacity:.5;font-size:13px;font-weight:400;margin-left:8px">(superseded by v13)</span></div>
+      <div class="desc">
+        v11 kissed both bowls. v12 keeps the top kiss but breathes a small sliver of cream past the lower bowl &mdash; the stem leans on the top disc only and just clears the bottom.
+        <br><br>
+        <strong>1. Top disc tangent (T<sub>1</sub>).</strong> Stem center-line sits at distance <code>r + 7 = 55</code> from <code>(151, 84)</code>. Contact point at ~<code>(98, 69)</code>.
+        <br><br>
+        <strong>2. Bottom disc gap, g &asymp; 4 px.</strong> Stem center-line distance to <code>(144, 164)</code> is <code>R + 7 + g = 71</code>. The cream sliver between the stem and the leftmost edge of the bottom bowl is the &ldquo;little triangle&rdquo; that gives the figure breathing room.
+        <br><br>
+        <strong>3. Stem angle &theta; &asymp; 16.5&deg; from vertical.</strong> Derived from subtracting the two perpendicular-distance equations of a common <em>quasi-</em>tangent:
+        <br><br>
+        <code style="background:#1a1a1a;color:#f1ebe1;padding:4px 10px;border-radius:4px;font-size:13px;">80 sin &theta; &minus; 7 cos &theta; = 12 + g    &rArr;    &theta; &asymp; 16.5&deg; for g = 4</code>
+        <br><br>
+        (Setting <code>g = 0</code> recovers v11's dual tangency at &theta; &asymp; 13.67&deg;.)
+        <br><br>
+        <strong>4. Cap on the baseline (option A).</strong> Stem center bottom at <code>(54, 217)</code>; the round cap of radius 7 lands its lowest point at <code>(52, 224)</code> &mdash; exactly the y of the bottom disc's bottom-most point. Spine and bowl share one baseline like a classical typographic B.
+        <br><br>
+        <strong>5. Stem top.</strong> <code>(111, 26)</code> &mdash; peeks above the upper bowl by ~17 px. Same projection as v11.
+        <br><br>
+        <strong>6. Round caps, stroke 14.</strong> Both stem termini are fully visible semi-circles. Soft, deliberate, not cut.
+        <br><br>
+        Narrative: the stem rests on the upper bowl and is held off the lower one by a hair of cream. The lower bowl's larger radius lets it lean further left without quite reaching the spine. The B reads cleanly at every size because everything terminates on one baseline.
+      </div>
+      <div class="lockup" style="margin-top:16px"><img src="concept-c-v12-lockup.svg" alt=""/></div>
+      <div class="lockup" style="margin-top:8px;background:#1a1a1a"><img src="concept-c-v12-lockup-dark.svg" alt=""/></div>
+      <div class="sizes">
+        <img src="concept-c-v12-mark.svg" width="16" height="16"/>
+        <img src="concept-c-v12-mark.svg" width="32" height="32"/>
+        <img src="concept-c-v12-mark.svg" width="64" height="64"/>
+        <img src="concept-c-v12-mark.svg" width="128" height="128"/>
+        <span class="label">favicon &middot; nav &middot; app-tile &middot; hero</span>
+      </div>
+      <div style="margin-top:16px;display:flex;gap:16px;">
+        <div style="text-align:center;">
+          <img src="concept-c-v12-mark.svg" width="128" height="128" style="border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.1)"/>
+          <div style="font-size:12px;opacity:.6;margin-top:6px;">Light mode</div>
+        </div>
+        <div style="text-align:center;">
+          <img src="concept-c-v12-mark-dark.svg" width="128" height="128" style="border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.1)"/>
+          <div style="font-size:12px;opacity:.6;margin-top:6px;">Dark mode</div>
+        </div>
+      </div>
+      <div class="lockup" style="margin-top:16px;background:#f1ebe1"><img src="concept-c-v12-construction.svg" alt="" style="max-height:420px"/></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mark"><img src="concept-c-v13-mark.svg" alt="C v13"/></div>
+    <div>
+      <div class="name">Concept C &middot; v13 &mdash; One Shape, One Magic <span style="background:#c1502e;color:#f1ebe1;font-size:11px;padding:2px 8px;border-radius:4px;letter-spacing:1px;margin-left:8px;">FINAL</span></div>
+      <div class="desc">
+        v12 had stem and top disc just touching. v13 pushes the stem ~5 px <em>into</em> the top disc and paints both in the same charcoal. They stop reading as two elements and start reading as <strong>one shape</strong>.
+        <br><br>
+        That one shape is the founder + the launchpad. The bottom disc is a different shape entirely, the market, looking for a fit. Where the two shapes overlap is the lens, painted forest in light and ochre on dark. That is the magic. Product-market fit, made literal.
+        <br><br>
+        <strong>1. Overlap o = 5 px.</strong> Stem center-line distance to top disc center: <code>r + 7 &minus; o = 50</code>. About 36% of the stem's width crosses the disc edge. Enough to merge, not enough to lose the stem's line.
+        <br><br>
+        <strong>2. Gap g = 4 px to bottom disc.</strong> Stem center-line distance to <code>(144, 164)</code>: <code>R + 7 + g = 71</code>. Cream sliver preserved.
+        <br><br>
+        <strong>3. Stem angle &theta; &asymp; 20.2&deg; from vertical.</strong> The classical formula:
+        <br><br>
+        <code style="background:#1a1a1a;color:#f1ebe1;padding:4px 10px;border-radius:4px;font-size:13px;">80 sin &theta; &minus; 7 cos &theta; = (R + 7 + g) &minus; (r + 7 &minus; o) = 21    &rArr;    &theta; &asymp; 20.2&deg;</code>
+        <br><br>
+        Each previous version was a different point on this same curve: v10 had two equal gaps, v11 had two tangencies (g = 0, o = 0), v12 had one tangency + one gap (o = 0, g = 4), v13 has overlap + gap. The family is parameterised by <code>o &minus; g</code>.
+        <br><br>
+        <strong>4. Cap on the baseline.</strong> Stem center bottom <code>(49, 217)</code>; round cap of radius 7 lands at <code>(47, 224)</code>, exactly the bottom disc's lowest y.
+        <br><br>
+        <strong>5. Same charcoal, same colour, same shape.</strong> <code style="background:#1a1a1a;color:#f1ebe1;padding:2px 6px;border-radius:3px;font-size:12px;">#1a1a1a</code> for both stem and top disc. <code style="background:#c1502e;color:#f1ebe1;padding:2px 6px;border-radius:3px;font-size:12px;">#c1502e</code> for the bottom disc. <code style="background:#2a4942;color:#f1ebe1;padding:2px 6px;border-radius:3px;font-size:12px;">#2a4942</code> (forest) or <code style="background:#c89b27;color:#1a1a1a;padding:2px 6px;border-radius:3px;font-size:12px;">#c89b27</code> (ochre, dark mode) for the lens.
+      </div>
+      <div class="lockup" style="margin-top:16px"><img src="concept-c-v13-lockup.svg" alt=""/></div>
+      <div class="lockup" style="margin-top:8px;background:#1a1a1a"><img src="concept-c-v13-lockup-dark.svg" alt=""/></div>
+      <div class="sizes">
+        <img src="concept-c-v13-mark.svg" width="16" height="16"/>
+        <img src="concept-c-v13-mark.svg" width="32" height="32"/>
+        <img src="concept-c-v13-mark.svg" width="64" height="64"/>
+        <img src="concept-c-v13-mark.svg" width="128" height="128"/>
+        <span class="label">favicon &middot; nav &middot; app-tile &middot; hero</span>
+      </div>
+      <div style="margin-top:16px;display:flex;gap:16px;">
+        <div style="text-align:center;">
+          <img src="concept-c-v13-mark.svg" width="128" height="128" style="border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.1)"/>
+          <div style="font-size:12px;opacity:.6;margin-top:6px;">Light mode</div>
+        </div>
+        <div style="text-align:center;">
+          <img src="concept-c-v13-mark-dark.svg" width="128" height="128" style="border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.1)"/>
+          <div style="font-size:12px;opacity:.6;margin-top:6px;">Dark mode</div>
+        </div>
+      </div>
+      <div class="lockup" style="margin-top:16px;background:#f1ebe1"><img src="concept-c-v13-construction.svg" alt="" style="max-height:420px"/></div>
+      <div style="margin-top:16px;padding:14px 18px;border:1px solid rgba(0,0,0,.1);border-radius:6px;background:rgba(193,80,46,.04);font-size:13px;line-height:1.65;">
+        Read the full story: <a href="/blog/designing-the-bhag-labs-logo.html" style="color:#c1502e;font-weight:500;">Designing the BHAG Labs Logo</a> &middot; Social and landscape exports: <a href="/brand/social/" style="color:#c1502e;font-weight:500;">/brand/social/</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

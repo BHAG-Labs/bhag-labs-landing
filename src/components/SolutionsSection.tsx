@@ -2,105 +2,134 @@ import { Layers, PieChart, FileText, Map, Newspaper } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import SectionLabel from "./SectionLabel";
 import { motion } from "framer-motion";
+import { useT } from "@/lib/i18n";
 
-const products = [
+const productDefs = [
   {
     icon: Layers,
     name: "Neev",
-    category: "Lean LaunchPad Platform",
-    badge: { label: "Live", cls: "bg-terracotta text-cream" },
+    devanagari: "नींव",
+    gloss: "foundation",
+    accentCls: "text-forest",
+    categoryKey: "solutions.neev.category",
+    badgeKey: "solutions.neev.badge",
+    badgeCls: "bg-terracotta text-cream",
     borderStyle: "border-solid",
-    description:
-      "A structured week-by-week platform where founders build Business Model Canvases, log customer interviews, and submit weekly check-ins. Admins monitor every team's progress across the cohort.",
-    link: "Explore Neev →",
+    descKey: "solutions.neev.desc",
+    linkKey: "solutions.neev.link",
     href: "https://neev.bhaglabs.com",
   },
   {
     icon: PieChart,
     name: "Hissa",
-    category: "Startup Equity Calculator",
-    badge: { label: "Live", cls: "bg-terracotta text-cream" },
+    devanagari: "हिस्सा",
+    gloss: "share",
+    accentCls: "text-foreground",
+    categoryKey: "solutions.hissa.category",
+    badgeKey: "solutions.hissa.badge",
+    badgeCls: "bg-terracotta text-cream",
     borderStyle: "border-solid",
-    description:
-      "Equity tools for the Indian startup ecosystem — ESOP valuation, co-founder splits, dilution simulation, India-specific ESOP tax, and ESOP pool planning. Client-side, all currency in ₹.",
-    link: "Try Hissa →",
+    descKey: "solutions.hissa.desc",
+    linkKey: "solutions.hissa.link",
     href: "https://hissa.bhaglabs.com",
   },
   {
     icon: FileText,
     name: "Pitchwala",
-    category: "AI Pitch Deck Builder",
-    badge: { label: "New", cls: "bg-ochre text-forest" },
+    devanagari: null,
+    gloss: "pitch-person",
+    accentCls: "text-terracotta",
+    categoryKey: "solutions.pitchwala.category",
+    badgeKey: "solutions.pitchwala.badge",
+    badgeCls: "border border-ochre text-ochre bg-transparent",
     borderStyle: "border-dashed",
-    description:
-      "9 questions, 10 slides. A guided wizard that turns founder intent into an investor-ready deck — framed for how Indian VCs actually evaluate seed and pre-seed bets.",
-    link: "Build a Deck →",
+    descKey: "solutions.pitchwala.desc",
+    linkKey: "solutions.pitchwala.link",
     href: "https://pitchwala.bhaglabs.com",
   },
   {
     icon: Map,
     name: "Yantra",
-    category: "AI Agents & Business Solutions Marketplace",
-    badge: { label: "New", cls: "bg-ochre text-forest" },
+    devanagari: "यंत्र",
+    gloss: "instrument",
+    accentCls: "text-teal",
+    categoryKey: "solutions.yantra.category",
+    badgeKey: "solutions.yantra.badge",
+    badgeCls: "border border-ochre text-ochre bg-transparent",
     borderStyle: "border-dashed",
-    description:
-      "A marketplace of proprietary AI agents (video, social, newsletter, outbound) and curated business solutions (logistics, payments, legal, marketing) — co-sold against the action plan from your feasibility report. Agents run on BHAG Labs' own GCP infra; partner solutions are commission-rev-shared.",
-    link: "Get a Plan →",
+    descKey: "solutions.yantra.desc",
+    linkKey: "solutions.yantra.link",
     href: "https://yantra.bhaglabs.com",
   },
   {
     icon: Newspaper,
-    name: "Bazaar",
-    category: "The Weekly Newsletter",
-    badge: { label: "Newsletter", cls: "bg-forest text-cream" },
+    name: "SIGINT",
+    devanagari: "संकेत",
+    gloss: "signal",
+    accentCls: "text-ochre",
+    categoryKey: "solutions.sigint.category",
+    badgeKey: "solutions.sigint.badge",
+    badgeCls: "border border-ochre text-ochre bg-transparent",
     borderStyle: "border-dashed",
-    description:
-      "A weekly broadsheet on India's startup, VC, and policy economy. Funding signals, regulatory shifts, and one actionable deal — every Sunday morning. Free, always.",
-    link: "Subscribe →",
-    href: "https://bazaar.bhaglabs.com",
+    descKey: "solutions.sigint.desc",
+    linkKey: "solutions.sigint.link",
+    href: "https://sigint.bhaglabs.com",
   },
 ];
 
-const SolutionsSection = () => (
-  <AnimatedSection id="solutions" className="section-padding section-light paper-texture">
-    <div className="relative z-10 max-w-6xl mx-auto">
-      <SectionLabel>What We Build</SectionLabel>
-      <h2 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl uppercase leading-[1.05] mb-4 text-foreground">
-        A Complete Operating System for{" "}
-        <span className="text-terracotta">Indian Founders.</span>
-      </h2>
-      <p className="text-muted-foreground max-w-2xl mb-16 text-base leading-relaxed">
-        Five purpose-built products for every stage of the founder journey — from first hypothesis to bank-ready DPR to investor-ready deck.
-      </p>
+const SolutionsSection = () => {
+  const t = useT();
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {products.map((p, i) => (
-          <motion.a
-            key={p.name}
-            href={p.href}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.06, duration: 0.4 }}
-            className={`p-7 flex flex-col bg-cream border-2 border-foreground ${p.borderStyle} hover:bg-cream-dark/40 transition-colors group`}
-          >
-            <div className="flex items-start justify-between mb-5">
-              <p.icon className="w-7 h-7 text-terracotta" />
-              <span className={`text-[10px] uppercase tracking-[0.2em] font-bold px-2 py-1 ${p.badge.cls}`}>
-                {p.badge.label}
+  return (
+    <AnimatedSection id="solutions" className="py-16 md:py-24 px-6 md:px-8 section-light">
+      <div className="relative z-10 max-w-6xl mx-auto">
+        <SectionLabel>{t('solutions.label')}</SectionLabel>
+        <h2 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl uppercase leading-[1.05] mb-4 text-foreground">
+          {t('solutions.title')}{" "}
+          <span className="text-terracotta">{t('solutions.titleHighlight')}</span>
+        </h2>
+        <p className="text-muted-foreground max-w-xl mb-16 text-base leading-relaxed">
+          {t('solutions.subtitle')}
+        </p>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {productDefs.map((p, i) => (
+            <motion.a
+              key={p.name}
+              href={p.href}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.06, duration: 0.4 }}
+              className={`p-7 flex flex-col bg-background border-2 border-foreground ${p.borderStyle} hover:bg-muted transition-colors group`}
+            >
+              <div className="flex items-start justify-between mb-5">
+                <p.icon className={`w-6 h-6 ${p.accentCls}`} />
+                <span className={`text-[10px] uppercase tracking-[0.2em] font-bold px-2 py-1 ${p.badgeCls}`}>
+                  {t(p.badgeKey)}
+                </span>
+              </div>
+              <span className="text-xs font-medium tracking-wide uppercase text-muted-foreground mb-2">{t(p.categoryKey)}</span>
+              <h3 className="font-heading font-bold text-2xl text-foreground mb-1">{p.name}</h3>
+              <p className="font-subheading italic text-sm text-foreground/55 mb-3">
+                {p.devanagari ? (
+                  <>
+                    <span lang="hi" className="not-italic">{p.devanagari}</span>
+                    <span className="mx-1.5">·</span>
+                  </>
+                ) : null}
+                {p.gloss}
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed flex-1">{t(p.descKey)}</p>
+              <span className="mt-5 text-sm font-semibold text-terracotta group-hover:text-foreground transition-colors tracking-wide">
+                {t(p.linkKey)}
               </span>
-            </div>
-            <span className="section-label text-muted-foreground mb-2">{p.category}</span>
-            <h3 className="font-heading font-bold text-3xl text-foreground mb-3">{p.name}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed flex-1">{p.description}</p>
-            <span className="mt-5 text-sm font-semibold text-terracotta group-hover:text-foreground transition-colors tracking-wide">
-              {p.link}
-            </span>
-          </motion.a>
-        ))}
+            </motion.a>
+          ))}
+        </div>
       </div>
-    </div>
-  </AnimatedSection>
-);
+    </AnimatedSection>
+  );
+};
 
 export default SolutionsSection;

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs v11</title>
+  <defs>
+    <clipPath id="v11-clip">
+      <circle cx="151" cy="84" r="48"/>
+    </clipPath>
+  </defs>
+  <rect width="256" height="256" fill="#f1ebe1"/>
+
+  <!-- Stem: round caps, lean ~13.67 deg right. Tangent to BOTH discs.
+       Bottom fixed at (59, 230); stem-top moved from (97, 26) to (109, 26) to set the angle. -->
+  <line x1="59" y1="230" x2="109" y2="26"
+        stroke="#1a1a1a" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Bottom disc (lower bowl): R=60, terracotta, UNCHANGED from v10 -->
+  <circle cx="144" cy="164" r="60" fill="#c1502e"/>
+
+  <!-- Top disc (upper bowl): r=48, charcoal. Disc-pair rotated ~2.91 deg CW
+       around bottom-disc centre so a single straight stem is tangent to both. -->
+  <circle cx="151" cy="84" r="48" fill="#1a1a1a"/>
+
+  <!-- Lens: overlap in forest #2a4942 (clipped intersection) -->
+  <circle cx="144" cy="164" r="60" fill="#2a4942" clip-path="url(#v11-clip)"/>
+</svg>

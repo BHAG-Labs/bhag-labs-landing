@@ -2,8 +2,10 @@ import { useState } from "react";
 import { Mail } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import SectionLabel from "./SectionLabel";
+import { useT } from "@/lib/i18n";
 
 const ContactSection = () => {
+  const t = useT();
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -12,59 +14,47 @@ const ContactSection = () => {
   };
 
   return (
-    <AnimatedSection id="contact" className="section-padding section-light paper-texture">
+    <AnimatedSection id="contact" className="py-16 md:py-24 px-6 md:px-8 section-light">
       <div className="relative z-10 max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <SectionLabel>Stay in Touch</SectionLabel>
+          <SectionLabel>{t('contact.label')}</SectionLabel>
           <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase leading-[1.05] mb-4 text-foreground">
-            Two Ways to <span className="text-terracotta">Reach Us</span>
+            {t('contact.title')} <span className="text-terracotta">{t('contact.titleHighlight')}</span>
           </h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {/* Founders */}
           <div className="border-2 border-foreground p-8 border-l-[6px] border-l-terracotta">
             <Mail className="w-6 h-6 text-terracotta mb-4" />
-            <h3 className="font-heading font-bold text-2xl mb-3 text-foreground">Talk to the Founders</h3>
+            <h3 className="font-heading font-bold text-2xl mb-3 text-foreground">{t('contact.founders.title')}</h3>
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-              For partnerships, pilots, and program-level conversations. We read every email. No autoresponders.
+              {t('contact.founders.desc')}
             </p>
             <a
               href="mailto:founders@bhaglabs.com"
-              className="inline-flex items-center gap-2 border-2 border-foreground px-6 py-2.5 text-sm font-semibold text-foreground hover:bg-foreground hover:text-cream transition-colors uppercase tracking-wider"
+              className="inline-flex items-center gap-2 border-2 border-foreground px-6 py-2.5 text-sm font-semibold text-foreground hover:bg-foreground hover:text-background transition-colors uppercase tracking-wider"
             >
-              founders@bhaglabs.com
+              {t('contact.founders.email')}
             </a>
           </div>
 
-          {/* Newsletter */}
-          <div className="border-2 border-foreground p-8 border-l-[6px] border-l-ochre bg-cream-dark/30">
-            <span className="section-label text-ochre mb-3 inline-block">BAZAAR — WEEKLY</span>
-            <h3 className="font-heading font-bold text-2xl mb-3 text-foreground">Join the Newsletter</h3>
+          <div className="border-2 border-foreground p-8 border-l-[6px] border-l-ochre">
+            <span className="text-xs font-semibold tracking-wide uppercase text-ochre mb-3 inline-block">{t('contact.newsletter.badge')}</span>
+            <h3 className="font-heading font-bold text-2xl mb-3 text-foreground">{t('contact.newsletter.title')}</h3>
             <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
-              India's startup, VC, and policy economy — one email every Sunday. Free.
+              {t('contact.newsletter.desc')}
             </p>
 
             {submitted ? (
               <div className="border-2 border-ochre p-4 text-center text-sm text-foreground">
-                <span className="text-ochre text-xl">◆</span> You're on the list. First edition lands Sunday.
+                {t('contact.newsletter.success')}
               </div>
             ) : (
-              // TODO: Connect form action to Substack/Beehiiv/ConvertKit URL
               <form onSubmit={handleSubmit} className="space-y-3">
-                <input required placeholder="Your name" className="w-full px-4 py-2.5 bg-transparent border-2 border-foreground/30 text-foreground text-sm focus:outline-none focus:border-ochre transition-colors" />
-                <input required type="email" placeholder="you@email.com" className="w-full px-4 py-2.5 bg-transparent border-2 border-foreground/30 text-foreground text-sm focus:outline-none focus:border-ochre transition-colors" />
-                <select required className="w-full px-4 py-2.5 bg-transparent border-2 border-foreground/30 text-foreground text-sm focus:outline-none focus:border-ochre transition-colors">
-                  <option value="">I am a...</option>
-                  <option>Founder</option>
-                  <option>Student</option>
-                  <option>Investor / Angel</option>
-                  <option>Faculty / Mentor</option>
-                  <option>Accelerator Manager</option>
-                  <option>Curious Observer</option>
-                </select>
+                <input required placeholder={t('contact.newsletter.namePlaceholder')} className="w-full px-4 py-2.5 bg-transparent border-2 border-foreground/30 text-foreground text-sm focus:outline-none focus:border-ochre transition-colors" />
+                <input required type="email" placeholder={t('contact.newsletter.emailPlaceholder')} className="w-full px-4 py-2.5 bg-transparent border-2 border-foreground/30 text-foreground text-sm focus:outline-none focus:border-ochre transition-colors" />
                 <button type="submit" className="w-full bg-ochre py-3 font-semibold text-forest text-sm uppercase tracking-wider hover:opacity-90 transition-opacity">
-                  Join Bazaar →
+                  {t('contact.newsletter.submit')}
                 </button>
               </form>
             )}

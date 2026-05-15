@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs v9 dark</title>
+  <defs>
+    <clipPath id="top-disc-v9d">
+      <circle cx="141" cy="102" r="32"/>
+    </clipPath>
+  </defs>
+  <rect width="256" height="256" fill="#1a1a1a"/>
+
+  <line x1="82" y1="191" x2="106" y2="65"
+        stroke="#f1ebe1" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="139" cy="154" r="40" fill="#c1502e"/>
+  <circle cx="141" cy="102" r="32" fill="#f1ebe1"/>
+  <circle cx="139" cy="154" r="40" fill="#2a4942" clip-path="url(#top-disc-v9d)"/>
+</svg>

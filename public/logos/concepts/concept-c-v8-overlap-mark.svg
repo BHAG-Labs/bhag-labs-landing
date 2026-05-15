@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs v8</title>
+  <defs>
+    <clipPath id="top-disc-v8">
+      <circle cx="118" cy="86" r="28"/>
+    </clipPath>
+  </defs>
+  <rect width="256" height="256" fill="#f1ebe1"/>
+
+  <!-- Bottom disc: R=44, terracotta -->
+  <circle cx="130" cy="140" r="44" fill="#c1502e"/>
+
+  <!-- Top disc: r=28, charcoal -->
+  <circle cx="118" cy="86" r="28" fill="#1a1a1a"/>
+
+  <!-- Lens: bottom disc in forest, clipped to top disc -->
+  <circle cx="130" cy="140" r="44" fill="#3d5a4a" clip-path="url(#top-disc-v8)"/>
+
+  <!-- Spine: left common external tangent, stroke 10, round caps -->
+  <line x1="92.9" y1="46" x2="82.0" y2="192"
+        stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+</svg>

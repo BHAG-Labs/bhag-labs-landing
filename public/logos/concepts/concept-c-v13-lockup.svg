@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 200" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs lockup v13</title>
+  <defs>
+    <clipPath id="v13l-clip"><circle cx="151" cy="84" r="48"/></clipPath>
+  </defs>
+
+  <g transform="translate(6,10) scale(0.7)">
+    <line x1="49" y1="217" x2="119" y2="26"
+          stroke="#1a1a1a" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="144" cy="164" r="60" fill="#c1502e"/>
+    <circle cx="151" cy="84" r="48" fill="#1a1a1a"/>
+    <circle cx="144" cy="164" r="60" fill="#2a4942" clip-path="url(#v13l-clip)"/>
+  </g>
+
+  <g transform="translate(210,112)">
+    <text font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="76" letter-spacing="-2" fill="#1a1a1a">bhag labs</text>
+    <text x="4" y="34" font-family="'Cormorant Garamond', Garamond, serif" font-weight="400" font-style="italic" font-size="15" letter-spacing="2" fill="#1a1a1a" opacity="0.5">Every Big Idea Deserves a Launchpad</text>
+  </g>
+</svg>

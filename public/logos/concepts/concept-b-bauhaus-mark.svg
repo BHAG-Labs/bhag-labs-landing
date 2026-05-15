@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs — Concept B · Bauhaus B (recommended)</title>
+  <rect width="256" height="256" fill="#f1ebe1"/>
+
+  <!-- Solid geometric B silhouette: two equal half-disks on a vertical stem -->
+  <path fill="#1a1a1a" d="
+    M84 64 H124 a32 32 0 0 1 0 64 a32 32 0 0 1 0 64 H84 Z
+  "/>
+
+  <!-- Terracotta dot: brand signature, sits on the baseline like a publisher's mark -->
+  <circle cx="170" cy="192" r="7" fill="#c1502e"/>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs — Tangent-Kissing Circles, sin θ = (R−r)/(R+r)</title>
+  <rect width="256" height="256" fill="#f1ebe1"/>
+
+  <!-- Bottom disc: R = 46. The audacious goal. -->
+  <circle cx="128" cy="146" r="46" fill="#c1502e"/>
+
+  <!-- Top disc: r = 30. The disciplined hypothesis.
+       Externally tangent to the bottom disc at the kiss point (128, 100): d(O₁,O₂) = R + r. -->
+  <circle cx="128" cy="70" r="30" fill="#1a1a1a"/>
+
+  <!-- Stem: common external tangent to both kissing discs.
+       Its lean from vertical satisfies  sin θ = (R−r)/(R+r) = 16/76 ≈ 0.211  ⇒  θ ≈ 12°.
+       The stem stretches from the crown of r (y=40) to the base of R (y=192). -->
+  <line x1="104" y1="40" x2="71" y2="192"
+        stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+</svg>

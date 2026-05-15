@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs — Concept A · Aperture (Logo Modernism plate)</title>
+  <!-- Charcoal plate, like a Taschen book cover or publisher's colophon -->
+  <rect width="256" height="256" fill="#1a1a1a"/>
+
+  <!-- Geometric B in cream, hollow counterforms (even-odd) -->
+  <path fill="#f1ebe1" fill-rule="evenodd" d="
+    M100 64 H124 a32 32 0 0 1 0 64 a32 32 0 0 1 0 64 H100 Z
+    M124 80 a16 16 0 0 1 0 32 Z
+    M124 144 a16 16 0 0 1 0 32 Z
+  "/>
+
+  <!-- Terracotta accent: a single dot — modernist brand signature -->
+  <circle cx="172" cy="192" r="6" fill="#c1502e"/>
+</svg>

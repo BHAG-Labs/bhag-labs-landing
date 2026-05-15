@@ -22,12 +22,12 @@ const ProblemSection = () => (
             </p>
             <p>
               The result? Programs can't measure progress. Founders don't learn the right methodology.
-              And the best ideas die — not because they were bad, but because nobody helped validate
+              And the best ideas die - not because they were bad, but because nobody helped validate
               them in time.
             </p>
             <p>
               The best programs in the world have moved to structured, software-driven
-              approaches built on the Lean LaunchPad methodology — where every assumption is tracked,
+              approaches built on the Lean LaunchPad methodology - where every assumption is tracked,
               every interview is logged, and every pivot is documented.
             </p>
             <p className="text-ochre font-semibold font-subheading text-xl">

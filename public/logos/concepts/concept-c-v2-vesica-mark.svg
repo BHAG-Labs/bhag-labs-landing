@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs — Vesica Piscis (two circles, d(O₁,O₂) = r)</title>
+  <rect width="256" height="256" fill="#f1ebe1"/>
+
+  <!-- Top disc: the disciplined one (rigor) -->
+  <circle cx="128" cy="100" r="56" fill="#1a1a1a"/>
+
+  <!-- Bottom disc: the audacious one (ambition). Center sits on the boundary of the top disc: d = r. -->
+  <circle cx="128" cy="156" r="56" fill="#c1502e"/>
+
+  <!-- The vesica piscis lens: the intersection, carved out in cream.
+       This is where the BHAG emerges. Height of lens = r·√3.
+       Reference: Euclid, Elements, Proposition 1.1. -->
+  <path fill="#f1ebe1" d="M79.5 128 A56 56 0 0 1 176.5 128 A56 56 0 0 1 79.5 128 Z"/>
+</svg>

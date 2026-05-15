@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs — Common External Tangent (sin θ = Δr/d)</title>
+  <rect width="256" height="256" fill="#f1ebe1"/>
+
+  <!-- Bottom disc: large, the audacious one. Radius R = 42. -->
+  <circle cx="126" cy="170" r="42" fill="#c1502e"/>
+
+  <!-- Top disc: small, the disciplined one. Radius r = 30. Centre offset 14px right. -->
+  <circle cx="140" cy="94" r="30" fill="#1a1a1a"/>
+
+  <!-- Stem: the common external tangent to both discs.
+       Tangent points computed from: sin θ = (R - r)/d  ⇒  θ ≈ 19° from vertical.
+       Equal discs → vertical stem. Unequal ambitions → the stem is forced to lean. -->
+  <line x1="116" y1="72" x2="80" y2="175"
+        stroke="#1a1a1a" stroke-width="11" stroke-linecap="round"/>
+</svg>

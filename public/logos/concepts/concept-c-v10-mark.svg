@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs v10</title>
+  <defs>
+    <clipPath id="v10-clip">
+      <circle cx="147" cy="84" r="48"/>
+    </clipPath>
+  </defs>
+  <rect width="256" height="256" fill="#f1ebe1"/>
+
+  <!-- Stem: butt caps, lean ~10.6 deg right, ~6px gap each side -->
+  <line x1="59" y1="230" x2="97" y2="26"
+        stroke="#1a1a1a" stroke-width="14" stroke-linecap="butt"/>
+
+  <!-- Bottom disc (lower bowl): R=60, terracotta -->
+  <circle cx="144" cy="164" r="60" fill="#c1502e"/>
+
+  <!-- Top disc (upper bowl): r=48, charcoal. R:r = 5:4 -->
+  <circle cx="147" cy="84" r="48" fill="#1a1a1a"/>
+
+  <!-- Lens: overlap in forest #2a4942 -->
+  <circle cx="144" cy="164" r="60" fill="#2a4942" clip-path="url(#v10-clip)"/>
+</svg>

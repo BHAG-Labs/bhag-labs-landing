@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs — Concept C lockup</title>
+
+  <!-- Mark -->
+  <g transform="translate(8,28) scale(0.5625)">
+    <rect x="72" y="64" width="14" height="128" fill="#1a1a1a"/>
+    <circle cx="124" cy="98" r="32" fill="#1a1a1a"/>
+    <circle cx="130" cy="166" r="38" fill="#c1502e"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(168,118)">
+    <text font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-weight="600" font-size="78" letter-spacing="-3" fill="#1a1a1a">bhag labs</text>
+    <text x="3" y="34" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-weight="500" font-size="13" letter-spacing="3" fill="#1a1a1a" opacity="0.55">A LABORATORY FOR INDIAN FOUNDERS</text>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs — Vesica Piscis lockup</title>
+
+  <!-- Mark: scaled vesica piscis into a 176×176 slot -->
+  <g transform="translate(8,12) scale(0.6875)">
+    <circle cx="128" cy="100" r="56" fill="#1a1a1a"/>
+    <circle cx="128" cy="156" r="56" fill="#c1502e"/>
+    <path fill="#f1ebe1" d="M79.5 128 A56 56 0 0 1 176.5 128 A56 56 0 0 1 79.5 128 Z"/>
+  </g>
+
+  <!-- Wordmark: lowercase, tight, single weight (Cluely register) -->
+  <g transform="translate(212,118)">
+    <text font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-weight="600" font-size="78" letter-spacing="-3" fill="#1a1a1a">bhag labs</text>
+    <text x="3" y="34" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-weight="500" font-size="12" letter-spacing="3.5" fill="#1a1a1a" opacity="0.55">VESICA  PISCIS  ·  d(O₁,O₂) = r</text>
+  </g>
+</svg>

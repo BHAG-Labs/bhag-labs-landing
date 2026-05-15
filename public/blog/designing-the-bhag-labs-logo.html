@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Designing the BHAG Labs Logo - BHAG Labs</title>
+  <meta name="description" content="A logo built from two circles and a leaning line. How we got there, why it matters, and the math that holds it together."/>
+  <link rel="icon" href="/favicon.svg"/>
+  <meta property="og:title" content="Designing the BHAG Labs Logo"/>
+  <meta property="og:description" content="A logo built from two circles and a leaning line. How we got there, and why it matters."/>
+  <meta property="og:image" content="/brand/social/og-image.png"/>
+  <meta property="og:type" content="article"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <style>
+    :root{
+      --cream:#f1ebe1;
+      --charcoal:#1a1a1a;
+      --terracotta:#c1502e;
+      --forest:#2a4942;
+      --ochre:#c89b27;
+    }
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;background:var(--cream);color:var(--charcoal);}
+    body{font-family:'Inter','Helvetica Neue',ui-sans-serif,system-ui,sans-serif;font-size:17px;line-height:1.75;}
+    .wrap{max-width:740px;margin:0 auto;padding:64px 28px 96px;}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 28px;border-bottom:1px solid rgba(0,0,0,.07);position:sticky;top:0;background:rgba(241,235,225,.92);backdrop-filter:blur(8px);z-index:10;}
+    .nav .brand{display:flex;align-items:center;gap:10px;font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:20px;color:var(--charcoal);text-decoration:none;letter-spacing:-.5px;}
+    .nav .brand img{height:28px;width:28px;}
+    .nav .back{font-size:13px;color:var(--terracotta);text-decoration:none;letter-spacing:.5px;}
+    .nav .back:hover{text-decoration:underline;}
+    .meta{font-family:'Inter',sans-serif;font-size:13px;letter-spacing:2px;opacity:.55;text-transform:uppercase;margin:0 0 14px 0;}
+    h1{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:52px;line-height:1.08;letter-spacing:-1.5px;margin:0 0 18px 0;}
+    .sub{font-family:'Cormorant Garamond',Garamond,serif;font-style:italic;font-size:24px;line-height:1.45;color:var(--charcoal);opacity:.7;margin:0 0 40px 0;}
+    h2{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:30px;line-height:1.2;letter-spacing:-.5px;margin:52px 0 14px 0;}
+    h3{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:21px;letter-spacing:-.2px;margin:36px 0 10px 0;}
+    p{margin:0 0 18px 0;}
+    em.tag{font-family:'Cormorant Garamond',Garamond,serif;font-style:italic;font-weight:400;}
+    figure{margin:36px 0;text-align:center;}
+    figure img{max-width:100%;height:auto;border-radius:6px;background:var(--cream);box-shadow:0 1px 8px rgba(0,0,0,.06);}
+    figure.dark img{background:var(--charcoal);}
+    figcaption{font-family:'Cormorant Garamond',Garamond,serif;font-style:italic;font-size:15px;opacity:.6;margin-top:12px;}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:24px 0;}
+    .grid figure{margin:0;}
+    .grid img{aspect-ratio:1;object-fit:contain;background:var(--cream);padding:8px;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+    .grid figcaption{font-size:12px;margin-top:8px;letter-spacing:.5px;}
+    .callout{margin:32px 0;padding:22px 26px;background:rgba(193,80,46,.06);border-left:3px solid var(--terracotta);border-radius:0 6px 6px 0;}
+    .callout p{margin:0;font-size:16.5px;line-height:1.7;}
+    code,.formula{font-family:'JetBrains Mono','SF Mono',Menlo,monospace;font-size:14px;background:var(--charcoal);color:var(--cream);padding:3px 8px;border-radius:3px;}
+    .formula{display:block;padding:14px 18px;text-align:center;margin:20px 0;font-size:15.5px;}
+    .twocol{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0;}
+    .twocol figure{margin:0;}
+    .footer-note{margin-top:64px;padding-top:32px;border-top:1px solid rgba(0,0,0,.1);font-size:14px;line-height:1.7;opacity:.6;}
+    .footer-note a{color:var(--terracotta);text-decoration:none;}
+    .palette{display:flex;gap:14px;margin:18px 0 30px 0;flex-wrap:wrap;}
+    .swatch{display:flex;align-items:center;gap:10px;font-size:13px;}
+    .swatch .chip{width:28px;height:28px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);}
+    @media (max-width:640px){
+      h1{font-size:38px;}
+      .sub{font-size:19px;}
+      h2{font-size:24px;}
+      .wrap{padding:36px 22px 72px;}
+      .grid{grid-template-columns:repeat(2,1fr);}
+      .twocol{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="/"><img src="/logo-mark.svg" alt=""/>bhag labs</a>
+    <a class="back" href="/logos/concepts/">&larr; All concepts</a>
+  </nav>
+
+  <article class="wrap">
+    <p class="meta">FIELD NOTES &middot; BRAND &middot; 13 MAY 2026</p>
+    <h1>Designing the BHAG Labs logo</h1>
+    <p class="sub">Two circles and a leaning line. How we got there, why it matters, and the small piece of geometry that holds it together.</p>
+
+    <figure>
+      <img src="/logos/concepts/concept-c-v13-mark.svg" alt="The final BHAG Labs mark: a leaning charcoal stem merged with a charcoal disc on top, sitting just above a terracotta disc, with a forest-green lens where they overlap." style="max-width:360px;"/>
+      <figcaption>The final mark, v13. A founder leaning into a launchpad, meeting the market.</figcaption>
+    </figure>
+
+    <p>Most logos start with a brand brief and end with a typeface. This one started with a question instead: what shape is a launchpad?</p>
+
+    <p>BHAG Labs builds software for universities, accelerators, and innovation programs. The whole job is to take a founder with a Big Hairy Audacious Goal and give them the runway, the rituals, and the rigour to actually ship something. So the mark could not be a polite abstract monogram. It had to <em>do</em> something. It had to feel like leaning into a piece of infrastructure and finding it solid.</p>
+
+    <p>We spent about two weeks on this. Thirteen named versions, dozens of unnamed ones, one moment where everything clicked. Here is the whole story.</p>
+
+    <h2>The brief, in one line</h2>
+    <p>Build a mark that reads as <strong>a B</strong> at glance, holds up as <strong>geometry</strong> on closer look, and tells a <strong>story</strong> on a third look. No icon-as-decoration. No metaphor that needs a paragraph to explain.</p>
+
+    <div class="callout"><p>Mission for the mark: a founder, a launchpad, and the magic that happens when their idea finds the market it was looking for.</p></div>
+
+    <h2>Three starting concepts</h2>
+    <p>We sketched in three directions before committing to one. Each was a different theory of what a B-mark <em>could</em> be.</p>
+
+    <div class="grid">
+      <figure><img src="/logos/concepts/concept-a-aperture-mark.svg" alt="Concept A: a charcoal plate with an aperture-style B"/><figcaption>A. Aperture<br><em class="tag">precision</em></figcaption></figure>
+      <figure><img src="/logos/concepts/concept-b-bauhaus-mark.svg" alt="Concept B: a solid Bauhaus-style B silhouette"/><figcaption>B. Bauhaus<br><em class="tag">authority</em></figcaption></figure>
+      <figure><img src="/logos/concepts/concept-c-disc-mark.svg" alt="Concept C v1: two stacked discs and a thin stem"/><figcaption>C. Discs<br><em class="tag">construction</em></figcaption></figure>
+      <figure><img src="/logos/concepts/concept-c-v13-mark.svg" alt="The final BHAG Labs mark"/><figcaption>What won.<br><em class="tag">v13</em></figcaption></figure>
+    </div>
+
+    <p>Concept A was an aperture, a precise framed plate that read like a camera lens. Too quiet for a launchpad. Concept B was a Bauhaus B, full silhouette, big and authoritative. Too settled for a company whose entire product is helping founders move. Concept C started from a different question entirely: what if a B is just <strong>two circles and a line</strong>?</p>
+
+    <p>Two circles and a line is what a B literally is in classical typography. A vertical stem and two bowls. Reduce it to its geometric primitives and you get something that can scale infinitely, animate cleanly, and stay readable at favicon size. We picked C.</p>
+
+    <h2>The iteration</h2>
+    <p>Then we had to find the <em>right</em> two circles and the <em>right</em> line. This took ten versions.</p>
+
+    <h3>v2 to v4: finding the relationship between the bowls</h3>
+    <p>We started with two equal circles overlapping in a Vesica Piscis. It is geometrically perfect and visually inert. A B has unequal bowls in almost every serif type design ever drawn, with the lower bowl heavier than the upper one. So we made the lower disc larger.</p>
+
+    <div class="twocol">
+      <figure><img src="/logos/concepts/concept-c-v2-vesica-mark.svg" alt="Concept C v2: two equal circles overlapping in a vesica piscis with a cream lens"/><figcaption>v2. Equal circles. Symmetrical but dead.</figcaption></figure>
+      <figure><img src="/logos/concepts/concept-c-v3-tangent-mark.svg" alt="Concept C v3: two unequal discs with a stem tangent to both"/><figcaption>v3. Unequal discs. A bit livelier.</figcaption></figure>
+    </div>
+
+    <p>The ratio settled at <code>R / r = 60 / 48 = 5 / 4</code>. That is close to what classical serif designers picked for their B-bowls (it is also a clean mathematical fraction, which felt right for a company whose products are mostly software). The lower bowl is exactly four-fifths heavier than the upper.</p>
+
+    <h3>v6 to v7: discovering the lens</h3>
+    <p>Then we let the discs <em>overlap</em>. The intersection of two circles is called a lens, and once we drew it in a separate colour, the mark stopped being a B and started being an event. Two worlds meeting.</p>
+
+    <div class="twocol">
+      <figure><img src="/logos/concepts/concept-c-v6-overlap-mark.svg" alt="v6: overlapping discs with a chord-style stem cutting through both"/><figcaption>v6. The chord-spine. Aggressive but wrong.</figcaption></figure>
+      <figure><img src="/logos/concepts/concept-c-v7-overlap-mark.svg" alt="v7: overlapping discs with a tangent-style stem standing outside the discs and a forest-green lens"/><figcaption>v7. Tangent spine. Right idea, too thin.</figcaption></figure>
+    </div>
+
+    <p>We tried running the stem <em>through</em> the discs as a chord in v6. It was punchy but the stem read as a slash, not a spine. By v7 we had moved the stem outside the discs as a tangent, and rendered the lens with a clipPath instead of a hand-traced path. The clipPath was a small technical win: it meant the overlap was always mathematically exact, no matter how we moved the bowls.</p>
+
+    <h3>v10: the equal-gap version we almost shipped</h3>
+    <p>By v10 the proportions were locked. Disc ratio 5:4. Stem stroke 14, butt-capped for an architectural feel. The stem floated a few pixels off both bowls so the negative space between them read as a tiny triangle. We were ready to call it done.</p>
+
+    <figure>
+      <img src="/logos/concepts/concept-c-v10-mark.svg" alt="v10: stem floats with equal gaps to both discs, butt-capped"/>
+      <figcaption>v10. Architectural. Restrained. Almost there.</figcaption>
+    </figure>
+
+    <p>Then we looked at it for a few days, and the floating stem started to bother us. A launchpad does not float. It leans on something. The triangle of negative space was beautiful, but it was also a way of saying that the spine and the bowls were not really part of the same object.</p>
+
+    <h3>v11 to v12: making the stem lean</h3>
+    <p>v11 closed both gaps. The stem became the <strong>common external tangent</strong> of the two unequal circles, kissing both at once. We solved a small system of equations to find the unique angle at which a stem anchored at the lower-left would touch both bowls simultaneously.</p>
+
+    <p class="formula">85 cos &theta; &minus; 66 sin &theta; = R + 7 = 67 &nbsp; &rArr; &nbsp; &theta; &asymp; 13.67&deg;</p>
+
+    <p>That worked, but it made the bowls feel <em>fused</em> to the stem rather than supported by it. So v12 reopened a small gap on the bottom only, keeping the kiss on top. A few pixels of cream between spine and base. Breathing room.</p>
+
+    <div class="twocol">
+      <figure><img src="/logos/concepts/concept-c-v11-mark.svg" alt="v11: stem tangent to both discs"/><figcaption>v11. Tangent to both. Locked.</figcaption></figure>
+      <figure><img src="/logos/concepts/concept-c-v12-mark.svg" alt="v12: stem tangent to top disc only, with a small gap to bottom disc"/><figcaption>v12. Top tangent, bottom sliver.</figcaption></figure>
+    </div>
+
+    <p>We also switched from butt caps to round caps somewhere in here, which is a small change that does a lot. A round cap reads as drawn. A butt cap reads as cut. The mark needed to feel made, not stamped out.</p>
+
+    <h3>v13: one shape, one magic</h3>
+    <p>The last move was the simplest. We pushed the stem about five pixels <em>into</em> the upper bowl, and made the stem and the upper bowl the same colour. They stopped looking like two elements that happened to be near each other and started looking like <strong>one shape</strong>.</p>
+
+    <figure>
+      <img src="/logos/concepts/concept-c-v13-mark.svg" alt="v13: stem merges with top disc, gap to bottom disc, single charcoal mass with forest lens"/>
+      <figcaption>v13. Final. The founder and the launchpad as one mass.</figcaption>
+    </figure>
+
+    <p>This was the moment the narrative clicked. The charcoal mass is the founder and the infrastructure as one thing, which is exactly the relationship BHAG Labs wants its founders to have with our tools. They are not separate. The lower bowl in terracotta is a different shape with a different colour. That is the market. The forest-green lens where the two shapes meet is product-market fit. The magic.</p>
+
+    <h2>The math, since you asked</h2>
+    <p>Every version sits on the same one-parameter family of geometry. Two unequal circles, a straight line. You can describe any version with two numbers: the overlap into the top disc (<code>o</code>) and the gap to the bottom disc (<code>g</code>).</p>
+
+    <p class="formula">80 sin &theta; &minus; 7 cos &theta; = (R + 7 + g) &minus; (r + 7 &minus; o) = 17 + g + o</p>
+
+    <p>Plug in different <code>o</code> and <code>g</code> and you walk the entire design space.</p>
+    <ul>
+      <li><strong>v10</strong>: <code>o = 0, g &asymp; 6</code> on both sides. Stem floats.</li>
+      <li><strong>v11</strong>: <code>o = 0, g = 0</code>. Stem tangent to both.</li>
+      <li><strong>v12</strong>: <code>o = 0, g = 4</code>. Top tangent, bottom sliver.</li>
+      <li><strong>v13</strong>: <code>o = 5, g = 4</code>. Overlap on top, sliver on bottom.</li>
+    </ul>
+
+    <p>The dimensions came from one constraint we picked first: the bottom of the stem cap should land on the same horizontal line as the bottom of the lower disc. A B should terminate at a baseline like every other letter that terminates at a baseline. That fixed one degree of freedom and left us free to play with the other.</p>
+
+    <figure>
+      <img src="/logos/concepts/concept-c-v13-construction.svg" alt="Construction diagram for v13, showing the tangent radius, overlap, gap, and angle annotations"/>
+      <figcaption>The v13 construction sheet. Every dimension annotated.</figcaption>
+    </figure>
+
+    <h2>The palette</h2>
+    <p>Four colours, doing different work.</p>
+    <div class="palette">
+      <div class="swatch"><span class="chip" style="background:#1a1a1a"></span><code>#1a1a1a</code> charcoal: founder + launchpad</div>
+      <div class="swatch"><span class="chip" style="background:#c1502e"></span><code>#c1502e</code> terracotta: the market</div>
+      <div class="swatch"><span class="chip" style="background:#2a4942"></span><code>#2a4942</code> forest: product-market fit (light mode)</div>
+      <div class="swatch"><span class="chip" style="background:#c89b27"></span><code>#c89b27</code> ochre: product-market fit (dark mode)</div>
+      <div class="swatch"><span class="chip" style="background:#f1ebe1;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);"></span><code>#f1ebe1</code> cream: the page</div>
+    </div>
+
+    <p>The lens is the only element that changes colour between light and dark mode. On cream, it is forest, which is grounded, slightly serious, the colour of a successful enterprise. On charcoal, it is ochre, which is warmer and reads as light against dark. Both colours mean the same thing in their context: this is where the value is.</p>
+
+    <figure class="dark">
+      <img src="/logos/concepts/concept-c-v13-mark-dark.svg" alt="Dark mode version of v13: stem and top disc in cream, bottom disc in terracotta, lens in ochre" style="max-width:360px;"/>
+      <figcaption>Same mark, dark mode. Same story.</figcaption>
+    </figure>
+
+    <h2>What we actually learned</h2>
+    <p>Three things, in case any of them help you with your own mark.</p>
+
+    <p><strong>Iterate on the story before you iterate on the geometry.</strong> v1 through v9 were geometry problems. v10 looked correct and felt empty. v11 to v13 were narrative problems with geometric solutions. The order matters. Get the metaphor right and the inches start mattering. Try to get the inches right with no metaphor and you will produce a perfectly proportioned mark that says nothing.</p>
+
+    <p><strong>Constraints are the design.</strong> We did not pick the disc ratio because it looked nice. We picked it because <code>5 / 4</code> matches classical B-bowl proportions, which means the mark inherits a quiet typographic familiarity. We did not pick the baseline-aligned cap because it looked nice. We picked it because every letter in the alphabet behaves that way. Each constraint we adopted from the outside (typography, classical geometry, Bauhaus restraint) saved us a decision and made the mark inherit a small piece of credibility.</p>
+
+    <p><strong>The last move is usually the smallest.</strong> Five pixels of overlap between v12 and v13. One colour decision (paint the stem the same charcoal as the top disc). That was the change that made the mark <em>mean</em> something. Everything before it was setting the stage.</p>
+
+    <h2>Where it lives</h2>
+    <p>You will see this mark in a lot of places. As a favicon in every BHAG Labs product (Neev, Hissa, Pitchwala, Yantra, Bazaar, Runway). As an avatar on social. As the OG image on every link we share. As the watermark on every founder agreement we generate. We have published all the social and landscape formats here: <a href="/brand/social/" style="color:var(--terracotta);">/brand/social/</a></p>
+
+    <p>If you are a founder reading this, that mark is for you. The leaning stem is meant to be you. The bowls are what we are building so you have something to lean on. The lens is the bit we cannot promise, but we can shape the conditions for. Product-market fit is rare and we will not pretend otherwise. But it is more likely when the founder and the infrastructure are one shape.</p>
+
+    <p>Every big idea deserves a launchpad. Now ours has a face.</p>
+
+    <div class="footer-note">
+      <p>Written by the BHAG Labs team. The thirteen versions of the mark, including all construction sheets and the supersedence chain, live at <a href="/logos/concepts/">/logos/concepts/</a>. The canonical brand files (light, dark, mark, lockup) live at <a href="/logos/">/logos/</a>. Bug reports about kerning are gratefully received at hello@bhaglabs.com.</p>
+    </div>
+  </article>
+</body>
+</html>

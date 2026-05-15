@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs v14 dark</title>
+  <defs>
+    <filter id="v14d-shadow" x="0" y="0" width="256" height="256" filterUnits="userSpaceOnUse">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.4"/>
+      <feOffset dy="3"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.45"/></feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Cream puck: top-disc + stem mass on dark bg -->
+    <radialGradient id="v14d-cream" cx="36%" cy="30%" r="82%" fx="32%" fy="26%">
+      <stop offset="0%"  stop-color="#fbf6ec"/>
+      <stop offset="60%" stop-color="#f1ebe1"/>
+      <stop offset="100%" stop-color="#cec8be"/>
+    </radialGradient>
+
+    <radialGradient id="v14d-terracotta" cx="36%" cy="30%" r="82%" fx="32%" fy="26%">
+      <stop offset="0%"  stop-color="#d96b48"/>
+      <stop offset="60%" stop-color="#c1502e"/>
+      <stop offset="100%" stop-color="#963c1f"/>
+    </radialGradient>
+
+    <radialGradient id="v14d-ochre" cx="42%" cy="32%" r="80%">
+      <stop offset="0%"  stop-color="#dcb144"/>
+      <stop offset="100%" stop-color="#a47914"/>
+    </radialGradient>
+
+    <linearGradient id="v14d-stem" gradientUnits="userSpaceOnUse"
+                    x1="87.17" y1="132.44" x2="101.83" y2="135.56">
+      <stop offset="0%"  stop-color="#fbf6ec"/>
+      <stop offset="50%" stop-color="#f1ebe1"/>
+      <stop offset="100%" stop-color="#cfc9bf"/>
+    </linearGradient>
+
+    <clipPath id="v14d-lens-clip">
+      <circle cx="148" cy="88" r="48"/>
+    </clipPath>
+  </defs>
+
+  <rect width="256" height="256" fill="#1a1a1a"/>
+
+  <ellipse cx="148" cy="234" rx="72" ry="4" fill="#000" opacity="0.45"/>
+
+  <line x1="76" y1="221" x2="113" y2="47"
+        stroke="url(#v14d-stem)" stroke-width="15" stroke-linecap="round"
+        filter="url(#v14d-shadow)"/>
+
+  <circle cx="148" cy="168" r="60" fill="url(#v14d-terracotta)" filter="url(#v14d-shadow)"/>
+
+  <circle cx="148" cy="88" r="48" fill="url(#v14d-cream)" filter="url(#v14d-shadow)"/>
+
+  <circle cx="148" cy="168" r="60" fill="url(#v14d-ochre)" clip-path="url(#v14d-lens-clip)"/>
+</svg>

@@ -74,6 +74,9 @@ export default {
         sage: {
           DEFAULT: "hsl(var(--sage))",
         },
+        teal: {
+          DEFAULT: "hsl(var(--teal))",
+        },
         "dusty-rose": {
           DEFAULT: "hsl(var(--dusty-rose))",
         },

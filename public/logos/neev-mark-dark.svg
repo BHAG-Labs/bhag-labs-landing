@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Neev">
+  <title>Neev dark</title>
+  <rect width="256" height="256" fill="#1a1a1a"/>
+
+  <g transform="rotate(-11 128 148)">
+    <rect x="81" y="168" width="94" height="28" fill="#f1ebe1"/>
+    <rect x="99" y="134" width="58" height="28" fill="#2a4942"/>
+    <rect x="110" y="100" width="36" height="28" fill="#c1502e"/>
+  </g>
+
+  <path d="M131 68 L139 80 L131 92 L123 80 Z" fill="#c89b27" transform="rotate(-11 131 80)"/>
+  <line x1="72" y1="210" x2="84" y2="54" stroke="#f1ebe1" stroke-width="8" stroke-linecap="butt"/>
+</svg>

@@ -4,11 +4,11 @@ import SectionLabel from "./SectionLabel";
 import { motion } from "framer-motion";
 
 const steps = [
-  { icon: Target, title: "Define the BHAG", desc: "Every venture starts with a Big Hairy Audacious Goal. Define the change you want to make in the world — and then systematically figure out how to get there." },
-  { icon: Map, title: "Map Your Assumptions", desc: "Break your idea into a Business Model Canvas. Identify every assumption hiding in your plan — about customers, channels, revenue, partnerships, and costs." },
+  { icon: Target, title: "Define the BHAG", desc: "Every venture starts with a Big Hairy Audacious Goal. Define the change you want to make in the world - and then systematically figure out how to get there." },
+  { icon: Map, title: "Map Your Assumptions", desc: "Break your idea into a Business Model Canvas. Identify every assumption hiding in your plan - about customers, channels, revenue, partnerships, and costs." },
   { icon: FlaskConical, title: "Build Hypotheses & Test Them", desc: "Turn each assumption into a testable hypothesis. Define what evidence would validate or invalidate it. Get out of the building and start talking to real people." },
   { icon: FileText, title: "Log Evidence, Track Pivots", desc: "Record every customer interview. Tag insights to specific hypotheses. When the evidence says pivot, document what changed and why." },
-  { icon: RefreshCw, title: "Report, Review, Repeat", desc: "Submit weekly check-ins. Receive mentor feedback. The cycle repeats until you have a validated business model — or clear evidence that you need a new one." },
+  { icon: RefreshCw, title: "Report, Review, Repeat", desc: "Submit weekly check-ins. Receive mentor feedback. The cycle repeats until you have a validated business model - or clear evidence that you need a new one." },
 ];
 
 const MethodologySection = () => (

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs v12</title>
+  <defs>
+    <clipPath id="v12-clip">
+      <circle cx="151" cy="84" r="48"/>
+    </clipPath>
+  </defs>
+  <rect width="256" height="256" fill="#f1ebe1"/>
+
+  <!-- Stem: tangent to TOP disc, ~4 px gap to bottom disc.
+       Cap-end at (52, 224) sits on the bottom-disc baseline.
+       Stroke 14, round caps. Lean theta ~16.5 deg. -->
+  <line x1="54" y1="217" x2="111" y2="26"
+        stroke="#1a1a1a" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Bottom disc: terracotta, unchanged from v11 -->
+  <circle cx="144" cy="164" r="60" fill="#c1502e"/>
+
+  <!-- Top disc: charcoal, unchanged from v11 -->
+  <circle cx="151" cy="84" r="48" fill="#1a1a1a"/>
+
+  <!-- Lens: clipped intersection in forest -->
+  <circle cx="144" cy="164" r="60" fill="#2a4942" clip-path="url(#v12-clip)"/>
+</svg>

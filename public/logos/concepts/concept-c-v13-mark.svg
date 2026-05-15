@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs v13</title>
+  <defs>
+    <clipPath id="v13-clip">
+      <circle cx="151" cy="84" r="48"/>
+    </clipPath>
+  </defs>
+  <rect width="256" height="256" fill="#f1ebe1"/>
+
+  <!-- Stem + top disc are the SAME colour (charcoal). They visually merge into one shape.
+       Stem center-line is 5 px INSIDE the top disc's edge (overlap o=5),
+       and ~4 px OUTSIDE the bottom disc's edge (gap g=4).
+       Cap-end lands on the disc baseline y=224. -->
+  <line x1="49" y1="217" x2="119" y2="26"
+        stroke="#1a1a1a" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Bottom disc: terracotta. The "different shape" looking for product-market fit. -->
+  <circle cx="144" cy="164" r="60" fill="#c1502e"/>
+
+  <!-- Top disc: same charcoal as the stem so they read as one mass. -->
+  <circle cx="151" cy="84" r="48" fill="#1a1a1a"/>
+
+  <!-- Lens: where the two worlds meet. The magic. -->
+  <circle cx="144" cy="164" r="60" fill="#2a4942" clip-path="url(#v13-clip)"/>
+</svg>

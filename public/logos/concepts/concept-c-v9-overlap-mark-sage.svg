@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs v9 sage lens</title>
+  <defs>
+    <clipPath id="top-disc-v9s">
+      <circle cx="141" cy="102" r="32"/>
+    </clipPath>
+  </defs>
+  <rect width="256" height="256" fill="#f1ebe1"/>
+
+  <line x1="82" y1="191" x2="106" y2="65"
+        stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="139" cy="154" r="40" fill="#c1502e"/>
+  <circle cx="141" cy="102" r="32" fill="#1a1a1a"/>
+  <circle cx="139" cy="154" r="40" fill="#8aa07c" clip-path="url(#top-disc-v9s)"/>
+</svg>

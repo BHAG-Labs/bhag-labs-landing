@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs — Overlapping Discs with Tangent Stem</title>
+  <rect width="256" height="256" fill="#f1ebe1"/>
+
+  <!-- Bottom disc: R = 46. Audacious. -->
+  <circle cx="130" cy="140" r="46" fill="#c1502e"/>
+
+  <!-- Top disc: r = 28. Disciplined, smaller, tilted left of bottom disc's axis. -->
+  <circle cx="120" cy="90" r="28" fill="#1a1a1a"/>
+
+  <!-- Lens of overlap: third colour, forest. Where rigor meets ambition. -->
+  <path fill="#3d5a4a" d="M97.85 107.11 A28 28 0 0 1 147.05 97.27 A46 46 0 0 1 97.85 107.11 Z"/>
+
+  <!-- Stem: common external tangent to both discs (left side).
+       Angle from vertical: sin θ = (R−r)/d ≈ 18/51 ≈ 0.353  ⇒  θ ≈ 20.7°.
+       Stretches from crown of top disc (y=60) to base of bottom disc (y=188). -->
+  <line x1="96" y1="60" x2="76" y2="188"
+        stroke="#1a1a1a" stroke-width="14" stroke-linecap="round"/>
+</svg>

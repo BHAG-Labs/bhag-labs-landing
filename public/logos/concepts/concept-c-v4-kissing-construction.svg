@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" role="img" aria-label="BHAG Labs — tangent-kissing circles construction">
+  <title>BHAG Labs — kissing circles construction</title>
+  <rect width="520" height="400" fill="#f1ebe1"/>
+
+  <!-- Centre the mark inside canvas: offset (+132, +80) from logo's (0,0) -->
+  <g transform="translate(132, 80)">
+    <!-- Hairline guides -->
+    <g stroke="#1a1a1a" stroke-width="0.6" fill="none" opacity="0.35">
+      <!-- Full outlines -->
+      <circle cx="128" cy="70" r="30"/>
+      <circle cx="128" cy="146" r="46"/>
+      <!-- Vertical centre-line through both centres (it's the d-line: d = R + r) -->
+      <line x1="128" y1="30" x2="128" y2="200" stroke-dasharray="2 3"/>
+      <!-- Radii as short segments at the kiss point -->
+      <line x1="128" y1="70" x2="128" y2="100"/>
+      <line x1="128" y1="100" x2="128" y2="146"/>
+      <!-- The OTHER external tangent (mirror image), dashed -->
+      <line x1="152" y1="40" x2="185" y2="192" stroke-dasharray="3 3"/>
+      <!-- Vertical reference line at T₁ to anchor angle θ -->
+      <line x1="98.69" y1="45" x2="98.69" y2="90" stroke-dasharray="1.5 2.5"/>
+    </g>
+
+    <!-- Angle arc for θ at T₁ (between vertical reference and the stem) -->
+    <path d="M 98.69 85 A 14 14 0 0 0 101.64 88.73"
+          stroke="#1a1a1a" stroke-width="0.6" fill="none" opacity="0.6"/>
+
+    <!-- Filled mark on top of guides -->
+    <circle cx="128" cy="146" r="46" fill="#c1502e"/>
+    <circle cx="128" cy="70" r="30" fill="#1a1a1a"/>
+    <line x1="104" y1="40" x2="71" y2="192"
+          stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- Centres O₁, O₂ and kiss point K and tangent points T₁, T₂ -->
+    <g fill="#f1ebe1" stroke="#1a1a1a" stroke-width="0.8">
+      <circle cx="128" cy="70"  r="2.4"/>
+      <circle cx="128" cy="146" r="2.4"/>
+      <circle cx="128" cy="100" r="2.2"/>
+      <circle cx="98.69" cy="63.68" r="2.2"/>
+      <circle cx="83.06" cy="136.32" r="2.2"/>
+    </g>
+
+    <!-- Labels -->
+    <g font-family="Inter, ui-sans-serif, system-ui, sans-serif" fill="#1a1a1a">
+      <text x="138" y="68"  font-size="11" font-weight="500">O₁</text>
+      <text x="138" y="149" font-size="11" font-weight="500" fill="#f1ebe1">O₂</text>
+      <text x="138" y="103" font-size="10" font-weight="500" opacity="0.7">K</text>
+
+      <text x="88"  y="58"  font-size="10" font-weight="500" text-anchor="end">T₁</text>
+      <text x="73"  y="134" font-size="10" font-weight="500" text-anchor="end">T₂</text>
+
+      <text x="108" y="92"  font-size="10" font-weight="500" opacity="0.7">θ</text>
+      <text x="135" y="88"  font-size="10" font-weight="500" opacity="0.7">r</text>
+      <text x="135" y="128" font-size="10" font-weight="500" opacity="0.7" fill="#f1ebe1">R</text>
+    </g>
+  </g>
+
+  <!-- Caption -->
+  <g font-family="Inter, ui-sans-serif, system-ui, sans-serif" fill="#1a1a1a">
+    <text x="260" y="340" font-size="11" font-weight="600" letter-spacing="3" text-anchor="middle">TANGENT  —  KISSING  CIRCLES</text>
+    <text x="260" y="362" font-size="11" font-weight="500" letter-spacing="0.5" text-anchor="middle" opacity="0.7">d(O₁,O₂) = R + r    ⇒    sin θ = (R − r) / (R + r)</text>
+    <text x="260" y="380" font-size="10" font-weight="400" letter-spacing="0.5" text-anchor="middle" opacity="0.55" font-style="italic">equal discs give a perpendicular stem. unequal ambitions force the lean.</text>
+  </g>
+</svg>

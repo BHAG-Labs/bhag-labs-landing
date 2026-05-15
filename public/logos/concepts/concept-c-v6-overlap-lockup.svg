@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs — Overlapping Discs lockup</title>
+
+  <!-- Mark: scaled into a 176×176 slot -->
+  <g transform="translate(8,12) scale(0.6875)">
+    <circle cx="130" cy="140" r="44" fill="#c1502e"/>
+    <circle cx="118" cy="88" r="30" fill="#1a1a1a"/>
+    <path fill="#3d5a4a" d="M97.77 110.10 A30 30 0 0 1 145.83 98.99 A44 44 0 0 1 97.77 110.10 Z"/>
+    <line x1="102" y1="50" x2="91" y2="170"
+          stroke="#1a1a1a" stroke-width="14" stroke-linecap="butt"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(212,118)">
+    <text font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-weight="600" font-size="78" letter-spacing="-3" fill="#1a1a1a">bhag labs</text>
+    <text x="3" y="34" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-weight="500" font-size="12" letter-spacing="3.5" fill="#1a1a1a" opacity="0.55">OVERLAPPING  DISCS  ·  d &lt; R + r</text>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs v15</title>
+  <defs>
+    <clipPath id="v15-lens-clip">
+      <circle cx="116" cy="82" r="48"/>
+    </clipPath>
+  </defs>
+
+  <rect width="256" height="256" fill="#f1ebe1"/>
+
+  <!-- Bottom bowl: terracotta (the market) -->
+  <circle cx="128" cy="162" r="60" fill="#c1502e"/>
+
+  <!-- Top bowl: charcoal (founder mass) -->
+  <circle cx="116" cy="82" r="48" fill="#1a1a1a"/>
+
+  <!-- Lens: forest where the bowls meet (product-market fit) -->
+  <circle cx="128" cy="162" r="60" fill="#2a4942" clip-path="url(#v15-lens-clip)"/>
+
+  <!-- Stem on TOP: the spine of the B.
+       Bowl left edges share the stem's left edge (x=68),
+       so each bowl looks like a D fused to the spine. -->
+  <line x1="76" y1="42" x2="76" y2="214"
+        stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+</svg>

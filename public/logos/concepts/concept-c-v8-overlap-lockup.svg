@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs lockup v8</title>
+  <defs>
+    <clipPath id="top-disc-lockup-v8">
+      <circle cx="118" cy="86" r="28"/>
+    </clipPath>
+  </defs>
+
+  <g transform="translate(8,12) scale(0.6875)">
+    <circle cx="130" cy="140" r="44" fill="#c1502e"/>
+    <circle cx="118" cy="86" r="28" fill="#1a1a1a"/>
+    <circle cx="130" cy="140" r="44" fill="#3d5a4a" clip-path="url(#top-disc-lockup-v8)"/>
+    <line x1="92.9" y1="46" x2="82.0" y2="192"
+          stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(212,118)">
+    <text font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-weight="600" font-size="78" letter-spacing="-3" fill="#1a1a1a">bhag labs</text>
+    <text x="3" y="34" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-weight="500" font-size="12" letter-spacing="3.5" fill="#1a1a1a" opacity="0.55">d &lt; R + r   &#183;   sin &#952; = (R &#8722; r) / d</text>
+  </g>
+</svg>

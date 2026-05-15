@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Hissa">
+  <title>Hissa dark</title>
+  <rect width="256" height="256" fill="#1a1a1a"/>
+
+  <circle cx="138" cy="128" r="72" fill="#f1ebe1"/>
+  <path d="M138 128 L138 56
+           A72 72 0 0 1 195.4 189.7 Z"
+        fill="#c1502e"/>
+  <line x1="138" y1="56" x2="195.4" y2="189.7"
+        stroke="#1a1a1a" stroke-width="3" stroke-linecap="butt"/>
+  <circle cx="138" cy="128" r="8" fill="#c89b27"/>
+  <line x1="48" y1="218" x2="60" y2="38" stroke="#f1ebe1" stroke-width="8" stroke-linecap="butt"/>
+</svg>

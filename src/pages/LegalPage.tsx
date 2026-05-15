@@ -26,7 +26,7 @@ const GRIEVANCE_OFFICER = {
   name: "Kartikeya Sharma",
   designation: "Founder",
   email: CONTACTS.grievance,
-  hours: "Mon–Fri 10:00–18:00 IST",
+  hours: "Mon-Fri 10:00-18:00 IST",
 };
 
 const LAST_UPDATED = "1 May 2026";
@@ -59,22 +59,22 @@ function Privacy() {
   return (
     <Page kicker="Privacy" title="Privacy Policy">
       <p>This policy explains what personal data {ENTITY.name} collects through this umbrella site, why, and your rights under India's Digital Personal Data Protection Act, 2023.</p>
-      <p>Each {ENTITY.name} product (Neev, Hissa, Pitchwala, Yantra, Bazaar) has its own privacy policy that governs use of that product.</p>
+      <p>Each {ENTITY.name} product (Neev, Hissa, Pitchwala, Yantra, SIGINT) has its own privacy policy that governs use of that product.</p>
 
       <h2>Who is the data fiduciary</h2>
       <p>{ENTITY.legal}. Privacy contact: <a href={`mailto:${CONTACTS.privacy}`}>{CONTACTS.privacy}</a>.</p>
 
       <h2>What this site collects</h2>
       <ul>
-        <li><strong>Newsletter signups</strong> — your name, email, and self-described role if you join the Bazaar mailing list via this site.</li>
-        <li><strong>Contact form messages</strong> — what you write to us, and your reply-to address.</li>
-        <li><strong>Anonymous usage analytics</strong> — page views, navigation paths, error reports. No third-party advertising trackers.</li>
+        <li><strong>Newsletter signups</strong> - your name, email, and self-described role if you join the SIGINT mailing list via this site.</li>
+        <li><strong>Contact form messages</strong> - what you write to us, and your reply-to address.</li>
+        <li><strong>Anonymous usage analytics</strong> - page views, navigation paths, error reports. No third-party advertising trackers.</li>
       </ul>
 
       <h2>How we use it</h2>
       <ul>
         <li>To respond to enquiries.</li>
-        <li>To deliver the Bazaar newsletter you opted into.</li>
+        <li>To deliver the SIGINT field report you opted into.</li>
         <li>To improve the site (aggregate analytics).</li>
       </ul>
 
@@ -91,7 +91,7 @@ function Privacy() {
       <h2>Your rights under the DPDP Act</h2>
       <ul>
         <li>Access, correction, erasure, withdraw consent.</li>
-        <li>Grievance redressal — see <a href="/grievance">Grievance page</a>.</li>
+        <li>Grievance redressal - see <a href="/grievance">Grievance page</a>.</li>
       </ul>
       <p>Email <a href={`mailto:${CONTACTS.privacy}`}>{CONTACTS.privacy}</a>. We respond within 72 hours for erasure / consent-withdrawal, 7 days for others.</p>
 

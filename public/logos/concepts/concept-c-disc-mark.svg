@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BHAG Labs">
+  <title>BHAG Labs — Concept C · Stacked Disc B</title>
+  <rect width="256" height="256" fill="#f1ebe1"/>
+
+  <!-- Vertical stem: thin, full height -->
+  <rect x="72" y="64" width="14" height="128" fill="#1a1a1a"/>
+
+  <!-- Top disc (smaller, charcoal) — the upper bowl of B as pure circle -->
+  <circle cx="124" cy="98" r="32" fill="#1a1a1a"/>
+
+  <!-- Bottom disc (larger, terracotta) — the lower bowl, intentionally heavier -->
+  <circle cx="130" cy="166" r="38" fill="#c1502e"/>
+</svg>

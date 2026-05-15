@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 180" width="160" height="180" role="img" aria-label="Ekam, the BHAG Labs guide">
+  <!-- Ekam (एकम्) — the unified BHAG Labs guide character.
+       Editorial ink-bottle silhouette. Cream face, charcoal body, ochre eye-spark,
+       terracotta numeral 1 on the chest plate. Flat, no gradients. -->
+
+  <defs>
+    <style>
+      .e-body  { fill: #1a1a1a; }
+      .e-face  { fill: #faf7f2; }
+      .e-eye   { fill: #1a1a1a; }
+      .e-spark { fill: #c89b27; }
+      .e-numeral { fill: #c1502e; }
+      .e-base  { fill: #2a2522; }
+      .e-stroke{ stroke: #1a1a1a; stroke-width: 2; fill: none; }
+      .e-blink { animation: ekamBlink 5.5s infinite; transform-origin: center; }
+      @keyframes ekamBlink {
+        0%, 92%, 100% { transform: scaleY(1); }
+        95%, 98%      { transform: scaleY(0.1); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .e-blink { animation: none; }
+      }
+    </style>
+  </defs>
+
+  <!-- Floor shadow -->
+  <ellipse cx="80" cy="170" rx="42" ry="4" fill="#1a1a1a" opacity="0.12"/>
+
+  <!-- Bottle base -->
+  <rect class="e-base" x="44" y="156" width="72" height="10" rx="1"/>
+
+  <!-- Bottle body: rounded square ink-pot -->
+  <path class="e-body" d="M40 60 Q40 44 56 44 H104 Q120 44 120 60 V152 Q120 158 114 158 H46 Q40 158 40 152 Z"/>
+
+  <!-- Neck/cork band (lighter charcoal accent) -->
+  <rect x="58" y="36" width="44" height="12" rx="2" fill="#2a2522"/>
+  <rect x="64" y="28" width="32" height="10" rx="2" fill="#1a1a1a"/>
+
+  <!-- Cream face plate -->
+  <rect class="e-face" x="52" y="68" width="56" height="44" rx="4"/>
+
+  <!-- Eyes -->
+  <g class="e-blink">
+    <circle class="e-eye" cx="68" cy="90" r="4"/>
+    <circle class="e-eye" cx="92" cy="90" r="4"/>
+    <!-- Ochre spark in right eye -->
+    <circle class="e-spark" cx="93.5" cy="88.5" r="1.4"/>
+  </g>
+
+  <!-- Subtle smile -->
+  <path d="M70 102 Q80 108 90 102" class="e-stroke" stroke-linecap="round"/>
+
+  <!-- Chest plate with terracotta "1" numeral -->
+  <rect x="62" y="120" width="36" height="28" rx="2" fill="#faf7f2"/>
+  <text x="80" y="143"
+        text-anchor="middle"
+        class="e-numeral"
+        font-family="'Playfair Display', Georgia, serif"
+        font-weight="900"
+        font-size="24">1</text>
+
+  <!-- एकम् caption under the numeral, very small -->
+  <text x="80" y="22"
+        text-anchor="middle"
+        fill="#c1502e"
+        font-family="'Playfair Display', Georgia, serif"
+        font-weight="700"
+        font-size="10"
+        letter-spacing="2">EKAM</text>
+</svg>
