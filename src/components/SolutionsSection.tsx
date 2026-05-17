@@ -3,6 +3,7 @@ import AnimatedSection from "./AnimatedSection";
 import SectionLabel from "./SectionLabel";
 import { motion } from "framer-motion";
 import { useT } from "@/lib/i18n";
+import { CornerFrame, DiamondDivider } from "./BhagMotifs";
 
 const productDefs = [
   {
@@ -94,38 +95,49 @@ const SolutionsSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {productDefs.map((p, i) => (
-            <motion.a
+            <motion.div
               key={p.name}
-              href={p.href}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.06, duration: 0.4 }}
-              className={`p-7 flex flex-col bg-background border-2 border-foreground ${p.borderStyle} hover:bg-muted transition-colors group`}
+              className="relative"
             >
-              <div className="flex items-start justify-between mb-5">
-                <p.icon className={`w-6 h-6 ${p.accentCls}`} />
-                <span className={`text-[10px] uppercase tracking-[0.2em] font-bold px-2 py-1 ${p.badgeCls}`}>
-                  {t(p.badgeKey)}
-                </span>
-              </div>
-              <span className="text-xs font-medium tracking-wide uppercase text-muted-foreground mb-2">{t(p.categoryKey)}</span>
-              <h3 className="font-heading font-bold text-2xl text-foreground mb-1">{p.name}</h3>
-              <p className="font-subheading italic text-sm text-foreground/55 mb-3">
-                {p.devanagari ? (
-                  <>
-                    <span lang="hi" className="not-italic">{p.devanagari}</span>
-                    <span className="mx-1.5">·</span>
-                  </>
-                ) : null}
-                {p.gloss}
-              </p>
-              <p className="text-sm text-muted-foreground leading-relaxed flex-1">{t(p.descKey)}</p>
-              <span className="mt-5 text-sm font-semibold text-terracotta group-hover:text-foreground transition-colors tracking-wide">
-                {t(p.linkKey)}
-              </span>
-            </motion.a>
+              <CornerFrame>
+                <a
+                  href={p.href}
+                  className={`p-7 flex flex-col bg-background border-2 border-foreground ${p.borderStyle} hover:bg-muted transition-colors group h-full`}
+                >
+                  <div className="flex items-start justify-between mb-5">
+                    <p.icon className={`w-6 h-6 ${p.accentCls}`} />
+                    <span className={`text-[10px] uppercase tracking-[0.2em] font-bold px-2 py-1 ${p.badgeCls}`}>
+                      {t(p.badgeKey)}
+                    </span>
+                  </div>
+                  <span className="text-xs font-medium tracking-wide uppercase text-muted-foreground mb-2">{t(p.categoryKey)}</span>
+                  <h3 className="font-heading font-bold text-2xl text-foreground mb-1">{p.name}</h3>
+                  <p className="font-subheading italic text-sm text-foreground/55 mb-3">
+                    {p.devanagari ? (
+                      <>
+                        <span lang="hi" className="not-italic">{p.devanagari}</span>
+                        <span className="mx-1.5">·</span>
+                      </>
+                    ) : null}
+                    {p.gloss}
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">{t(p.descKey)}</p>
+                  <span className="mt-5 text-sm font-semibold text-terracotta group-hover:text-foreground transition-colors tracking-wide">
+                    {t(p.linkKey)}
+                  </span>
+                </a>
+              </CornerFrame>
+            </motion.div>
           ))}
+        </div>
+
+        {/* Diamond-divider rest beat between sections */}
+        <div className="mt-20 text-foreground/60">
+          <DiamondDivider />
         </div>
       </div>
     </AnimatedSection>

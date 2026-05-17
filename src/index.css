@@ -1,93 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* =============================================================
+   BHAG Labs design tokens — "Broadsheet × Bauhaus"
+   Source of truth: bhag-labs-design-system/colors_and_type.css
+   HSL channels match the canonical hex palette (charcoal #1a1a1a,
+   cream #f1ebe1, terracotta #c1502e, forest #2a4942, ochre #c89b27,
+   teal #1f4a5a, sage #8a9678, dusty-rose #d3a89a).
+   ============================================================= */
+
 @layer base {
   :root {
-    --background: 34 24% 91%;
+    --background: 34 35% 91%;
     --foreground: 0 0% 10%;
 
-    --card: 34 24% 91%;
+    --card: 34 35% 91%;
     --card-foreground: 0 0% 10%;
 
-    --popover: 34 24% 91%;
+    --popover: 34 35% 91%;
     --popover-foreground: 0 0% 10%;
 
-    --primary: 11 55% 49%;
-    --primary-foreground: 34 24% 91%;
+    --primary: 14 62% 47%;
+    --primary-foreground: 34 35% 91%;
 
     --secondary: 0 0% 10%;
-    --secondary-foreground: 34 24% 91%;
+    --secondary-foreground: 34 35% 91%;
 
-    --muted: 34 16% 85%;
-    --muted-foreground: 25 6% 39%;
+    --muted: 34 35% 86%;
+    --muted-foreground: 28 10% 38%;
 
-    --accent: 43 66% 47%;
+    --accent: 43 67% 47%;
     --accent-foreground: 0 0% 10%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 14 62% 47%;
+    --destructive-foreground: 34 35% 91%;
 
     --border: 0 0% 10%;
     --input: 0 0% 10%;
-    --ring: 11 55% 49%;
+    --ring: 14 62% 47%;
 
     --radius: 0px;
 
-    --terracotta: 11 55% 49%;
-    --ochre: 43 66% 47%;
-    --forest: 163 27% 23%;
-    --sage: 100 12% 55%;
+    /* Brand palette — light surface */
+    --terracotta: 14 62% 47%;
+    --terracotta-warm: 24 73% 55%;
+    --ochre: 43 67% 47%;
+    --forest: 167 27% 23%;
+    --sage: 84 13% 53%;
     --teal: 196 49% 24%;
-    --dusty-rose: 6 30% 65%;
+    --dusty-rose: 17 40% 72%;
     --charcoal: 0 0% 10%;
-    --cream: 34 24% 91%;
-    --cream-dark: 30 16% 82%;
+    --charcoal-soft: 20 9% 15%;
+    --cream: 34 35% 91%;
+    --cream-soft: 34 36% 97%;
+    --cream-dark: 34 35% 86%;
+    --cream-darker: 33 31% 80%;
+
+    /* Sub-brand product signals */
+    --product-neev: 167 27% 23%;
+    --product-hissa: 0 0% 10%;
+    --product-pitchwala: 14 62% 47%;
+    --product-yantra: 196 49% 24%;
+    --product-bazaar: 43 67% 47%;
+    --product-runway: 24 73% 55%;
 
     --sidebar-background: 0 0% 10%;
-    --sidebar-foreground: 34 24% 91%;
-    --sidebar-primary: 11 55% 49%;
-    --sidebar-primary-foreground: 34 24% 91%;
-    --sidebar-accent: 43 66% 47%;
+    --sidebar-foreground: 34 35% 91%;
+    --sidebar-primary: 14 62% 47%;
+    --sidebar-primary-foreground: 34 35% 91%;
+    --sidebar-accent: 43 67% 47%;
     --sidebar-accent-foreground: 0 0% 10%;
-    --sidebar-border: 43 66% 47%;
-    --sidebar-ring: 11 55% 49%;
+    --sidebar-border: 43 67% 47%;
+    --sidebar-ring: 14 62% 47%;
   }
 
   .dark {
     --background: 0 0% 10%;
-    --foreground: 34 24% 91%;
+    --foreground: 34 35% 91%;
 
     --card: 0 0% 14%;
-    --card-foreground: 34 24% 91%;
+    --card-foreground: 34 35% 91%;
 
     --popover: 0 0% 14%;
-    --popover-foreground: 34 24% 91%;
+    --popover-foreground: 34 35% 91%;
 
-    --primary: 11 55% 49%;
-    --primary-foreground: 34 24% 91%;
+    --primary: 14 62% 47%;
+    --primary-foreground: 34 35% 91%;
 
-    --secondary: 34 24% 91%;
+    --secondary: 34 35% 91%;
     --secondary-foreground: 0 0% 10%;
 
     --muted: 0 0% 18%;
     --muted-foreground: 34 16% 65%;
 
-    --accent: 43 66% 47%;
-    --accent-foreground: 34 24% 91%;
+    --accent: 43 67% 47%;
+    --accent-foreground: 34 35% 91%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 14 62% 47%;
+    --destructive-foreground: 34 35% 91%;
 
     --border: 0 0% 25%;
     --input: 0 0% 25%;
-    --ring: 11 55% 49%;
+    --ring: 14 62% 47%;
 
-    --charcoal: 0 0% 10%;
-    --cream: 34 24% 91%;
-    --cream-dark: 0 0% 18%;
+    /* Dark surface — cream and charcoal flip; lens accent shifts terracotta → ochre */
+    --charcoal: 34 35% 91%;
+    --charcoal-soft: 33 31% 80%;
+    --cream: 0 0% 10%;
+    --cream-soft: 0 0% 13%;
+    --cream-dark: 20 9% 15%;
+    --cream-darker: 30 17% 7%;
+
+    --product-pitchwala: 43 67% 47%;
   }
 }
 
@@ -165,4 +192,338 @@
     background-color: hsl(0 0% 8%);
     color: hsl(34 24% 91%);
   }
+}
+
+/* =============================================================
+   BHAG Labs v14 unified-teardrop mark
+   4.4s assembly loop: teardrop blooms → big disc enters → lens ignites.
+   Set data-mode="dark" to flip teardrop → cream and lens → ochre.
+   Add .bhag-mark-static for final state (no animation).
+   ============================================================= */
+.bhag-mark { overflow: visible; display: inline-block; }
+.bhag-mark .bm-teardrop { fill: #1a1a1a; }
+.bhag-mark .bm-big      { fill: #c1502e; }
+.bhag-mark .bm-lens     { fill: #2a4942; }
+.bhag-mark[data-mode="dark"] .bm-teardrop { fill: #f1ebe1; }
+.bhag-mark[data-mode="dark"] .bm-lens     { fill: #c89b27; }
+.dark .bhag-mark:not([data-mode="light"]) .bm-teardrop { fill: #f1ebe1; }
+.dark .bhag-mark:not([data-mode="light"]) .bm-lens     { fill: #c89b27; }
+
+.bhag-mark .bm-teardrop {
+  transform-box: fill-box;
+  transform-origin: 0% 100%;
+  animation: bm-teardrop-bloom 4.4s cubic-bezier(.16, 1, .3, 1) infinite both;
+}
+.bhag-mark .bm-big {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: bm-big-in 4.4s cubic-bezier(.16, 1, .3, 1) infinite both;
+}
+.bhag-mark .bm-lens {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: bm-lens-in 4.4s cubic-bezier(.16, 1, .3, 1) infinite both;
+}
+@keyframes bm-teardrop-bloom {
+  0%        { transform: scale(0)    rotate(-18deg); opacity: 0; }
+  10%       { opacity: 1; }
+  28%       { transform: scale(1.04) rotate(2deg);   opacity: 1; }
+  36%, 94%  { transform: scale(1)    rotate(0);      opacity: 1; }
+  100%      { transform: scale(1)    rotate(0);      opacity: 1; }
+}
+@keyframes bm-big-in {
+  0%, 30%   { transform: scale(.45) translateY(40px); opacity: 0; }
+  55%       { transform: scale(1.08) translateY(0);   opacity: 1; }
+  62%, 94%  { transform: scale(1)    translateY(0);   opacity: 1; }
+  100%      { transform: scale(1)    translateY(0);   opacity: 1; }
+}
+@keyframes bm-lens-in {
+  0%, 62%   { transform: scale(.5);  opacity: 0; }
+  74%       { transform: scale(1.18); opacity: 1; }
+  82%, 94%  { transform: scale(1);    opacity: 1; }
+  100%      { transform: scale(1);    opacity: 1; }
+}
+.bhag-mark.bhag-mark-static .bm-teardrop,
+.bhag-mark.bhag-mark-static .bm-big,
+.bhag-mark.bhag-mark-static .bm-lens {
+  animation: none; transform: none; opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .bhag-mark .bm-teardrop,
+  .bhag-mark .bm-big,
+  .bhag-mark .bm-lens {
+    animation: none !important; transform: none !important; opacity: 1 !important;
+  }
+}
+
+/* =============================================================
+   Construction grid + corner marks — broadsheet × bauhaus
+   wrap any tile with .bhag-tile for the framed effect.
+   ============================================================= */
+.bhag-tile { position: relative; overflow: hidden; }
+.bhag-tile::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(26,26,26,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,26,26,0.06) 1px, transparent 1px);
+  background-size: 24px 24px; background-position: -1px -1px;
+  opacity: 0;
+  animation: bhag-grid-pulse 4.4s linear infinite;
+}
+.dark .bhag-tile::before,
+.bhag-tile[data-mode="dark"]::before {
+  background-image:
+    linear-gradient(rgba(241,235,225,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(241,235,225,0.06) 1px, transparent 1px);
+}
+@keyframes bhag-grid-pulse {
+  0%, 60%, 100% { opacity: 0; }
+  10%, 35%      { opacity: 0.55; }
+}
+.bhag-corners { position: relative; }
+.bhag-corners::before,
+.bhag-corners::after,
+.bhag-corners > .corner-tl,
+.bhag-corners > .corner-tr,
+.bhag-corners > .corner-bl,
+.bhag-corners > .corner-br { pointer-events: none; }
+.bhag-corner {
+  position: absolute; width: 12px; height: 12px;
+  border: 0 solid currentColor; opacity: 0.45;
+}
+.bhag-corner.tl { top: 10px; left: 10px;    border-top: 1.5px solid; border-left: 1.5px solid;
+                  animation: bhag-corner-in-tl .9s cubic-bezier(.34,1.56,.64,1) both, bhag-corner-pulse 3.2s ease-in-out 1.4s infinite; }
+.bhag-corner.tr { top: 10px; right: 10px;   border-top: 1.5px solid; border-right: 1.5px solid;
+                  animation: bhag-corner-in-tr .9s cubic-bezier(.34,1.56,.64,1) .08s both, bhag-corner-pulse 3.2s ease-in-out 1.5s infinite; }
+.bhag-corner.bl { bottom: 10px; left: 10px; border-bottom: 1.5px solid; border-left: 1.5px solid;
+                  animation: bhag-corner-in-bl .9s cubic-bezier(.34,1.56,.64,1) .16s both, bhag-corner-pulse 3.2s ease-in-out 1.6s infinite; }
+.bhag-corner.br { bottom: 10px; right: 10px; border-bottom: 1.5px solid; border-right: 1.5px solid;
+                  animation: bhag-corner-in-br .9s cubic-bezier(.34,1.56,.64,1) .24s both, bhag-corner-pulse 3.2s ease-in-out 1.7s infinite; }
+@keyframes bhag-corner-in-tl { from { transform: translate(-10px, -10px); opacity: 0; } to { transform: translate(0,0); opacity: .45; } }
+@keyframes bhag-corner-in-tr { from { transform: translate( 10px, -10px); opacity: 0; } to { transform: translate(0,0); opacity: .45; } }
+@keyframes bhag-corner-in-bl { from { transform: translate(-10px,  10px); opacity: 0; } to { transform: translate(0,0); opacity: .45; } }
+@keyframes bhag-corner-in-br { from { transform: translate( 10px,  10px); opacity: 0; } to { transform: translate(0,0); opacity: .45; } }
+@keyframes bhag-corner-pulse {
+  0%, 100% { border-color: currentColor; }
+  50%      { border-color: hsl(var(--terracotta)); }
+}
+
+/* =============================================================
+   12 BRAND MOTIFS — port of preview/brand-motifs.html
+   ============================================================= */
+.bhag-motif { display: inline-flex; }
+
+/* 1. Stacked arches: rise + breathe */
+.m-stack { display: inline-flex; flex-direction: column; align-items: center; }
+.m-stack span {
+  border-top-left-radius: 999px; border-top-right-radius: 999px;
+  background: hsl(var(--terracotta));
+  transform-origin: bottom center; opacity: 0;
+  animation: stack-rise .9s cubic-bezier(.34,1.56,.64,1) forwards,
+             stack-breathe 4s ease-in-out infinite 1.2s;
+}
+.m-stack span:nth-child(1) { width: 68px; height: 34px; animation-delay: .55s, 1.6s; }
+.m-stack span:nth-child(2) { width: 58px; height: 29px; background: #d4724f; animation-delay: .30s, 1.4s; }
+.m-stack span:nth-child(3) { width: 48px; height: 24px; background: #dfa28b; animation-delay: .05s, 1.2s; }
+@keyframes stack-rise {
+  0% { transform: translateY(28px) scaleY(.4); opacity: 0; }
+  60% { opacity: 1; }
+  100% { transform: translateY(0) scaleY(1); opacity: 1; }
+}
+@keyframes stack-breathe {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-2px) scale(1.025); }
+}
+
+/* 2. Doorway: arches grow then keystone ignites */
+.m-arch { position: relative; width: 140px; height: 70px; }
+.m-arch span {
+  position: absolute; bottom: 0; left: 50%;
+  border-top-left-radius: 999px; border-top-right-radius: 999px;
+  transform-origin: bottom center;
+}
+.m-arch .o { width: 140px; height: 70px; background: hsl(var(--terracotta));
+             transform: translateX(-50%) scaleY(0); animation: arch-grow .7s cubic-bezier(.2,.7,.2,1) .1s forwards; }
+.m-arch .i { width: 84px; height: 42px; background: hsl(var(--charcoal));
+             transform: translateX(-50%) scaleY(0); animation: arch-grow .6s cubic-bezier(.2,.7,.2,1) .55s forwards; }
+.m-arch .k { width: 42px; height: 21px; background: hsl(var(--cream));
+             transform: translateX(-50%) scaleY(0); animation: arch-grow .5s cubic-bezier(.2,.7,.2,1) .95s forwards,
+                                                            key-ignite 3.5s ease-in-out 1.6s infinite; }
+@keyframes arch-grow { from { transform: translateX(-50%) scaleY(0); } to { transform: translateX(-50%) scaleY(1); } }
+@keyframes key-ignite {
+  0%, 100% { background: hsl(var(--cream)); }
+  50%      { background: hsl(var(--ochre)); }
+}
+
+/* 3. Striped petal */
+.m-stripe {
+  width: 80px; height: 80px; border-radius: 80px 0 80px 0;
+  background-image: repeating-linear-gradient(45deg, hsl(var(--forest)) 0 4px, transparent 4px 9px);
+  border: 2px solid hsl(var(--forest));
+  animation: stripe-march 1.6s linear infinite, petal-wobble 5s ease-in-out infinite;
+}
+@keyframes stripe-march { from { background-position: 0 0; } to { background-position: 12.73px 0; } }
+@keyframes petal-wobble { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(6deg); } }
+
+/* 4. Dot grid 4x4 — diagonal sweep */
+.m-dots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.m-dots span { width: 7px; height: 7px; border-radius: 50%; background: hsl(var(--charcoal));
+               transform: scale(0); animation: dot-wave 2.4s cubic-bezier(.2,.7,.2,1) infinite; }
+.m-dots span:nth-child(1)  { animation-delay: 0s; }
+.m-dots span:nth-child(2)  { animation-delay: .08s; }
+.m-dots span:nth-child(3)  { animation-delay: .16s; }
+.m-dots span:nth-child(4)  { animation-delay: .24s; }
+.m-dots span:nth-child(5)  { animation-delay: .08s; }
+.m-dots span:nth-child(6)  { animation-delay: .16s; }
+.m-dots span:nth-child(7)  { animation-delay: .24s; }
+.m-dots span:nth-child(8)  { animation-delay: .32s; }
+.m-dots span:nth-child(9)  { animation-delay: .16s; }
+.m-dots span:nth-child(10) { animation-delay: .24s; }
+.m-dots span:nth-child(11) { animation-delay: .32s; }
+.m-dots span:nth-child(12) { animation-delay: .40s; }
+.m-dots span:nth-child(13) { animation-delay: .24s; }
+.m-dots span:nth-child(14) { animation-delay: .32s; }
+.m-dots span:nth-child(15) { animation-delay: .40s; }
+.m-dots span:nth-child(16) { animation-delay: .48s; }
+@keyframes dot-wave {
+  0%, 70%, 100% { transform: scale(1);   background: hsl(var(--charcoal)); }
+  35%           { transform: scale(1.7); background: hsl(var(--terracotta)); }
+}
+
+/* 5. Bullet rhythm: heartbeat */
+.m-bullets { display: flex; gap: 12px; align-items: center; }
+.m-bullets span {
+  width: 12px; height: 12px; border-radius: 50%; background: hsl(var(--ochre));
+  transform: scale(0);
+  animation: pop-in .5s cubic-bezier(.34,1.56,.64,1) forwards, beat 1.6s ease-in-out infinite;
+}
+.m-bullets span:nth-child(1) { animation-delay: 0s,    1.0s; }
+.m-bullets span:nth-child(2) { animation-delay: .08s,  1.1s; }
+.m-bullets span:nth-child(3) { animation-delay: .16s,  1.2s; }
+.m-bullets span:nth-child(4) { animation-delay: .24s,  1.3s; }
+.m-bullets span:nth-child(5) { animation-delay: .32s,  1.4s; }
+@keyframes pop-in { from { transform: scale(0); } to { transform: scale(1); } }
+@keyframes beat {
+  0%, 100% { transform: scale(1);    background: hsl(var(--ochre)); }
+  50%      { transform: scale(1.18); background: color-mix(in srgb, hsl(var(--ochre)) 70%, hsl(var(--terracotta))); }
+}
+
+/* 6. Progress dots — filling cycle */
+.m-progress { display: flex; gap: 12px; align-items: center; }
+.m-progress span {
+  width: 12px; height: 12px; border-radius: 50%;
+  border: 2px solid hsl(var(--charcoal)); background: transparent;
+  animation: prog-fill 5s cubic-bezier(.2,.7,.2,1) infinite;
+}
+.m-progress span:nth-child(1) { animation-delay: .4s; }
+.m-progress span:nth-child(2) { animation-delay: 1.0s; }
+.m-progress span:nth-child(3) { animation-delay: 1.6s; }
+.m-progress span:nth-child(4) { animation-delay: 2.2s; }
+.m-progress span:nth-child(5) { animation-delay: 2.8s; }
+@keyframes prog-fill {
+  0%, 5%   { background: transparent; border-color: hsl(var(--charcoal)); transform: scale(1); }
+  10%      { background: hsl(var(--terracotta)); border-color: hsl(var(--terracotta)); transform: scale(1.3); }
+  20%, 80% { background: hsl(var(--terracotta)); border-color: hsl(var(--terracotta)); transform: scale(1); }
+  95%, 100% { background: transparent; border-color: hsl(var(--charcoal)); transform: scale(1); }
+}
+
+/* 7. Quarter petal */
+.m-petal {
+  width: 64px; height: 64px; background: hsl(var(--dusty-rose));
+  border-radius: 64px 0 0 0; transform-origin: bottom right;
+  animation: petal-spin 5s ease-in-out infinite;
+}
+@keyframes petal-spin {
+  0%, 100% { transform: rotate(0)    scale(1); }
+  25%      { transform: rotate(-8deg) scale(1.04); }
+  50%      { transform: rotate(0)    scale(1); }
+  75%      { transform: rotate(8deg)  scale(.96); }
+}
+
+/* 8. Striped quarter */
+.m-petal-stripe {
+  width: 64px; height: 64px; border-radius: 64px 0 0 0;
+  background-image: repeating-linear-gradient(-45deg, hsl(var(--sage)) 0 4px, transparent 4px 9px);
+  border-top: 2px solid hsl(var(--sage)); border-left: 2px solid hsl(var(--sage));
+  transform-origin: bottom right;
+  animation: stripe-march-neg 1.6s linear infinite, petal-pivot 6s ease-in-out infinite;
+}
+@keyframes stripe-march-neg { from { background-position: 0 0; } to { background-position: -12.73px 0; } }
+@keyframes petal-pivot { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(-5deg); } }
+
+/* 9. Notched disc */
+.m-notch {
+  width: 72px; height: 72px; background: hsl(var(--terracotta)); border-radius: 50%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 35% 100%, 0 65%);
+  animation: notch-drift 7s ease-in-out infinite;
+}
+@keyframes notch-drift { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(15deg); } }
+
+/* 10. Corner marks (standalone widget) */
+.m-corners { position: relative; width: 96px; height: 64px; }
+.m-corners i {
+  position: absolute; width: 12px; height: 12px;
+  border: 0 solid hsl(var(--charcoal));
+}
+.m-corners i.tl { top: 0; left: 0; border-top-width: 1.5px; border-left-width: 1.5px;
+                  animation: corner-in-tl .9s cubic-bezier(.34,1.56,.64,1) forwards, corner-pulse 3.2s ease-in-out 1.4s infinite; }
+.m-corners i.tr { top: 0; right: 0; border-top-width: 1.5px; border-right-width: 1.5px;
+                  animation: corner-in-tr .9s cubic-bezier(.34,1.56,.64,1) .08s forwards, corner-pulse 3.2s ease-in-out 1.5s infinite; }
+.m-corners i.bl { bottom: 0; left: 0; border-bottom-width: 1.5px; border-left-width: 1.5px;
+                  animation: corner-in-bl .9s cubic-bezier(.34,1.56,.64,1) .16s forwards, corner-pulse 3.2s ease-in-out 1.6s infinite; }
+.m-corners i.br { bottom: 0; right: 0; border-bottom-width: 1.5px; border-right-width: 1.5px;
+                  animation: corner-in-br .9s cubic-bezier(.34,1.56,.64,1) .24s forwards, corner-pulse 3.2s ease-in-out 1.7s infinite; }
+@keyframes corner-in-tl { from { transform: translate(-10px, -10px); opacity: 0; } to { transform: translate(0,0); opacity: 1; } }
+@keyframes corner-in-tr { from { transform: translate( 10px, -10px); opacity: 0; } to { transform: translate(0,0); opacity: 1; } }
+@keyframes corner-in-bl { from { transform: translate(-10px,  10px); opacity: 0; } to { transform: translate(0,0); opacity: 1; } }
+@keyframes corner-in-br { from { transform: translate( 10px,  10px); opacity: 0; } to { transform: translate(0,0); opacity: 1; } }
+@keyframes corner-pulse {
+  0%, 100% { border-color: hsl(var(--charcoal)); }
+  50%      { border-color: hsl(var(--terracotta)); }
+}
+
+/* 11. Double rule — draws across */
+.m-double { width: 96px; display: flex; flex-direction: column; gap: 6px; }
+.m-double .a, .m-double .b {
+  background: hsl(var(--charcoal));
+  transform-origin: left center; transform: scaleX(0);
+  animation: rule-draw .9s cubic-bezier(.2,.7,.2,1) forwards;
+}
+.m-double .a { height: 4px; animation-delay: .05s; }
+.m-double .b { height: 1px; animation-delay: .35s; transform-origin: right center; }
+@keyframes rule-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* 12. Diamond divider */
+.m-diamond { display: flex; align-items: center; gap: 8px; }
+.m-diamond i {
+  flex: 1; height: 1px; background: hsl(var(--charcoal)); opacity: .3;
+  transform-origin: center; transform: scaleX(0);
+  animation: rule-draw .8s cubic-bezier(.2,.7,.2,1) .2s forwards;
+}
+.m-diamond i:first-child { transform-origin: right center; }
+.m-diamond i:last-child  { transform-origin: left center; }
+.m-diamond s {
+  width: 8px; height: 8px; background: hsl(var(--charcoal));
+  text-decoration: none;
+  transform: rotate(45deg) scale(0);
+  animation: dia-pop .6s cubic-bezier(.34,1.56,.64,1) forwards, dia-spin 4s ease-in-out 1s infinite;
+}
+@keyframes dia-pop  { from { transform: rotate(45deg)  scale(0); } to { transform: rotate(45deg)  scale(1); } }
+@keyframes dia-spin {
+  0%, 100% { transform: rotate(45deg)  scale(1); }
+  50%      { transform: rotate(225deg) scale(1.15); }
+}
+
+/* Reveal-on-scroll (works with IntersectionObserver via .is-visible) */
+.bhag-reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+.bhag-reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .m-stack span, .m-arch span, .m-stripe, .m-dots span, .m-bullets span,
+  .m-progress span, .m-petal, .m-petal-stripe, .m-notch, .m-corners i,
+  .m-double .a, .m-double .b, .m-diamond i, .m-diamond s,
+  .bhag-corner, .bhag-tile::before {
+    animation: none !important; transform: none !important; opacity: 1 !important;
+  }
+  .bhag-reveal { opacity: 1; transform: none; transition: none; }
 }

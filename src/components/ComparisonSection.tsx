@@ -1,6 +1,7 @@
 import AnimatedSection from "./AnimatedSection";
 import SectionLabel from "./SectionLabel";
 import { useT } from "@/lib/i18n";
+import { CornerFrame, QuarterPetal } from "./BhagMotifs";
 
 const ROW_KEYS = [
   { key: 'comparison.row.bmcVersioning', sheets: "partial", pm: "no", bhag: "yes" },
@@ -22,14 +23,18 @@ const ComparisonSection = () => {
   const t = useT();
 
   return (
-    <AnimatedSection className="py-16 md:py-24 px-6 md:px-8 section-light">
-      <div className="max-w-5xl mx-auto">
+    <AnimatedSection className="py-16 md:py-24 px-6 md:px-8 section-light relative overflow-hidden">
+      {/* QuarterPetal — top-right dusty-rose accent */}
+      <div aria-hidden="true" className="absolute top-12 right-6 opacity-30 hidden md:block">
+        <QuarterPetal />
+      </div>
+      <div className="max-w-5xl mx-auto relative">
         <SectionLabel>{t('comparison.label')}</SectionLabel>
         <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase leading-[1.05] mb-12 text-foreground">
           {t('comparison.title')} <span className="text-terracotta">{t('comparison.titleHighlight')}</span>
         </h2>
 
-        <div className="overflow-x-auto">
+        <CornerFrame inset className="overflow-x-auto">
           <table className="w-full text-left text-sm border-2 border-foreground">
             <thead>
               <tr className="border-b-2 border-foreground">
@@ -50,7 +55,7 @@ const ComparisonSection = () => {
               ))}
             </tbody>
           </table>
-        </div>
+        </CornerFrame>
       </div>
     </AnimatedSection>
   );

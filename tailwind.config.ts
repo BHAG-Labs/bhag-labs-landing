@@ -64,6 +64,7 @@ export default {
         },
         terracotta: {
           DEFAULT: "hsl(var(--terracotta))",
+          warm: "hsl(var(--terracotta-warm))",
         },
         ochre: {
           DEFAULT: "hsl(var(--ochre))",
@@ -82,11 +83,30 @@ export default {
         },
         charcoal: {
           DEFAULT: "hsl(var(--charcoal))",
+          soft: "hsl(var(--charcoal-soft))",
         },
         cream: {
           DEFAULT: "hsl(var(--cream))",
+          soft: "hsl(var(--cream-soft))",
           dark: "hsl(var(--cream-dark))",
+          darker: "hsl(var(--cream-darker))",
         },
+        product: {
+          neev: "hsl(var(--product-neev))",
+          hissa: "hsl(var(--product-hissa))",
+          pitchwala: "hsl(var(--product-pitchwala))",
+          yantra: "hsl(var(--product-yantra))",
+          bazaar: "hsl(var(--product-bazaar))",
+          runway: "hsl(var(--product-runway))",
+        },
+      },
+      letterSpacing: {
+        eyebrow: "0.22em",
+        button: "0.08em",
+      },
+      transitionTimingFunction: {
+        enter: "cubic-bezier(0.16, 1, 0.3, 1)",
+        exit: "cubic-bezier(0.4, 0, 1, 1)",
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -3,6 +3,7 @@ import { Menu, X, ChevronDown, Sun, Moon, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useDarkMode } from "@/hooks/use-dark-mode";
 import { useT, useLang, LANGUAGES } from "@/lib/i18n";
+import BhagMark from "./BhagMark";
 
 const Navbar = () => {
   const t = useT();
@@ -10,8 +11,6 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [solOpen, setSolOpen] = useState(false);
   const [dark, setDark] = useDarkMode();
-
-  const logoSrc = dark ? "/logos/bhag-labs-mark-dark.svg" : "/logos/bhag-labs-mark.svg";
 
   const solutions = [
     { name: "Neev", desc: t('nav.sol.neev.desc'), href: "https://neev.bhaglabs.com" },
@@ -25,7 +24,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
       <div className="max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between h-16">
         <a href="#" className="flex items-center gap-2.5 leading-none">
-          <img src={logoSrc} alt="" className="h-8 w-8" aria-hidden="true" />
+          <BhagMark size={28} mode={dark ? "dark" : "light"} className="shrink-0" />
           <span className="flex flex-col">
             <span className="font-heading font-bold text-xl text-foreground tracking-tight">{t('nav.brandName')}</span>
             <span className="text-[10px] text-muted-foreground font-subheading">{t('nav.brandNameHindi')}</span>

@@ -2,6 +2,7 @@ import { ClipboardList, FlaskConical, Mic, BarChart3, Users } from "lucide-react
 import AnimatedSection from "./AnimatedSection";
 import SectionLabel from "./SectionLabel";
 import { useT } from "@/lib/i18n";
+import { CornerFrame, StripedPetal, StackArches } from "./BhagMotifs";
 
 const featureDefs = [
   { icon: ClipboardList, titleKey: "neev.feature.bmc.title", descKey: "neev.feature.bmc.desc" },
@@ -15,8 +16,12 @@ const NeevSpotlight = () => {
   const t = useT();
 
   return (
-    <AnimatedSection id="neev" className="py-16 md:py-24 px-6 md:px-8 section-light">
-      <div className="max-w-5xl mx-auto">
+    <AnimatedSection id="neev" className="py-16 md:py-24 px-6 md:px-8 section-light relative overflow-hidden">
+      {/* Striped petal ornament — bottom-right, forest-tinted Neev signal */}
+      <div aria-hidden="true" className="absolute -bottom-6 -right-6 opacity-25 hidden lg:block">
+        <StripedPetal />
+      </div>
+      <div className="max-w-5xl mx-auto relative">
         <SectionLabel>{t('neev.label')}</SectionLabel>
         <div className="grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-16 items-start">
           <div>
@@ -26,6 +31,10 @@ const NeevSpotlight = () => {
             <p className="font-subheading text-lg text-muted-foreground mb-8 italic">
               {t('neev.subtitle')}
             </p>
+            {/* Stacked arches motif — the editorial "rise" flourish */}
+            <div className="mb-6">
+              <StackArches />
+            </div>
 
             <div className="space-y-5">
               {featureDefs.map((f) => (
@@ -44,7 +53,7 @@ const NeevSpotlight = () => {
             </a>
           </div>
 
-          <div className="border-2 border-foreground/20">
+          <CornerFrame className="border-2 border-foreground/20">
             <div className="border-b border-foreground/10 px-4 py-3 flex items-center gap-3">
               <span className="text-[10px] text-muted-foreground tracking-wider uppercase">{t('neev.browserBar')}</span>
             </div>
@@ -70,7 +79,7 @@ const NeevSpotlight = () => {
                 <div className="flex-1 h-6 bg-muted ml-2" />
               </div>
             </div>
-          </div>
+          </CornerFrame>
         </div>
       </div>
     </AnimatedSection>

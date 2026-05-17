@@ -1,15 +1,20 @@
 import AnimatedSection from "./AnimatedSection";
 import { useT } from "@/lib/i18n";
+import { Doorway, BulletRhythm } from "./BhagMotifs";
 
 const CtaSection = () => {
   const t = useT();
 
   return (
-    <AnimatedSection className="section-padding section-terracotta relative">
+    <AnimatedSection className="section-padding section-terracotta relative overflow-hidden">
       <div className="absolute inset-4 border border-primary-foreground/20 pointer-events-none" />
       <div className="absolute inset-8 border-2 border-primary-foreground/10 pointer-events-none" />
 
       <div className="relative z-10 max-w-3xl mx-auto text-center">
+        {/* Doorway motif — terracotta outer, cream inner, ochre keystone */}
+        <div className="flex justify-center mb-8">
+          <Doorway />
+        </div>
         <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase leading-[1.05] mb-6 text-cream">
           {t('cta.title')}
         </h2>
@@ -28,6 +33,11 @@ const CtaSection = () => {
         <a href="#contact" className="inline-block mt-6 text-sm text-cream/80 hover:text-cream transition-colors tracking-wide">
           {t('cta.founders')}
         </a>
+
+        {/* Bullet rhythm — ochre heartbeat over terracotta */}
+        <div className="mt-10 flex justify-center">
+          <BulletRhythm />
+        </div>
       </div>
     </AnimatedSection>
   );

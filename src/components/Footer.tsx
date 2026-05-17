@@ -1,20 +1,29 @@
 import { useT } from "@/lib/i18n";
+import BhagMark from "./BhagMark";
+import { DotGrid, DoubleRule } from "./BhagMotifs";
 
 const Footer = () => {
   const t = useT();
 
   return (
-    <footer className="section-dark py-16 px-6 md:px-8">
-      <div className="max-w-5xl mx-auto">
+    <footer className="section-dark py-16 px-6 md:px-8 relative overflow-hidden">
+      {/* Faded dot-grid ornament in the upper right — broadsheet decoration */}
+      <div aria-hidden="true" className="absolute top-10 right-10 opacity-50 hidden md:block">
+        <DotGrid />
+      </div>
+      <div className="max-w-5xl mx-auto relative">
         <div className="mb-10 flex items-start gap-4">
-          <img src="/logos/bhag-labs-mark-dark.svg" alt="" className="h-12 w-12" aria-hidden="true" />
+          <BhagMark size={48} mode="dark" className="shrink-0" />
           <div>
             <div className="font-heading font-bold text-3xl text-cream mb-1">{t('footer.brandName')}</div>
-            <p className="text-sm text-cream/50 max-w-md">{t('footer.tagline')}</p>
+            <p className="text-sm text-cream/50 max-w-md font-subheading italic">{t('footer.tagline')}</p>
           </div>
         </div>
 
-        <hr className="rule-gold mb-10 opacity-30" />
+        {/* Double-rule motif — the brand's section break */}
+        <div className="mb-10 text-ochre">
+          <DoubleRule className="!w-full" />
+        </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>

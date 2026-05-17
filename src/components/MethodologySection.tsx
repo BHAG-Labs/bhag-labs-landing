@@ -2,6 +2,7 @@ import { Target, Map, FlaskConical, FileText, RefreshCw } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import SectionLabel from "./SectionLabel";
 import { motion } from "framer-motion";
+import { ProgressDots, DiamondDivider } from "./BhagMotifs";
 
 const steps = [
   { icon: Target, title: "Define the BHAG", desc: "Every venture starts with a Big Hairy Audacious Goal. Define the change you want to make in the world - and then systematically figure out how to get there." },
@@ -17,10 +18,15 @@ const MethodologySection = () => (
     <AnimatedSection className="section-padding section-dark">
       <div className="max-w-5xl mx-auto">
         <SectionLabel variant="light">The Methodology</SectionLabel>
-        <h2 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl uppercase leading-[1.05] mb-16 text-cream">
+        <h2 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl uppercase leading-[1.05] mb-6 text-cream">
           The Lean LaunchPad,{" "}
           <span className="text-ochre">Digitized.</span>
         </h2>
+
+        {/* Progress dots — fills in sequence, mirroring the 5-step methodology */}
+        <div className="mb-12 text-cream">
+          <ProgressDots />
+        </div>
 
         <div className="space-y-0 border-t-2 border-ochre/30">
           {steps.map((step, i) => (
@@ -44,6 +50,11 @@ const MethodologySection = () => (
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Diamond divider — section rest beat */}
+        <div className="mt-16 text-cream/40">
+          <DiamondDivider />
         </div>
       </div>
     </AnimatedSection>

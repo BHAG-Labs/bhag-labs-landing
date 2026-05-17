@@ -3,6 +3,7 @@ import AnimatedSection from "./AnimatedSection";
 import SectionLabel from "./SectionLabel";
 import { motion } from "framer-motion";
 import { useT } from "@/lib/i18n";
+import { DotGrid, NotchedDisc, DiamondDivider } from "./BhagMotifs";
 
 const segmentDefs = [
   { icon: GraduationCap, titleKey: "whoWeServe.universities.title", descKey: "whoWeServe.universities.desc" },
@@ -17,8 +18,17 @@ const WhoWeServeSection = () => {
   const t = useT();
 
   return (
-    <AnimatedSection id="who-we-serve" className="py-16 md:py-24 px-6 md:px-8 section-dark">
-      <div className="max-w-5xl mx-auto">
+    <AnimatedSection id="who-we-serve" className="py-16 md:py-24 px-6 md:px-8 section-dark relative overflow-hidden">
+      {/* DotGrid editorial decoration — top-right corner */}
+      <div aria-hidden="true" className="absolute top-12 right-12 opacity-60 hidden md:block text-cream">
+        <DotGrid />
+      </div>
+      {/* NotchedDisc ornament — bottom-left, large but quiet */}
+      <div aria-hidden="true" className="absolute -bottom-10 -left-10 opacity-20 hidden lg:block">
+        <NotchedDisc />
+      </div>
+
+      <div className="max-w-5xl mx-auto relative">
         <SectionLabel variant="light">{t('whoWeServe.label')}</SectionLabel>
         <h2 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl uppercase leading-[1.05] mb-16 text-cream">
           {t('whoWeServe.title')} <span className="text-ochre">{t('whoWeServe.titleHighlight')}</span>
@@ -39,6 +49,11 @@ const WhoWeServeSection = () => {
               <p className="text-sm text-cream/60 leading-relaxed">{t(s.descKey)}</p>
             </motion.div>
           ))}
+        </div>
+
+        {/* Diamond divider — section rest beat in cream/dark */}
+        <div className="mt-16 text-cream/40">
+          <DiamondDivider />
         </div>
       </div>
     </AnimatedSection>
