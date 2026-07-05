@@ -1,6 +1,6 @@
 import { BookOpen, UsersRound, LayoutDashboard, GitFork, Shield, Cpu } from "lucide-react";
-import AnimatedSection from "./AnimatedSection";
-import SectionLabel from "./SectionLabel";
+import AnimatedSection from "@/components/AnimatedSection";
+import SectionLabel from "@/components/SectionLabel";
 import { motion } from "framer-motion";
 
 const features = [

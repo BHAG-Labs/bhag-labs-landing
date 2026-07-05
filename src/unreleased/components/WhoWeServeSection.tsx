@@ -1,9 +1,9 @@
 import { GraduationCap, Rocket, Building, Briefcase, FlaskConical, Users } from "lucide-react";
-import AnimatedSection from "./AnimatedSection";
-import SectionLabel from "./SectionLabel";
+import AnimatedSection from "@/components/AnimatedSection";
+import SectionLabel from "@/components/SectionLabel";
 import { motion } from "framer-motion";
 import { useT } from "@/lib/i18n";
-import { DotGrid, NotchedDisc, DiamondDivider } from "./BhagMotifs";
+import { DotGrid, NotchedDisc, DiamondDivider } from "@/components/BhagMotifs";
 
 const segmentDefs = [
   { icon: GraduationCap, titleKey: "whoWeServe.universities.title", descKey: "whoWeServe.universities.desc" },

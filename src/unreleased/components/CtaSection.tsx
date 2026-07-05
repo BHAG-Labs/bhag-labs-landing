@@ -1,6 +1,6 @@
-import AnimatedSection from "./AnimatedSection";
+import AnimatedSection from "@/components/AnimatedSection";
 import { useT } from "@/lib/i18n";
-import { Doorway, BulletRhythm } from "./BhagMotifs";
+import { Doorway, BulletRhythm } from "@/components/BhagMotifs";
 
 const CtaSection = () => {
   const t = useT();

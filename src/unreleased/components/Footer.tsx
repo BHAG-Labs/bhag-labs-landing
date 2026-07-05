@@ -1,6 +1,6 @@
 import { useT } from "@/lib/i18n";
-import BhagMark from "./BhagMark";
-import { DotGrid, DoubleRule } from "./BhagMotifs";
+import BhagMark from "@/components/BhagMark";
+import { DotGrid, DoubleRule } from "@/components/BhagMotifs";
 
 const Footer = () => {
   const t = useT();

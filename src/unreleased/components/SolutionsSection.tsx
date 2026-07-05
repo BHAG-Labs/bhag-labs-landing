@@ -1,9 +1,9 @@
 import { Layers, PieChart, FileText, Map, Newspaper } from "lucide-react";
-import AnimatedSection from "./AnimatedSection";
-import SectionLabel from "./SectionLabel";
+import AnimatedSection from "@/components/AnimatedSection";
+import SectionLabel from "@/components/SectionLabel";
 import { motion } from "framer-motion";
 import { useT } from "@/lib/i18n";
-import { CornerFrame, DiamondDivider } from "./BhagMotifs";
+import { CornerFrame, DiamondDivider } from "@/components/BhagMotifs";
 
 const productDefs = [
   {

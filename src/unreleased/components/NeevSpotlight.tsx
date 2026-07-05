@@ -1,8 +1,8 @@
 import { ClipboardList, FlaskConical, Mic, BarChart3, Users } from "lucide-react";
-import AnimatedSection from "./AnimatedSection";
-import SectionLabel from "./SectionLabel";
+import AnimatedSection from "@/components/AnimatedSection";
+import SectionLabel from "@/components/SectionLabel";
 import { useT } from "@/lib/i18n";
-import { CornerFrame, StripedPetal, StackArches } from "./BhagMotifs";
+import { CornerFrame, StripedPetal, StackArches } from "@/components/BhagMotifs";
 
 const featureDefs = [
   { icon: ClipboardList, titleKey: "neev.feature.bmc.title", descKey: "neev.feature.bmc.desc" },

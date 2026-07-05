@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Mail } from "lucide-react";
-import AnimatedSection from "./AnimatedSection";
-import SectionLabel from "./SectionLabel";
+import AnimatedSection from "@/components/AnimatedSection";
+import SectionLabel from "@/components/SectionLabel";
 import { useT } from "@/lib/i18n";
 
 const ContactSection = () => {

@@ -1,8 +1,8 @@
 import { Target, Map, FlaskConical, FileText, RefreshCw } from "lucide-react";
-import AnimatedSection from "./AnimatedSection";
-import SectionLabel from "./SectionLabel";
+import AnimatedSection from "@/components/AnimatedSection";
+import SectionLabel from "@/components/SectionLabel";
 import { motion } from "framer-motion";
-import { ProgressDots, DiamondDivider } from "./BhagMotifs";
+import { ProgressDots, DiamondDivider } from "@/components/BhagMotifs";
 
 const steps = [
   { icon: Target, title: "Define the BHAG", desc: "Every venture starts with a Big Hairy Audacious Goal. Define the change you want to make in the world - and then systematically figure out how to get there." },

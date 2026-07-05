@@ -1,5 +1,5 @@
-import AnimatedSection from "./AnimatedSection";
-import SectionLabel from "./SectionLabel";
+import AnimatedSection from "@/components/AnimatedSection";
+import SectionLabel from "@/components/SectionLabel";
 
 const TrustSection = () => (
   <AnimatedSection className="section-padding section-light">

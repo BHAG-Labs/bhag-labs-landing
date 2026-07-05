@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useT } from "@/lib/i18n";
-import BhagMark from "./BhagMark";
-import { CornerFrame, BulletRhythm } from "./BhagMotifs";
+import BhagMark from "@/components/BhagMark";
+import { CornerFrame, BulletRhythm } from "@/components/BhagMotifs";
 
 const HeroSection = () => {
   const t = useT();

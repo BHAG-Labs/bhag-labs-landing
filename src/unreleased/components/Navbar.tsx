@@ -3,7 +3,7 @@ import { Menu, X, ChevronDown, Sun, Moon, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useDarkMode } from "@/hooks/use-dark-mode";
 import { useT, useLang, LANGUAGES } from "@/lib/i18n";
-import BhagMark from "./BhagMark";
+import BhagMark from "@/components/BhagMark";
 
 const Navbar = () => {
   const t = useT();

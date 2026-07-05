@@ -1,7 +1,7 @@
-import AnimatedSection from "./AnimatedSection";
-import SectionLabel from "./SectionLabel";
+import AnimatedSection from "@/components/AnimatedSection";
+import SectionLabel from "@/components/SectionLabel";
 import { useT } from "@/lib/i18n";
-import { CornerFrame, QuarterPetal } from "./BhagMotifs";
+import { CornerFrame, QuarterPetal } from "@/components/BhagMotifs";
 
 const ROW_KEYS = [
   { key: 'comparison.row.bmcVersioning', sheets: "partial", pm: "no", bhag: "yes" },
