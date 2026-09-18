@@ -12,11 +12,6 @@ import { CornerFrame, BulletRhythm } from "@/components/BhagMotifs";
 const APP_URL = "https://app.bhaglabs.com/?utm_source=landing&utm_campaign=deck";
 const SIGINT_URL = "https://sigint.bhaglabs.com";
 
-// Landing-side pricing display. The app charges by server-side geolocation;
-// this timezone check only decides which prices to *show* here.
-const IS_INDIA =
-  typeof Intl !== "undefined" &&
-  /Calcutta|Kolkata/.test(Intl.DateTimeFormat().resolvedOptions().timeZone ?? "");
 
 // The animated brief in the hero types, edits, and rewrites its way through
 // these. Consecutive ideas often share an opening on purpose: the cursor
@@ -522,34 +517,29 @@ const Pricing = () => (
         </p>
       </div>
 
-      {IS_INDIA ? (
-        <div className="grid sm:grid-cols-2 gap-6">
-          <PricingCard
-            kicker="Starter"
-            price="₹99"
-            desc="15 slides and the 3-minute script. Download and present."
-          />
-          <PricingCard
-            highlight
-            kicker="Complete"
-            price="₹399"
-            desc="The deck, the 3-minute and 5-minute scripts, and autofill: point us at your GitHub repo or README and most questions answer themselves."
-          />
-        </div>
-      ) : (
-        <div className="max-w-md mx-auto">
-          <PricingCard
-            highlight
-            kicker="Complete"
-            price="$9.99"
-            desc="The deck, the 3-minute and 5-minute scripts, and autofill: point us at your GitHub repo or README and most questions answer themselves."
-          />
-        </div>
-      )}
+      <div className="grid sm:grid-cols-3 gap-6">
+        <PricingCard
+          kicker="Single deck"
+          price="$9.99"
+          desc="One credit. The 15-slide deck, plus the 3-minute and 5-minute scripts."
+        />
+        <PricingCard
+          highlight
+          kicker="3 decks"
+          price="$24.99"
+          desc="Three credits at $8.33 each. Credits never expire, so they keep until you need them."
+        />
+        <PricingCard
+          kicker="10 decks"
+          price="$69.99"
+          desc="Ten credits at $7.00 each. For an accelerator batch, a cohort, or a busy quarter."
+        />
+      </div>
 
       <p className="text-center text-sm text-muted-foreground max-w-xl mx-auto mt-8 leading-relaxed">
-        Prices follow where you are, and checkout shows yours before you
-        confirm. If a purchase ever goes wrong, write to{" "}
+        A credit is spent the first time you generate a deck. Editing it
+        afterwards is free forever, and every deck gets two free re-runs if you
+        change your answers. If a purchase ever goes wrong, write to{" "}
         <a href="mailto:hello@bhaglabs.com" className="underline hover:text-foreground">
           hello@bhaglabs.com
         </a>{" "}
